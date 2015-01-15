@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--{if $noindex}--><meta name="robots" content="noindex" /><!--{/if}--> 
+<title>{$keywords}<!--{if $pager.page>1}--> - Page {$pager.page}<!--{/if}--> - {$sitename}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="pd_list.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" hreflang="en" href="http://www.temperqueen.com/" />
+</head>
+
+<body>
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  --> 
+
+<!--g_content S  -->
+<div class="g_content">
+       
+    <div class="position">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    </div>
+    
+    <div class="con2">
+        <!--g_content_l S  -->
+        <div class="g_content_l">
+            <div id="gallery_left" class="fl"> 
+                <dl class="narrow">
+                        <dt><h2>{$cat_name}</h2></dt>
+                        <dd>
+                        <!--{foreach from=$categories[7]['cat_id'] item=child}-->
+                        <a href="{$child.url}">{$child.name}</a>
+                        <!--{/foreach}-->
+                        </dd>
+                    </dl>
+                <!--{if $filter_attr_list}-->
+                <!--{foreach from=$filter_attr_list item=filter_attr}-->
+                    <!--{if $filter_attr.filter_attr_name != 'Price' and $filter_attr.filter_attr_name != 'Silhouette' and $filter_attr.filter_attr_name != 'Hemline/Train'}-->
+                    <div class="Fabric">
+                        <dl>
+                            <dt>{$filter_attr.filter_attr_name|escape:html}</dt>
+                            <dd><ul>  
+                                <!--{foreach from=$filter_attr.attr_list item=attr}-->
+                                    <!--{if $attr.attr_value != 'All'}-->
+                                    <li><a href="{$attr.url}" class="enabled disabled" rel="nofollow">{$attr.attr_value}</a></li>
+                                    <!--{/if}-->
+                                <!--{/foreach}-->
+                            </ul></dd>
+                        </dl>
+                    </div>
+                    <!--{/if}-->
+                <!--{/foreach}-->
+                <!--{/if}-->
+               
+               <!--{if $cat.cat_describe}-->
+               <dl class="cateleft_desc clearfix">
+                    <div id="zanlist">
+                        <h2 class="tit">{$cat_name}</h2>
+                        <p>{$cat.cat_describe}</p>
+                    </div>
+               </dl>
+               <!--{/if}--> 
+            </div>
+            
+        </div>
+        <!--g_content_l E  -->   
+        
+        <!--g_content_r S  -->        
+        <div class="g_content_r">
+             <div id="right">
+                <div class="postion_rde">
+                    <h1 class="point">{$cat_name}</h1><span>We have<em>{$pager.record_count}</em>commodity</span>
+                </div>
+                <div class="clear"></div>
+                <div id="view_selects">
+                    <span> 
+                        <a rel="nofollow" <!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC">on time</a> |
+                        <a rel="nofollow" <!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=DESC">last update</a> |
+                        <a rel="nofollow" <!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=ASC">lowest price</a> |
+                        <a rel="nofollow" <!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=DESC">highest price</a>
+                    </span>
+                </div>
+                
+                <!--Wholesale-->           
+                
+                <div class="garrery_01">
+                    <!--{foreach from=$goods_list item=goods}-->
+                    <!-- {if $goods.goods_id} -->
+                    <dl class="l_g_s">
+                        <dd>
+                            <a href="{$goods.url}" class="imgc_a">
+                            <span class="offsale sale_{$goods.sale_num}"></span>
+                            <img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="imgChange"></a>
+                        </dd>
+                        <dt>
+                            <h3>
+                                <a href="{$goods.url}" title="{$goods.name|escape:html} Weeding Derss" class="dname">
+                                    {$goods.name|escape:html} Weeding Derss
+                                </a>
+                            </h3>
+                        </dt>
+                        <dd class="last">
+                            <div class="free"> </div>
+                            <span class="prlist h20p">
+                                <span class="old_pirce">USD ${$goods.market_price} </span>
+                                <span class="fuhao">USD $</span>
+                                <span class="huobi" data-price="{$goods.shop_price}">{$goods.shop_price}</span>
+                            </span>
+                        </dd>
+                        <dd class="last">
+                            <div class="l_star50"></div>
+                            <span class="fc000"><a rel="nofollow" href="{$goods.url}#wrr">
+                            Reviews({$goods.comment_count})</a></span>
+                        </dd>
+                    </dl>
+                    <!--{/if}-->
+                   <!--{/foreach}--> 
+
+                    <div class="clear">&nbsp;</div>
+                </div>
+                
+                
+                    <div class="border_d">
+                        <div>
+                            <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+                                <span>{$lang.pager_1}&nbsp;<strong>{$pager.record_count}</strong>&nbsp;{$lang.pager_2}</span>
+                                
+                                <!-- {if $pager.page_count neq 1} -->
+                                    <!--{foreach from=$pager.page_number key=key item=item}-->
+                                        <!-- {if $pager.page eq $key} --><font color="red">{$key}</font><!-- {else} --> <a href="{$item}">[{$key}]</a><!-- {/if} -->
+                                    <!--{/foreach}-->
+                                <!-- {/if} -->
+                                <a href="{$pager.page_next}">Next</a>
+                                <a href="{$pager.page_next}">Last</a>
+                            </form> 
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+             </div>
+        </div>
+         <!--g_content_r E  -->  
+    </div>
+    </div>
+  
+  
+</div>
+<!--g_content E  -->
+
+<div class="clear"></div>
+<div class="g_content tagslist">
+    <div class="tag_tit">
+        <h3 class="tit">{$cat_name} Recommended Popular Categories</h3>
+    </div>
+    <div class="tags_content clearfix">
+        <!--{if $keytaglist}-->
+        <ul>
+            <!-- {foreach from=$keytaglist item=tags}-->
+             <li><a href="{$tags.key_url}" title="{$tags.key_name}">{$tags.key_name}</a></li>
+            <!--{/foreach}-->  
+       </ul> 
+        <!-- {/if}-->   
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

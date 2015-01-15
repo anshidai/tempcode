@@ -1,0 +1,411 @@
+html{*overflow-x:hidden}
+.ody{text-align:center;margin:0 auto;padding:0;font-size:12px;color:#645b56;line-height:20px}
+.ody>div{text-align:left;margin-right:auto;margin-left:auto}
+.iv,form,ul,ol,li,span,dl,dt,dd,input{padding:0;text-align:left}
+.mg,a img,p,fieldset{border:0;margin:0;padding:0}
+.1,h2,h3,h4{margin:0;padding:0;font-size:100%}
+.l,ol,li{list-style:none}
+.able,td,input{font-size:12px;word-break:break-all}
+.nput[type="button"]{cursor:pointer}
+.mg{vertical-align:middle}
+.{outline-style:none;color:#000;text-decoration:none}
+.:hover{color:#e27c50}
+.ody,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,textarea,p,blockquote,th,td,iframe{margin:0;padding:0;font-weight:normal;font-family:Arial}
+.nput,select{margin:0;padding:0;font-family:Arial}
+.nput{-moz-box-sizing:border-box;font-family:Tahoma,Verdana,Arial;font-size:11px;vertical-align:middle;border:0;overflow:visible}
+.nput[type="text"],input[type="password"]{padding-left:5px}
+.ddress,caption,cite,dfn,em,var{font-style:normal;font-weight:normal}
+.:before,q:after{content:''}
+.bbr,acronym{border:0}
+.clear{clear:both;padding:0;margin:0;font:0;line-height:0}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+. html .clearfix{height:1%}
+.inputz{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;height:22px;*height:18px}
+.in_block{display:-moz-inline-stack;display:inline-block;vertical-align:top;zoom:1;*display:inline}
+.in_block input{margin-left:12px}
+.fl{float:left}
+.fr{float:right}
+.r{clear:both}
+.:before,q:after{content:''}
+.bbr,acronym{border:0}
+.red,.red a{color:#ff5847}
+.reds{color:#ff5847}
+.redl{color:#ff5847;margin:0 5px}
+.red2{color:#ff5847}
+.c666{color:#666}
+.br5p{border-radius:5px}
+.br3p{border-radius:3px}
+.fl{float:left}
+.Checkbox1{margin:0 106px 0 50px}
+.fr{float:right}
+.w50p{width:50px}
+.w100p{width:100px}
+.w150p{width:150px}
+.w200p{width:200px}
+.w300p{width:300px}
+.w320p{width:300px}
+.w400p{width:400px}
+.w450p{width:450px}
+.w960p{width:960px}
+.pr10p{padding-right:10px}
+.pt4p{padding-top:4px}
+.m10p{margin:10px}
+.m10p0p{margin:10px 0}
+.m10p0p20p{margin:10px 0 20px}
+.m0p4p{margin:0 4px}
+.m0p10p{margin:0 10px}
+.m10p20p{margin:10px 20px}
+.m10p20p5p{margin:10px 20px 5px}
+.ml5p{margin-left:5px}
+.mt5p{margin-top:5px}
+.mt10p{margin-top:10px}
+.mt30p{margin-top:30px}
+.mr10p{margin-right:10px}
+.mb6p{margin-bottom:6px}
+.mb10p{margin-bottom:10px}
+.ml10p{margin-left:10px}
+.ml4p{margin-left:4px}
+.mr4p{margin-right:4px}
+.ml26p{margin-left:23px}
+.ml163p{margin-left:163px}
+.mt20p{margin-top:20px}
+.mr20p{margin-right:20px}
+.mb20p{margin-bottom:20px}
+.mb40p{margin-bottom:40px}
+.ml20p{margin-left:20px}
+.ml20mb10p{margin-left:20px;margin-bottom:10px}
+.ml22p{margin-left:22px}
+.ml130p{margin-left:130px}
+.ml150p{margin-left:150px}
+.ml160p{margin-left:160px}
+.pl10p{padding-left:10px}
+.pl134p{padding-left:134px}
+.pr20p{padding-right:20px}
+.cpointer{cursor:pointer}
+.posa{position:absolute}
+.lh18p{line-height:18px}
+.h20p{height:20px}
+.fs13p{font-size:13px}
+.fs14p{font-size:14px}
+.posr{position:relative}
+.vatop{vertical-align:top}
+.tal{text-align:left}
+.tar{text-align:right}
+.tdlt{text-decoration:line-through;line-height:10px}
+.tdul{text-decoration:underline}
+.cc771e{color:#ff5847}
+.c000{color:#000}
+.caaa{color:#aaa}
+.red,i{color:Red}
+.fs11p{font-size:11px}
+.fwnor{font-weight:normal}
+.{text-decoration:none}
+.r{clear:both}
+.elect{color:#999}
+.caaa{color:#aaa}
+.clear{clear:both;font-size:1px;width:1px;visibility:hidden;margin-top:0!important;*margin-top:-1px;height:0;line-height:0;border:0 none;margin:0;padding:0}
+.topbanner{display:none}
+.btoh_btn,.msa_btn,.a_close_btn,.urgent_btn,.del_btn,.but,.but3,.delan,.backan,input.br,input.up,.copy_btn,.pay_btn{background:url("http://s.dresswe.com/images/a_btn_bg2.gif") no-repeat scroll 0 0 transparent;border:medium none;cursor:pointer}
+.wrapper,#big{width:1000px;margin:0 auto}
+.nput.product_login{background:url("http://s.dresswe.com/images/productlogin.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:30px;margin-left:10px;width:84px;border:0}
+.form_bt{padding:0 15px;height:30px;background-color:#e17749;color:#fff;font-size:13px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px}
+.form_bt:hover{background-color:#ff5847}
+.{font-family:Verdana}
+.content{margin:5px auto;width:1000px}
+.container{margin:auto;width:1000px}
+.bnav a{color:#666}
+.bnav a:hover{text-decoration:underline;color:#ff5948}
+.nav_bread_crumb,#bnav{height:40px;line-height:40px;padding:0 10px;background-color:#eee;border-top:1px solid #d8d8d8;margin-bottom:20px}
+.nav_bread_crumb a{color:#775e51}
+.nav_bread_crumb a:hover{color:#ff5847;text-decoration:underline}
+.nav_bread_crumb b{display:inline;color:#ff5948;font-weight:normal}
+.n_l{line-height:30px}
+.n_l span{color:#ff5948}
+.probre{float:left;width:940px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fuhao{padding-right:0}
+.imgc_a{display:block;position:relative;top:0;left:0;width:187px}
+.offsale{background-position:left 0;background-repeat:no-repeat;display:block;height:75px;position:absolute;right:0;top:0;width:50px;z-index:10}
+.top{background-position:left 0;background-repeat:no-repeat;display:block;height:75px;position:absolute;right:0;top:0;width:50px;z-index:10}
+.Free_Shipping{background:url("http://s.dresswe.com/images/m3_Free_Shipping.png") no-repeat scroll 0 -2px transparent;padding-left:24px;float:left;color:transparent;height:20px;width:85px}
+.photo1 .offsale{right:-1px}
+.offsale05{background-image:url("http://s.dresswe.com/images/add_new/off_05.png")}
+.offsale25{background-image:url("http://s.dresswe.com/images/add_new/off_25.png")}
+.offsale20{background-image:url("http://s.dresswe.com/images/add_new/off_20.png")}
+.offsale15{background-image:url("http://s.dresswe.com/images/add_new/off_15.png")}
+.offsale10{background-image:url("http://s.dresswe.com/images/add_new/off_10.png")}
+.offsale30{background-image:url("http://s.dresswe.com/images/add_new/off_30.png")}
+.offsale50{background-image:url("http://s.dresswe.com/images/add_new/off_50.png")}
+.offsale45{background-image:url("http://s.dresswe.com/images/add_new/off_45.png")}
+.offsale40{background-image:url("http://s.dresswe.com/images/add_new/off_40.png")}
+.offsale35{background-image:url("http://s.dresswe.com/images/add_new/off_35.png")}
+.offsale55{background-image:url("http://s.dresswe.com/images/add_new/off_55.png")}
+.offsale75{background-image:url("http://s.dresswe.com/images/add_new/off_75.png")}
+.offsale70{background-image:url("http://s.dresswe.com/images/add_new/off_70.png")}
+.offsale65{background-image:url("http://s.dresswe.com/images/add_new/off_65.png")}
+.offsale60{background-image:url("http://s.dresswe.com/images/add_new/off_60.png")}
+.offsale80{background-image:url("http://s.dresswe.com/images/add_new/off_80.png")}
+.offsalenew{background-image:url("http://s.dresswe.com/images/add_new/off_new.png")}
+.offsale95{background-image:url("http://s.dresswe.com/images/add_new/off_95.png")}
+.offsale90{background-image:url("http://s.dresswe.com/images/add_new/off_90.png")}
+.offsale85{background-image:url("http://s.dresswe.com/images/add_new/off_85.png")}
+.offsaletop{background-image:url("http://s.dresswe.com/images/add_new/off_top.png")}
+.top1{background-image:url("http://s.dresswe.com/images/add_new/top1.png")}
+.top2{background-image:url("http://s.dresswe.com/images/add_new/top2.png")}
+.top3{background-image:url("http://s.dresswe.com/images/add_new/top3.png")}
+.top4{background-image:url("http://s.dresswe.com/images/add_new/top4.png")}
+.top5{background-image:url("http://s.dresswe.com/images/add_new/top5.png")}
+.top6{background-image:url("http://s.dresswe.com/images/add_new/top6.png")}
+.top7{background-image:url("http://s.dresswe.com/images/add_new/top7.png")}
+.top8{background-image:url("http://s.dresswe.com/images/add_new/top8.png")}
+.top9{background-image:url("http://s.dresswe.com/images/add_new/top9.png")}
+.top10{background-image:url("http://s.dresswe.com/images/add_new/top10.png")}
+.ody.home #back-top{visibility:hidden}
+.back-top{width:45px;overflow:hidden;position:fixed;left:50%;_position:absolute;margin-left:505px;bottom:30px}
+.back-top a{display:block;text-align:center;text-decoration:none;cursor:pointer}
+.back-top span{width:45px;height:45px;display:block;margin-bottom:7px;background:url(http://s.dresswe.com/images/allnewbt.png) no-repeat 13px -254px #e17749}
+.back-top span:hover{background-color:#ff5847}
+.showbox{display:none}
+.l_star0,.l_star05,.l_star10,.l_star15,.l_star20,.l_star25,.l_star30,.l_star35,.l_star40,.l_star45,.l_star50{background:url("http://s.dresswe.com/images/star.png") no-repeat 0 0;float:left;height:12px;line-height:12px;margin-top:3px;overflow:hidden;width:70px}
+.l_star0{background-position:left top}
+.l_star05{background-position:left -17px}
+.l_star10{background-position:left -17px}
+.l_star15{background-position:left -17px}
+.l_star20{background-position:left -33px}
+.l_star25{background-position:left -33px}
+.l_star30{background-position:left -49px}
+.l_star35{background-position:left -49px}
+.l_star40{background-position:left -65px}
+.l_star45{background-position:left -65px}
+.l_star50{background-position:left -81px}
+.back{float:right}
+.back a{text-decoration:underline}
+.help_right .h_n .nb{float:right}
+.help_right .h_n .nb a:hover{text-decoration:underline}
+.help_right .h_n a{margin-right:4px}
+.top-language{height:30px;line-height:30px;background:#333}
+.top-language .language_t{width:1000px;margin:0 auto}
+.top-language .language_t a{color:#fff;margin-right:35px;display:inline-block}
+.top-language .language_t a:hover{border-bottom:2px solid #df6a3f;height:28px}
+.top-language .language_t a.current{border-bottom:2px solid #df6a3f;height:28px}
+.header{width:1000px;margin:0 auto 10px}
+.topnav{padding-top:20px;font-size:12px;width:880px;float:right}
+.form_select{float:left;position:relative;z-index:100;border:1px solid #fff}
+.form_select>span{display:inline-block;padding-right:15px;text-indent:10px;background:#fff;position:relative;z-index:1000}
+.form_select .showul{position:absolute;background-color:#fff;z-index:999;border:1px solid #ccc;width:100%;left:0;*left:10px;top:18px;border-top:0}
+.form_select .showul>li{padding:3px 10px;cursor:pointer;font-size:12px}
+.form_select .showul>li:hover,.form_select .showul>li:hover a{background-color:#e17749;color:#fff}
+.language .showul{width:90px;border:1px solid #ccc}
+.currency .showul{width:51px;border:1px solid #ccc}
+
+
+.usertool .langshow,.usertool .currshow{padding:0 15px}
+.showbt{height:17px}
+.currency em{width:18px;display:inline-block}
+.currency .showbt,.language .showbt{padding-left:0}
+.currency .showbt{width:36px}
+.language.hover .showbt,.currency.hover .showbt,.accountbt.hover>a,.cartbt.hover>span{border:1px solid #ccc}
+.language.hover .showbt,.currency.hover .showbt{border-bottom:0}
+
+.usertool .langshow,.usertool .currshow{padding:0 15px}
+.usertool{float:right;height:30px;width:100%}
+.usertool>li{float:right;padding:0 25px;border-right:1px solid #000;height:15px;line-height:15px;position:relative;z-index:100}
+.chatbt>a{display:block;background:url(http://s.dresswe.com/images/allnewbt.png) no-repeat;height:27px;line-height:27px;margin-top:-7px;padding-left:30px;display:inline-block}
+.mysan{border-color:#000 rgba(0,0,0,0) rgba(0,0,0,0);border-style:solid dashed dashed;border-width:4px;height:0;position:absolute;right:5px;top:12px;width:0}
+.hover .mysan{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform:rotate(180deg);-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s;-webkit-transform-origin:4px 2px;-moz-transform-origin:4px 2px;transform-origin:4px 2px}
+.cartbt{float:right;width:81px;margin-top:10px;margin-left:20px}
+.cartbt>span{display:block;background:url(http://s.dresswe.com/images/allnewbt.png) no-repeat 7px -58px;height:27px;line-height:27px;display:inline-block;border:1px solid #fff;padding:0 3px 0 33px;cursor:pointer}
+.usertool>li.chatbt{padding-right:0;border-right:0}
+.chatbt a{background-position:0 0}
+.seachbox{width:300px;height:30px;border:1px solid #b2b2b2;position:relative;float:right;margin-top:8px}
+.seachbox input[type="text"]{width:265px;*width:260px;border:0;padding:8px 0 5px 5px;border-width:0}
+.seachbox input[type="button"]{border:0;background:url(http://s.dresswe.com/images/allnewbt.png) no-repeat 3px -106px;height:30px;width:30px;position:absolute;right:0}
+.usertool>li.accountbt{padding-right:20px;padding-left:15px}
+.showbt,.accountbt>a{padding-right:20px;padding-left:10px;position:relative;height:25px;display:block;border:1px solid #fff;margin-top:-7px;line-height:25px;background:#fff;z-index:1002}
+.accountbt.hover>a{border-bottom:0}
+.accountbt .mysan{top:11px}
+.showm{width:400px;float:left;font-size:12px;color:#df6a3f;margin:8px 0 0 15px}
+.s_top span{font-size:15px;text-transform:uppercase;padding-right:5px;font-weight:bold}
+.s_bottom>span{text-transform:uppercase;padding-left:35px}
+.s_bottom a{color:#df6a3f;font-size:13px;font-weight:bold}
+.s_bottom a:hover{text-decoration:underline}
+.conjiao{border-color:rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #df6a3f;border-style:solid;border-width:4px;height:0;width:0;display:inline-block;margin-left:5px}
+
+.nav{clear:both;position:relative;height:30px;z-index:60}
+.logo{margin-bottom:10px;width:110px;height:110px;text-align:center;background-color:#fff;float:left}
+.navline{height:30px;font-size:18px}
+.navline>li{display:inline-block;*display:inline;font-size:14px;height:30px;position:relative}
+.navline>li>a{text-transform:capitalize;height:30px;line-height:30px;display:inline-block;padding:0 10px}
+.navline .menus{position:absolute;top:39px;left:0;width:958px;background:url(http://s.dresswe.com/images/navopacity.png) repeat 0 0;z-index:60;padding:20px;display:none;border:1px solid #d1d1d1}
+.navline .menus ul{width:179px;float:left;margin-right:8px}
+.navline .nav7 .menus ul{width:274px}
+.navline .nav7>a{color:#df6a3f;font-weight:bold}
+.navline .menus ul li{font-size:11px;color:#444;margin-bottom:3px;font-family:Verdana}
+.navline .menus ul li.ertitle{font-size:12px;color:#000;font-weight:bold}
+.magc{width:100%;position:absolute;top:23px;left:0;height:18px;display:none;text-align:center;z-index:61}
+.magc span{width:17px;height:17px;background:url(http://s.dresswe.com/images/allnewbt.png) no-repeat 0 -310px;display:inline-block}
+.nav2 .menus{left:-144px}
+.nav3 .menus{left:-84px;width:592px}
+.nav3 .menus ul{width:140px}
+.nav4 .menus{left:-179px;width:400px}
+.nav5 .menus{width:561px;left:-173px}
+.nav6 .menus{width:139px;left:-35px}
+.nav7 .menus{width:148px;left:-2px}
+.nav8 .menus{width:134px;left:-54px}
+
+.shop_list{background-color:#fff;border:1px solid #ccc;margin-bottom:10px;padding:15px 0 10px;position:absolute;right:0;text-align:center;top:20px;width:302px;z-index:1000}
+.raitem{border-bottom:1px dashed #ccc;font-family:Verdana,Geneva,sans-serif;font-size:11px;padding-bottom:10px;text-align:center}
+.shop_list dl{border-bottom:1px dashed #ccc;margin:10px;overflow:hidden;padding-bottom:10px}
+.shop_list dl dt{float:left;width:60px;height:90px}
+.shop_list dl dd{color:#666;float:left;font-size:11px;margin-bottom:0;margin-left:10px;padding:0;text-align:left;width:210px}
+.shop_list dl dd p{height:18px;margin-bottom:3px;overflow:hidden;padding:0}
+.carta{padding:0 10px;background-color:#e17749;color:#fff;display:inline-block;height:20px;line-height:20px;font-size:12px;border-radius:3px}
+.carta:hover{color:#fff}
+.cat-remove{border:1px solid #ccc;background:url(http://s.dresswe.com/images/rembg.jpg) repeat-x 0 0;float:right;cursor:pointer;padding:0 10px}
+.my-account-con{left:15px;position:absolute;text-align:left;top:18px;width:180px;z-index:1001;padding-top:10px;background-color:#fff;border:1px solid #ccc}
+.my-account-con li{line-height:17px;overflow:hidden;padding-bottom:9px;padding-left:35px;position:relative}
+.my-account-con li a{display:block}
+.my-account-con li a span{background:url(http://s.dresswe.com/images/my-account-bg.jpg) no-repeat scroll 0 0;display:block;height:22px;left:9px;position:absolute;top:-5px;width:20px}
+.my-account-con li a.order span{background-position:0 0}
+.my-account-con li a.rae span{background-position:0 -30px}
+.my-account-con li a.waitlist span{background-position:0 -61px}
+.my-account-con li a.credits span{background-position:0 -91px}
+.my-account-con li a.favorites span{background-position:0 -120px}
+.my-account-con li a.as span{background-position:0 -149px}
+.my-account-con li a.ifg span{background-position:0 -180px}
+.my-account-con li a.facebooks span{background-position:0 -210px}
+.my-account-con li a.signout span{background-position:0 -240px}
+.my-account-con li a.order:hover span{background-position:-25px 0}
+.my-account-con li a.rae:hover span{background-position:-25px -30px}
+.my-account-con li a.waitlist:hover span{background-position:-25px -61px}
+.my-account-con li a.credits:hover span{background-position:-25px -91px}
+.my-account-con li a.favorites:hover span{background-position:-25px -120px}
+.my-account-con li a.as:hover span{background-position:-25px -149px}
+.my-account-con li a.ifg:hover span{background-position:-25px -180px}
+.my-account-con li a.facebook:hover span{background-position:-25px -210px}
+.my-account-con li a.signout:hover span{background-position:-25px -240px}
+.ad{width:1000px;background:url(http://s.dresswe.com/images/topbanner.jpg) left top no-repeat;cursor:pointer;height:89px;margin-top:22px;margin-bottom:-15px}
+.ad span{float:left;display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;width:40px;height:40px;font-size:23px;color:#fff;margin-top:29px;text-align:center;font-family:Arial}
+.ad-d{margin-left:829px;margin-right:2px}
+.ad-h{margin-left:2px}
+.ad-m{margin-left:0}
+.ad-s{margin-left:0}
+.timePart{width:1000px;background:url(http://s.dresswe.com/images/topbanner.jpg) left top no-repeat;cursor:pointer;height:90px;margin-top:9px}
+.timePart span{float:left;display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;width:40px;height:40px;font-size:23px;color:#fff;margin-top:29px;text-align:center;font-family:Arial}
+.time-d{margin-left:829px;margin-right:2px}
+.time-h{margin-left:2px}
+.time-m{margin-left:0}
+.time-s{margin-left:0}
+.tags{text-align:center;margin:5px 0}
+.big .foot .w_ico .tac a{color:#333}
+.big .foot .w_ico .tac a:hover{color:#ff5847}
+.w_ico{padding-bottom:50px}
+.w_ico li{text-align:center}
+.w_ico li.tac{text-align:center}
+.w_ico li.tac a{text-decoration:underline}
+.w_ico li.wi span,.w_ico li.wi a{display:inline-block;vertical-align:middle;margin:0 2px}
+.w_ico .a_5{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -6px -18px;width:245px;height:25px}
+.w_ico .a_paypal{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -255px 0;width:60px;height:60px}
+.w_ico .a_westernunion{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -315px -19px;height:30px;width:115px}
+.w_ico .a_ems{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -435px -16px;height:27px;width:90px}
+.w_ico .a_dhl{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -530px -18px;height:30px;width:103px}
+.w_ico .a_tnt{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -637px -18px;height:30px;width:77px}
+.w_ico .a_ups{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -719px -19px;height:35px;width:30px}
+.w_ico .a_ver{background:url(http://s.dresswe.com/images/add_new/foot_bg.gif) no-repeat -754px -18px;height:31px;width:124px}
+.w_ico li.wk{width:83%;margin:0 auto 10px}
+.foot{margin:0 auto;width:1000px;margin-top:10px}
+.foot .customer{padding:15px 0;border-bottom:1px solid #000}
+.foot .customer dl{float:left;width:158px;border-right:1px dotted #000;padding:0 10px 10px 23px}
+.foot .customer dl li{line-height:20px}
+.foot .customer dl a{background:url(http://s.dresswe.com/images/add_new/Arrow_03.gif) no-repeat left 7px;font-size:12px;color:#000;padding-left:18px;display:block}
+.foot .customer dl a:hover{text-decoration:underline;color:#ff5847}
+.foot .customer dl dt{font-size:12px;color:#000;line-height:15px;font-weight:bold;margin-bottom:20px}
+.foot .customer dl.last{border-right:0}
+.link dt a{font-size:12px;color:#51423a;vertical-align:middle;padding:0 3px}
+.link dt a:hover{text-decoration:underline;color:#ff5847}
+.link dt{border-top:2px solid #000;font-size:12px;height:30px;line-height:30px;margin-top:2px;text-align:center}
+.link dd li span{color:#666}
+.foot #boxc{background-color:#ff5847;z-index:300}
+.newsletters{line-height:29px;height:29px;border-bottom:1px dotted #000;border-top:1px dotted #000;padding:10px 0 10px 0;position:relative}
+.indexshare{position:absolute;right:0;top:-1px}
+.newslett{float:left;height:29px}
+.newslett *{vertical-align:middle}
+.away{float:right;height:29px;cursor:pointer;display:none}
+.away a{margin:0 5px}
+.away a.gplus{display:none}
+.away a img.new_coupon{display:none}
+.newsletters .newslett span{color:#000;font-family:arial;font-size:18px}
+.newslett .newslett-inp{border:1px solid #000;width:218px;height:24px;line-height:25px;padding:0 3px}
+.newslett .newslett-btn{background:#000;border:medium none;cursor:pointer;height:25px;color:#fff;text-align:center;text-transform:uppercase;font-size:12px;padding:0 10px}
+.newslett .newslett-btn:hover{background:#696969}
+.con404{width:998px;margin-left:auto;margin-right:auto;margin-bottom:10px;border:1px solid #ccc;background:url(http://s.dresswe.com/images/c404img.jpg) no-repeat #fff right 260px;position:relative;z-index:0}
+.c404p{height:140px;padding:90px 0 0 126px;background:url(http://s.dresswe.com/images/404img.png) no-repeat 10px 76px}
+.ul404 a{text-decoration:underline;color:#c33}
+.c404p p{line-height:30px}
+..sorry{font-size:38px;color:#c03;padding-left:0;padding-right:10px}
+.c404tit{line-height:84px;height:78px;font-size:14px;font-weight:bolder;color:#000;padding-top:10px;padding-left:126px}
+.strong2{font-size:24px;color:#333;font-weight:bolder}
+.con404 p{color:#666;font-weight:bolder;font-size:12px}
+.con404 strong,ul.str{color:#000;font-weight:bolder}
+.con404 strong{font-size:14px}
+.l.str{font-size:12px;line-height:26px;margin:16px 0 154px 126px}
+.ul404{font-size:12px;color:#666;font-weight:bolder;line-height:24px;padding-left:126px}
+.ul404 li{background:url("http://s.dresswe.com/images/add_new/all_bg.gif") no-repeat scroll -477px -176px transparent;padding-left:30px}
+.imgbox{overflow:hidden}
+.imgbox ul li{float:left;margin-right:17px;height:105px}
+.imgbox ul li span{border:2px solid transparent;height:94px;overflow:hidden;display:block}
+.imgbox ul li.active span{border:2px solid #e7bf25}
+.imgbox ul li b{background:url(http://s.dresswe.com/images/imga.png) no-repeat center 0;height:5px;display:none}
+.imgbox ul li.active b{display:block}
+.imgbox ul li img{height:94px;cursor:url(http://s.dresswe.com/images/fangda.png),url(http://s.dresswe.com/images/fangda.cur),auto}
+.imgbox ul li.active img{cursor:url(http://s.dresswe.com/images/suoxiao.png),url(http://s.dresswe.com/images/suoxiao.cur),auto}
+.imgdi img{cursor:url(http://s.dresswe.com/images/suoxiao.png),url(http://s.dresswe.com/images/suoxiao.cur),auto;max-width:100%}
+.greybackground{background-color:#000;opacity:.5;filter:alpha(opacity=50);position:fixed;height:100%;width:100%;left:0;top:0;z-index:499}
+.box{background:none repeat scroll 0 0 #ff5847;display:none;font-size:12px;position:absolute;width:716px;z-index:500}
+.box_l{float:left;height:365px;margin-top:6px;width:6px}
+.box_r{float:left;height:365px;margin-top:6px;width:6px}
+.box_b{background:url("http://s.dresswe.com/images/box_bgb.jpg") no-repeat left bottom;width:703px;height:11px;float:left}
+.box_content,#box_content2{background:#fff;float:left;margin-top:6px;position:relative;width:703px;z-index:99999}
+.box_content{height:358px}
+.box_content input.gooncheck{background:url(http://s.dresswe.com/images/add_new/shopCart_bg.gif) no-repeat left -798px;border:0;height:31px;width:177px}
+.box_content input.gooncheck:hover{background-position:left -839px}
+.box_content center input{background:#e17749;border:medium none;border-radius:5px;color:#fff;cursor:pointer;font-size:12px;font-weight:bold;height:20px;line-height:20px;padding:0 10px 0 10px;text-align:center}
+.box_content center input:hover{background-color:#ff5847}
+.content_box{height:359px}
+.close{background:url("http://s.dresswe.com/images/box_close.jpg") no-repeat scroll left top transparent;height:24px;position:absolute;right:0;top:1px;width:25px;z-index:9999}
+.cin{float:left;height:100%;width:42%}
+.cin ul{line-height:20px;margin-left:24px;width:260px}
+.cin ul li.lb{font-size:12px;padding:10px 0 17px;text-align:center}
+.cin ul li.lb a{color:#ff5847}
+.cin ul li.la{padding-top:10px}
+.cin ul li.lc{color:#ff5847;font-size:12px;text-align:left}
+.cin ul li input.l{background:none repeat scroll 0 0 transparent;border:1px solid #ccc;width:223px;line-height:20px;height:20px;padding:0 2px;margin:10px 0 0}
+.si_t{color:#ff5847;font-size:16px;padding:60px 0 12px 24px}
+.si_btn{background-color:#e17749;padding:0 15px;text-align:center;font-size:14px;color:#fff;height:30px;line-height:30px;border:0;cursor:pointer;border-radius:5px}
+.si_btn:hover{background-color:#ff5847}
+.box .cb{color:#222;font-weight:normal}
+.register b span{color:#d60b0f}
+.register{background:url("http://s.dresswe.com/images/register_bg.jpg") repeat-y scroll left top #f6f6f6;float:left;height:100%;line-height:15px;width:58%}
+.register strong{color:#ff5847;display:block;font-size:16px;font-weight:normal;padding:59px 0 10px 24px}
+.register input.i{background:none repeat scroll 0 0 #fff;border:1px solid #ccc;width:223px;line-height:20px;height:20px;padding:0 2px}
+.rsp{font-size:10px}
+.sps{color:#ff5847;font-size:10px}
+.rg{padding:0 18px 0 25px;font-size:11px}
+.cbx_agree{margin-right:5px}
+.tdul{text-decoration:underline}
+.box_content .register .rg a{color:#5c5c5c;text-decoration:underline;padding-left:3px}
+.box_content .register .rg a:hover{color:#ff5847;text-decoration:underline}
+.cbx_agree{margin-right:5px}
+.register{padding:25px 0 30px 0;text-align:center}
+.register .si_btn{margin-left:79px}
+.wait2,#wait1{position:absolute;left:279px;top:117px}
+.LoginEmail{border:1px solid #999;width:223px;line-height:20px;height:20px;margin:8px 0 0}
+.LoginPwd{border:1px solid #999;width:223px;line-height:20px;height:20px;margin:8px 0 0}
+.new_ress,.new_ress tr,.new_ress td{border:medium none}
+.new_ress{width:652px}
+.new_ress span{color:#f00;padding:0 5px}
+.ress_an2{border:1px solid #ccc;height:36px;width:320px}
+.new_ress p{color:#aaa}
+.save{background:url("http://s.dresswe.com/images/a_btn_bg1.gif") no-repeat scroll -188px -72px transparent;border:medium none;height:27px;width:68px}
+.rsp{font-size:10px}
+.cbx_agree{margin-right:5px}
+.tdul{text-decoration:underline}

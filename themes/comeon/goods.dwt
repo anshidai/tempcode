@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$goods.goods_name}, {$catinfo.cat_name} - {$sitename}</title>
+<meta name="Keywords" content="<!--{if $keywords}-->{$keywords}<!--{else}-->{$goods.goods_name}At a reasonable price to sell, Temperqueen has a variety of similar goods, buy cheap {$goods.goods_name} goods and similar goods on the Temperqueen.com<!--{/if}-->" /> 
+<meta name="Description" content="{$goods.goods_name}, <!--{if $seodescription}-->{$seodescription}<!--{else}-->{$goods.goods_name}At a reasonable price to sell, Temperqueen has a variety of similar goods, buy cheap {$goods.goods_name} goods and similar goods on the Temperqueen.com<!--{/if}-->, {$sitename}" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="detail.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" hreflang="en" href="http://www.temperqueen.com/" />
+{insert_scripts files='common.js,transport.js,mzp-packed.js'}
+<script type="text/javascript">
+function $id(element) {
+  return document.getElementById(element);
+}
+</script>
+</head>
+
+<body>
+<div id="mask_layer"></div>
+<div id="globalWrapper">
+  <script type="text/javascript">
+  var process_request = "Please waiting...";
+</script>
+
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+
+<!--g_content S  -->
+<div class="g_content">
+       
+    <div class="position">
+        <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+    </div>
+    
+    <div id="product">
+        <!--left S  -->
+        <div class="left">
+           <!-- zoom-img begin -->
+                <div class="zoom_thumbs">
+                    <div class="small_thumbs">
+                        <span class="before" id="gotop"></span>
+                            <div class="smoll" id="showArea">
+                                <div class="innserimg">
+                                    <a href="{$goods.original_img}" rel="zoom1" rev="{$goods.original_img}"><img src="{$goods.goods_thumb}" /></a>
+                                    <!-- {if $pictures}-->
+                                    <!-- {foreach from=$pictures item=picture}-->
+                                    <a href="{$picture.img_url}" rel="zoom1" rev="{$picture.img_url}"><img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" /></a>
+                                    <!--{/foreach}-->
+                                    <!-- {/if}-->
+                                </div>
+                            </div>
+                        
+                        <span class="after" id="gobottom"></span>
+                    </div>
+                    <div class="bigzoom_thumbs">
+                        <span class="offsale sale_{$goods.sale_num}" style="right:-5px;"></span>
+                        <a href="{$goods.goods_img}" id="zoom1" class="MagicZoom MagicThumb">
+                            <img src="{$goods.original_img}" id="main_img" class="main_img" style="width:390px; height:540px;" />
+                        </a>
+                    </div>
+                </div>
+                <!-- zoom-img end -->
+        </div>
+        <!--left E  -->   
+        
+        <!--right S  -->        
+        <div class="right">
+            <h1>{$goods.goods_name} {$catinfo.cat_name} <span> ItemCode:{$goods.goods_sn}</span></h1>
+            
+            <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+            <div class="market">
+                <div class="market_left">
+                    <p class="m1">
+                        Market Price: 
+                        <span id="market_price">
+                            <span class="fuhao">USD </span>
+                            <span class="huobi" data-price="{$goods.market_price}">{$goods.market_price}</span>
+                        </span>
+                    </p>
+                    <p class="m2">
+                        Price: 
+                        <span>
+                            <b>
+                                <span id="allPrice">
+                                    <span class="fuhao">USD $</span>
+                                    <span id="infoprice" class="huobi" data-price="{$goods.shop_price}" itemprop="price">{$goods.shop_price}</span>
+                                </span>
+                            </b>
+                        </span>
+                    </p>
+                    <!--{if $goods.is_promote and $goods.gmt_end_time }-->
+                    
+                    <div class="offtime" id="timeout">
+                        <div id="timeinner"><span>&nbsp;days&nbsp;</span></div>
+                    </div>
+                        <script type="text/javascript">
+                        var target = [];
+                        var time_id = [];
+                        target[target.length] = new Date("{$goods.gmt_end_time_format}").getTime();
+                        time_id[time_id.length] = "timeinner";
+                        setTimeout("show_date_time_0()", 100);
+                    </script>
+                        
+                    <!--{/if}-->
+              </div>
+            </div>
+            
+            
+            <div id="order">
+                <ul class="size">
+                    <li>
+                        <select name="attrColor" id="attrColor" class="d_s">
+                            <option value="">Select Color</option>
+                            <option value="White">White</option>
+                            <option value="Ivory">Ivory</option>
+                            <option value="Champagne">Champagne</option>
+                            <option value="Black">Black</option>
+                            <option value="Red">Red</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Purple">Purple</option>
+                            <option value="Pink">Pink</option>
+                            <option value="Grape">Grape</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Burgundy">Burgundy</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Daffodil">Daffodil</option>
+                            <option value="Fuchsia">Fuchsia</option>
+                            <option value="Dark Champagne">Dark Champagne</option>
+                            <option value="Leopard">Leopard</option>
+                            <option value="Multi">Multi</option>
+                            <option value="Lilac">Lilac</option>
+                            <option value="Lavender">Lavender</option>
+                            <option value="Light Purple">Light Purple</option>
+                            <option value="Light Sky Blue">Light Sky Blue</option>
+                            <option value="Light Slate Gray">Light Slate Gray</option>
+                            <option value="Sky Blue">Sky Blue</option>
+                            <option value="Royal Blue">Royal Blue</option>
+                            <option value="Dark Navy">Dark Navy</option>
+                            <option value="Sage Green">Sage Green</option>
+                            <option value="Hunter Green">Hunter Green</option>
+                            <option value="Dark Green">Dark Green</option>
+                            <option value="light green">light green</option>
+                        </select> 
+                    </li>
+                    
+                    <li>
+                        <select name="attrSize" id="attrSize" class="d_s">
+                            <option value="">Select Size</option>
+                            <option value="US2-UK6-EUR32">US2-UK6-EUR32</option>
+                            <option value="US4-UK8-EUR34">US4-UK8-EUR34</option>
+                            <option value="US6-UK10-EUR36">US6-UK10-EUR36</option>
+                            <option value="US8-UK12-EUR38">US8-UK12-EUR38</option>
+                            <option value="US10-UK14-EUR40">US10-UK14-EUR40</option>
+                            <option value="US12-UK16-EUR42">US12-UK16-EUR42</option>
+                            <option value="US14-UK18-EUR44">US14-UK18-EUR44</option>
+                            <option value="US16-UK20-EUR46">US16-UK20-EUR46</option>
+                            <option value="US14W-UK18-EUR44">US14W-UK18-EUR44</option>
+                            <option value="US16W-UK20-EUR46">US16W-UK20-EUR46</option>
+                            <option value="US18W-UK22-EUR48">US18W-UK22-EUR48</option>
+                            <option value="US20W-UK24-EUR50">US20W-UK24-EUR50</option>
+                            <option value="US22W-UK26-EUR52">US22W-UK26-EUR52</option>
+                            <option value="US24W-UK28-EUR54">US24W-UK28-EUR54</option>
+                            <option value="US26W-UK30-EUR56">US26W-UK30-EUR56</option>
+                        </select> 
+                    </li>
+                    
+                </ul>
+            </div>                      
+            
+            <div class="clear"></div>
+            
+            <!--<div class="price-total">
+                <p>
+                    Quantity:  <input name="number" type="text" value="1" size="4" onblur="changePrice()" id="number" class="textInput_member">
+                    Total：USD <span id="ECS_GOODS_AMOUNT" class="goodsPrice">${$goods.shop_price}</span>    
+                </p>
+            </div>-->
+            <div class="tity">
+                <ul class="quan">
+                    <li class="si"><input name="custom" id="customcheck" type="checkbox" onclick="customAttr()" /> Custom measurements:</li>
+                </ul>
+             </div>
+             <div class="custom_ments clearfix" id="custom_measurements" style="display:none;">
+                <p>Looking for a perfect fit? For an additional $ 19.9, our tailors will use your exact measurements to create a made-to-order dress just for you.</p>
+                <dl class="cus_from clearfix">
+                    <dt>A. Shoulder Width:</dt>
+                    <dd><input id="cus_shoulder_width" type="text" name="cus_shoulder_width"> cm</dd>
+                    <dt>B. Bust Size:</dt>
+                    <dd><input id="cus_bust_size" type="text" name="cus_bust_size"> cm</dd>
+                    <dt>C. Waist Size:</dt>
+                    <dd><input id="cus_waist_size" type="text" name="cus_waist_size"> cm</dd>
+                    <dt>D. Hip Size:</dt>
+                    <dd><input id="cus_hip_size" type="text" name="cus_hip_size"> cm</dd>
+                    <dt>E. Hollow to floor<br>(for floor length dress):</dt>
+                    <dd><input id="cus_hollow_to_floor" type="text" name="cus_hollow_to_floor"> cm</dd>
+                    <dt>F. Hollow to Knee:</dt>
+                    <dd><input id="cus_hollow_to_knee" type="text" name="cus_hollow_to_knee"> cm</dd>
+                </dl>     
+             </div>
+            <div class="blank5"></div>            
+            <div class="bttn">
+                <input type="button" value="Add to Bag" class="add_cart but1" onclick="javascript:addToCart({$goods.goods_id})" />
+                <a class="favorites"  href="javascript:collect({$goods.goods_id});"></a>
+                <span class="safeico"></span> 
+            </div>
+            <div class="blank5" style="height:2px;"></div>
+        
+            <ul class="meas">
+                  <li class="iteminfo"><a href="#tabs" rel="nofollow">Item Information</a></li>
+                    <li class="OriginalDesign"><a href="#tabs" rel="nofollow">Original Design</a></li>
+                    <li class="sizecha"><a href="#tabs" rel="nofollow">Size Chart</a></li>
+                    <!-- <li class="ColorChart"><a class="property" href="#tabs" rel="nofollow">Color Chart</a></li> -->
+                    <li class="measgu"><a href="#tabs" rel="nofollow">Measuring Guide</a></li>
+                    <li class="FAQs"><a class="property" href="#tabs" rel="nofollow">FAQS</a></li>
+                    <li class="QualityGuarantee"><a class="property" href="#tabs" rel="nofollow">Quality Guarantee</a></li>
+            </ul>
+            
+            <ul class="Item clearfix">
+                <li class="faeydress_star">
+                    <div style="float: left;">
+                        <span class="l_star50"></span>
+                        <a href="#rwt" class="first" rel="nofollow">Reviews ({$comment.count})</a> 
+                        <a href="#rwt" rel="nofollow">Write a review</a>
+                    </div>
+                </li>
+                <li class="share_block">
+                    <a href="javascript:;" onclick="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title));" class="facebook"></a>
+                    <a href="javascript:;" onclick="javascript:window.open('http://pinterest.com/pin/create/button/?url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)+'&media='+encodeURIComponent('http://www.temperqueen.com/{$goods.original_img}')+'&description='+encodeURIComponent('{$goods.goods_name}')+'&is_video=false');" class="pinterest"></a>
+                    <a href="javascript:;" onclick="javascript:window.open('https://twitter.com/share?url='+encodeURIComponent(document.location.href)+'%3Futm_medium%3Dtwitter%26utm_source%3Dtwitter.com&text='+encodeURIComponent(document.title));" class="twitter"></a>
+                    <a href="javascript:;" onclick="javascript:window.open('https://plus.google.com/share?url='+encodeURIComponent(document.location.href)+'%3Futm_medium%3Dgoogleplus&hl=en-US');" class="googleplus"></a>
+                </li>
+            </ul>
+            
+            <div class="madetoorder_box">
+                <ul>
+                    <li class="madetoorder"><img src="themes/comeon/images/made-to-drder-_en.jpg">
+                        <p>This dress is<strong>Made-To-Order</strong>. Whether you choose a standard size or custom measurements, our tailors craft each dress to order.<br>
+                        By selecting "Custom measurements", your dress will be personally tailored for your exact fit.
+                        </p>
+                    </li>
+                    <!-- <li><strong>Weight:</strong> 2.000kilogram</li>-->
+                    
+                    <!-- <li class="shippingtime"><strong>Ship to:</strong>
+                            <select name="country" id="shicountryid">
+                                <option value="223">United States</option>
+                                <option value="1">Afghanistan</option>
+                            </select>
+                            <strong>Purchase Quantity:</strong>
+                            <input id="ship_quantity" class="shipping-text" type="text" value="1" size="5" name="ship_quantity">
+                            <span class="c-button-2 shipping-button"><input type="button" value="Calculate"></span>
+                    </li> -->
+                    <li id="shipcostdiv">
+                        <table width="100%" border="0" cellspacing="1" cellpadding="0" class="Shippingtable"> 
+                        <tbody>
+                            <tr>
+                                <th align="center" width="170">Service</th>
+                                <th align="center" width="163">Estimated Delivery Time</th>
+                                <th align="center" width="157">Shipping Cost</th>
+                            </tr>
+                            <tr>
+                                <td align="center">DHL</td>
+                                <td align="center">2-5 days</td>
+                                <td align="center"><span id="Standard_shipping">Free Shipping</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">EMS Express Service</td>
+                                <td align="center">10-15 days </td>
+                                <td align="center"><span id="Standard_shipping">Free Shipping</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        We ship to over 200 countries worldwide.<br>
+                        Tailoring Time: 15-25 Business Days.<br>
+                        Shipping Time: 2-5 Business days.<br>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- <div class="maindec">
+                <ul class="decul">
+                    <li class="active"><img src="images/hq.png">Processing</li>
+                    <li><img src="images/xs.png">Payment</li>
+                </ul>
+                <div class="bixuantab">
+                    <div class="bix active">
+                        <span class="st">We ship to over 200 countries worldwide.</span><br>
+                        <span class="st">Tailoring Time: 15-25 Calendar Days.</span><br>
+                        <span class="st">Shipping Time: 2-5 Calendar days.</span>
+                   </div>
+                   <div class="bix">
+                       <img src="images/paymeth.png"><p>We currently accept 21 currencies for your payment.  Accept most online payment methods, and Western Union and Bank Transfer</p>
+                   </div>
+                </div>
+            </div> -->
+            
+            
+           </form> 
+            
+        </div>
+        <!--right E  -->
+        <div class="clear"></div>
+        <div class="pd_script">
+            <div class="tabs">
+                <ul id="tabs">
+                    <li class="select" tab="tab1">Item Information</li>
+                    <li tab="tab2">Size Chart</li>
+                    <li tab="tab4">Delivery</li>
+                    <li tab="tab5">Measuring Guide</li>
+                    <li tab="tab6">Original Design</li>
+                    <li tab="tab7">FAQs</li>
+                    <li tab="tab8">Quality Guarantee</li>
+                </ul>
+            </div>
+            
+            <!-- tab_con1 start -->
+            <div id="tab1" class="goods_con tab_con">
+              <dl>
+                <dd>
+                  <ul>
+                    <!--{if $goods_attr}-->
+                    <!-- {foreach from=$goods_attr item=attr} -->
+                        <!--{if $attr.value !='' && ($attr.name != 'Select Size' || $attr.name != 'Color')}-->
+                        <li>
+                        <div class="li_title">{$attr.name|escape:html}:</div>
+                        <div class="li_con">&nbsp;&nbsp;{$attr.value}</div>
+                        </li>
+                        <!--{/if}-->
+                    <!-- {/foreach}--> 
+                    <!--{/if}-->
+                      <div class="clear"></div>
+                  </ul>
+                </dd>
+                <dd></dd>
+              </dl>
+              <div class="content" id="content">
+              <p class="desc">{$goods.goods_desc} </p>
+              <p class="image"><img src="{$goods.goods_img}" /></p>
+              <!-- {if $pictures}-->
+                <!-- {foreach from=$pictures item=picture}-->
+                <p class="image"><img src="{$picture.img_url}" /></p>
+                <!--{/foreach}-->
+              <!-- {/if}-->
+              </div>   
+        </div>
+        <!-- tab_con1 end -->
+        
+        <!-- tab_con2 start -->
+        <div id="tab2" class="goods_con tab_con" style="display:none;">
+            <!-- #BeginLibraryItem "/library/goods_size_chart.lbi" --><!-- #EndLibraryItem -->      
+        </div>
+        
+        <!-- tab_con3 start -->
+        <div id="tab3" class="goods_con tab_con" style="display:none;">
+                
+        </div>
+        
+        <!-- tab_con4 start -->
+        <div id="tab4" class="goods_con tab_con" style="display:none;">
+            <div class="delivery">
+                <h3 class="dtit">Formal Dresses</h3>
+                <p class="ddesc">Receiving time (Time needed for your order to be received successfully since you made the order) = Tailoring time (around 15-20 Calendar days) +shipping time (around 2-5 Calendar days)</p>
+                <p><img src="images/delivery_01.jpg" alt="" /></p>
+                <h3 class="dtit">Wedding Dresses</h3>
+                <p class="ddesc">Receiving time (Time needed for your order to be received successfully since you made the order) = Tailoring time (around 20-25 Calendar days) +shipping time (around 2-5 Calendar days)</p>
+                <p><img src="images/delivery_02.jpg" alt="" /></p>
+                <p class="ddesc">Tailoring Time: 15-25 Calendar days Tailoring Time refers the time needed for the preparation of order item(s) before shipping</p><br />
+                <p class="ddesc">We ship to over 200 countries worldwide. <br />
+                    Tailoring Time: 15-25 Calendar Days.<br />
+                    Shipping Time: 2-5 Calendar days.<br /></p>
+            </div>    
+        </div>
+        
+        <!-- tab_con5 start -->
+        <div id="tab5" class="goods_con tab_con" style="display:none;">
+            <!-- #BeginLibraryItem "/library/goods_measuring_guide.lbi" --><!-- #EndLibraryItem -->      
+        </div>
+        
+        <!-- tab_con6 start -->
+        <div id="tab6" class="goods_con tab_con" style="display:none;">
+            <!-- #BeginLibraryItem "/library/goods_original_design.lbi" --><!-- #EndLibraryItem -->      
+        </div>
+        
+        <!-- tab_con7 start -->
+        <div id="tab7" class="goods_con tab_con" style="display:none;">
+            <!-- #BeginLibraryItem "/library/goods_faq.lbi" --><!-- #EndLibraryItem -->      
+        </div>
+        
+        <!-- tab_con8 start -->
+        <div id="tab8" class="goods_con tab_con" style="display:none;">
+            <!-- #BeginLibraryItem "/library/goods_quality_guarantee.lbi" --><!-- #EndLibraryItem -->
+        </div>
+        
+        <div class="clear"></div>
+         
+        <!-- reviews-wrapper start -->
+        <div class="review-tit" id="rwt">
+            <h3 class="tit">Product Reviews</h3>
+            <span class="des">See All Reviws</span>
+        </div>
+        <div class="reviews-wrapper clearfix">
+        
+            <!-- review-top start -->
+            <div class="review-top clearfix">
+                <span class="review-dialog" id="comment_show">Write A Review</span>
+                <div class="average-rating">
+                    <div class="rating-box">
+                        <p class="average_p">Average Rating:</p>
+                        <div class="point_start"><span class="length" style="width:100%;"></span></div>
+                        <p class="average_views">based on {$comment.count} reviews  </p>
+                    </div>
+                </div>
+                
+                <div class="filters">
+                    <h4>Result Filters</h4>
+                    <ul class="review-filters">
+                        <li>Last Week ({$comment.week_1})</li>
+                        <li>Last 4 Weeks ({$comment.week_4})</li>
+                        <li>Last 6 Months ({$comment.month_6})</li>
+                        <li>All Reviews ({$comment.count})</li>
+                    </ul>
+                </div>
+                
+                <!-- separate-rating start -->
+                <div class="separate-rating">
+                    <div class="minsart">
+                        <div class="startbox"><span class="length" style="width:100%;"></span></div>
+                        <div class="scrollbox"><span class="length" style="width:{$comment.star5_per}%;"></span></div>
+                        <div class="percentbox"><span><!--{if $comment.star5_per}-->{$comment.star5_per}<!--{else}-->0<!--{/if}-->% ({$comment.star5})</span></div>
+                    </div>
+                    <div class="minsart">
+                        <div class="startbox"><span class="length" style="width:80%;"></span></div>
+                        <div class="scrollbox"><span class="length" style="width:{$comment.star4_per}%;"></span></div>
+                        <div class="percentbox"><span><!--{if $comment.star4_per}-->{$comment.star4_per}<!--{else}-->0<!--{/if}-->% ({$comment.star4})</span></div>
+                    </div>
+                    <div class="minsart">
+                        <div class="startbox"><span class="length" style="width:60%;"></span></div>
+                        <div class="scrollbox"><span class="length" style="width:{$comment.star3_per}%;"></span></div>
+                        <div class="percentbox"><span><!--{if $comment.star3_per}-->{$comment.star3_per}<!--{else}-->0<!--{/if}-->% ({$comment.star3})</span></div>
+                    </div>
+                    <div class="minsart">
+                        <div class="startbox"><span class="length" style="width:40%;"></span></div>
+                        <div class="scrollbox"><span class="length" style="width:{$comment.star2_per}%;"></span></div>
+                        <div class="percentbox"><span><!--{if $comment.star2_per}-->{$comment.star2_per}<!--{else}-->0<!--{/if}-->% ({$comment.star2})</span></div>
+                    </div>
+                    <div class="minsart">
+                        <div class="startbox"><span class="length" style="width:20%;"></span></div>
+                        <div class="scrollbox"><span class="length" style="width:{$comment.star1_per}%;"></span></div>
+                        <div class="percentbox"><span><!--{if $comment.star1_per}-->{$comment.star1_per}<!--{else}-->0<!--{/if}-->% ({$comment.star1})</span></div>
+                    </div>
+                </div>
+                <!-- separate-rating end -->
+            </div>
+            <!-- review-top end -->
+            
+            <!-- reviews-list start -->
+            <div class="reviews-list clearfix">
+                <!--<div class="page-collateral clearfix">
+                    <span class="amount">Items <!--{if $comment_count}-->{$comment_count}<!--{else}-->0<!--{/if}--> total</span>
+                    <div class="comment-pages">
+                        <strong>Page:</strong>
+                        <a href="javascript:;" class="prevlink"></a>
+                        <span class="currlink">1</span>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="javascript:;" class="nextlink"></a>
+                    </div>
+                </div>-->
+                <!-- comment-list start -->
+                <div class="comment-list clearfix">
+                    <!-- comment-block start -->
+                    <!--{if $commentlist}-->
+                    <!-- {foreach from=$commentlist item=tags}-->  
+                    <div class="comment-block clearfix">
+                        <div class="comment-sider">
+                            <strong>{$tags.user_name}</strong>
+                            <span class="date">{$tags.date} <br></span>
+                        </div>
+                        <div class="comment-right">
+                            <div class="inner-block">
+                                <h3 class="tit">{$goods.goods_name}</h3>
+                                <p class="txt">{$tags.content}</p>
+                                <!-- <p class="help">Was this review helpful?    yes |   no</p> -->
+                            </div>
+                            <div class="rating-box">
+                                <ul>
+                                    <li><span class="name">Quality</span><div class="startbox"><span class="length" style="width:{$tags.quslity_rank_all}0%;"></span></div></li>
+                                    <li><span class="name">Value</span><div class="startbox"><span class="length" style="width:{$tags.value_rank_all}0%;"></span></div></li>
+                                    <li><span class="name">Price</span><div class="startbox"><span class="length" style="width:{$tags.price_rank_all}0%;"></span></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--{/foreach}-->
+                    <!--{/if}-->
+                    <!-- comment-block end --> 
+                    
+                </div>
+                <!-- comment-list end -->
+                
+            </div>
+            <!-- reviews-list end -->    
+
+        </div>
+        <!-- reviews-wrapper end -->
+
+        <div class="blank5" style="height:20px;"></div>
+      </div>
+        
+    </div>
+    
+</div>
+<!--g_content E -->
+
+<div class="clear"></div>
+<div class="g_content tagslist">
+    <div class="tag_tit">
+        <h3 class="tit">Recommended Popular Categories</h3>
+    </div>
+    <div class="tags_content clearfix">
+        <!--{if $keytaglist}-->
+        <ul>
+            <!-- {foreach from=$keytaglist item=tags}-->
+             <li><a href="{$tags.key_url}" title="{$tags.key_name}">{$tags.key_name}</a></li>
+            <!--{/foreach}-->  
+       </ul> 
+        <!-- {/if}-->   
+    </div>
+</div>
+<div class="clear"></div>
+
+<!-- comment-layer start -->
+
+<div class="comment-layer" id="comment-layer" style="display:none">
+    <input type="hidden" name="quslity_rank" id="quslity_rank" value="5" />
+    <input type="hidden" name="value_rank" id="value_rank" value="5" />
+    <input type="hidden" name="price_rank" id="price_rank" value="5" />
+    <input type="hidden" name="cmt_type" id="cmt_type" value="0" />
+    <input type="hidden" name="goods_id" id="goods_id" value="{$goods.goods_id}" />
+    <div class="header-tit">Tell us what you think about this item:</div>
+    <div class="overall-raiting clearfix">
+        <div class="win-top clearfix">
+            <div class="left clearfix">
+                Overall Rating <em class="cred">*</em><br>
+                select the number of stars that reflect <br>
+                your overall item rating<br>
+            </div>
+            <div class="right clearfix">
+                <ul class="rating-box">
+                    <li>
+                        <span class="name">Quality</span>
+                        <div class="startbox movestar" id="quslity_star">
+                            <span value="1" class="active-star" ></span>
+                            <span value="2" class="active-star"></span>
+                            <span value="3" class="active-star"></span>
+                            <span value="4" class="active-star"></span>
+                            <span value="5" class="active-star"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="name">Value</span>
+                        <div class="startbox movestar" id="value_star">
+                            <span value="1" class="active-star" ></span>
+                            <span value="2" class="active-star"></span>
+                            <span value="3" class="active-star"></span>
+                            <span value="4" class="active-star"></span>
+                            <span value="5" class="active-star"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="name">Price</span>
+                        <div class="startbox movestar" id="price_star">
+                            <span value="1" class="active-star" ></span>
+                            <span value="2" class="active-star"></span>
+                            <span value="3" class="active-star"></span>
+                            <span value="4" class="active-star"></span>
+                            <span value="5" class="active-star"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- win-top end -->
+    </div>
+    <div class="clear"></div>    
+    <!-- comment-form start -->
+    <div class="comment-form clearfix">
+        <a href="javascript:;" class="close" id="comment_close" title="close"></a>
+        <div class="left clearfix">
+            <div class="review-des-top clearfix">
+                Your Review <em class="cred">*</em><br>
+                share your opinion with others by<br>
+                writing a detailed review<br>
+            </div>
+            <div class="review-des-bottom clearfix">
+                when writing your review, try to avoid:<br>
+                - non-product related comments<br>
+                - price and promotion details<br>
+                - inappropriate language<br>
+                - info about other companies or websites<br>
+                - any personal info - we want to <br>protect your privacy!<br>
+            </div>
+        </div>
+        <!-- left end -->
+
+        <div class="form-right clearfix">
+            <dl class="form-dl clearfix">
+                <dd>
+                    <strong>Nickname: </strong>
+                    <div class="input-comment"><input type="text" name="nickname" id="review_nickname" class="input-text"></div>
+                </dd>
+                <dd>
+                    <strong>Review Title: </strong>
+                    <div class="input-comment"><input type="text" name="title" id="review_title" class="input-text"></div>
+                </dd>
+                <dd>
+                    <strong>Overall Review: <em class="cred">*</em></strong>
+                    <div class="input-comment"><textarea name="content" id="review_content" cols="5" rows="3" class="required-entry"></textarea></div>
+                </dd>
+                <dt>
+                    <div class="comment-submit">
+                        <input type="button" name="submit" onclick="submitComment();" class="comment-btn" value="Submit" />
+                    </div>
+                </dt>
+            </dl>
+        </div>
+        <!-- right end -->    
+    </div>
+    <!-- comment-form end -->
+</div>
+<!-- comment-layer end -->
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem --> 
+
+<script type="text/javascript">
+    var goods_id = goodsId = {$goods.goods_id};
+     function changePrice()
+    {
+      var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+      var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+      Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+    }
+    
+    function changePriceResponse(res)
+    {
+      if (res.err_msg.length > 0)
+      {
+        alert(res.err_msg);
+      }
+      else
+      {
+        document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+        if (document.getElementById('ECS_GOODS_AMOUNT'))
+          document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+      }
+    }
+    
+</script>
+
+{insert_scripts files='jquery.LoadImage.js,goods.js'} 
+
+<!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery(".small-color li").mouseover(function(){
+            var $_this = jQuery(this);
+            var parentobj = $_this.parent().parent().find(".big-color");
+            parentobj.find("img").attr('src', $_this.find('img').attr('src'));
+            parentobj.find("span").html($_this.find('span').html());   
+        });
+    });
+</script>
+</body>
+</html>

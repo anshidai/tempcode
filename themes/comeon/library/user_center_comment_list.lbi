@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<h5><span>{$lang.label_comment}</span></h5>
+<div class="blank"></div>
+<!--{foreach from=$comment_list item=comment} -->
+    <div class="f_l">
+        <b>{if $comment.comment_type eq '0'}{$lang.goods_comment}{else}{$lang.article_comment}{/if}: </b><font class="f4">{$comment.cmt_name}</font>&nbsp;&nbsp;({$comment.formated_add_time})
+    </div>
+    <div class="f_r">
+        <a href="user.php?act=del_cmt&amp;id={$comment.comment_id}" title="{$lang.drop}" onclick="if (!confirm('{$lang.confirm_remove_msg}')) return false;" class="f6">{$lang.drop}</a>
+    </div>
+    <div class="msgBottomBorder">
+        {$comment.content|escape}<br />
+        <!--{if $comment.reply_content}-->
+        <b>{$lang.reply_comment}：</b><br />
+        {$comment.reply_content}
+        <!--{/if}-->
+    </div>
+<!-- {/foreach} -->
+<!-- {if $comment_list}-->
+    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<!-- {else}-->
+    {$lang.no_comments}
+<!-- {/if}-->

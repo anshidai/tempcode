@@ -1,0 +1,63 @@
+<!-- $Id: content_key_list.htm 17019 2010-01-29 10:10:34Z yoja365.com $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ad position list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+<tr>
+<th width="20%">关键词</th>
+<th width="40%">URL</th>
+<th width="15%">内链重复次数</th>
+<th width="10%">排序</th>
+<th width=  "15%">操作</th>
+</tr>
+{foreach from=$ckey_list item=ckey}
+<tr align="center" >
+<td align="left" class="first-cell" >     
+<span>{$ckey.key_name}</span>  
+</td>
+<td align="left" class="first-cell" >     
+<span>{$ckey.key_url}</span>  
+</td>
+<td align="right"><span >{$ckey.replace_num}</span></td>
+<td align="right"><span >{$ckey.sort_order}</span></td>
+<td align="center">
+<a href="content_key.php?act=edit&amp;key_id={$ckey.key_id}">{$lang.edit}</a> |
+<a href="content_key.php?act=remove&amp;key_id={$ckey.key_id}" onclick="return confirm('确认要删除这个关键词吗？');" title="{$lang.remove}">{$lang.remove}</a>
+</td>
+</tr>
+{/foreach}
+<tr><td colspan=4 align=right>{include file="page.htm"}</td></tr>
+</table>
+{if $full_page}
+</div>
+</form>
+
+{literal}
+<script type="text/javascript" language="JavaScript">
+listTable.recordCount = {$record_count};
+listTable.pageCount = {$page_count};
+
+{foreach from=$filter item=item key=key}
+listTable.filter.{$key} = '{$item}';
+{/foreach}
+{literal}
+
+onload = function()
+{
+// 开始检查订单
+startCheckOrder();
+}
+
+
+{/literal}
+</script>
+{/literal}
+
+{include file="pagefooter.htm"}
+{/if}

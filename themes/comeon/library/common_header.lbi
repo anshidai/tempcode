@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='jquery-1.4.2.min.js'} 
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div class="logo"><a href="http://www.temperqueen.com">temperqueen</a></div>
+    <div class="header_r">
+        <div class="top_nav">
+            <ul class="usertool">
+                <!-- <li class="chatbt"><a rel="nofollow" target="_blank" href="#">Live Chat </a></li>-->
+                <li class="accountbt showbut"><a rel="nofollow" href="user.php?act=order_list">My Account<span class="mysan"></span></a>
+                    <div class="my-account-con showbox" style="display: none;">
+                    <ul>
+                        <li><a class="order" href="/user.php?act=order_list" rel="nofollow"><span></span>Order</a></li>
+                        <li><a class="credits" href="/user.php?act=bonus" rel="nofollow"><span></span>Coupons</a></li>
+                        <li><a class="favorites" href="/user.php?act=collection_list" rel="nofollow"><span></span>Favorites</a></li>
+                        <li><a class="as" href="/user.php?act=account_log" rel="nofollow"><span></span>Account Details</a></li>
+                        <li><a class="ifg" href="/user.php?act=profile" rel="nofollow"><span></span>My Information</a></li>
+                        <li id="userLogOut"></li>
+                    </ul>
+                    </div>
+                </li>
+                {insert_scripts files='transport.js,utils.js'}
+                {insert name='member_info'}
+                <!--
+                <li class="currshow">
+                    <div class="currency form_select showbut">
+                    <span class="showbt" id="CurrencyHuobidiv">USD<span class="mysan"></span></span>
+                    <ul id="currencyul" class="showul showbox" style="display: none;">
+                        <li>USD</li>
+                    </ul>
+                    </div>
+                </li>
+                 -->
+            </ul>
+        </div>
+        
+        <div class="search">
+            <div class="buy_car">{insert name='cart_info'}</div>
+            <div class="search_mode">
+                <div class="search_box"><input class="input_search" name="" value="" type="text" /></div>
+                <div class="bt_search"><input class="bt_searchr" name="" value="" type="button" /></div>
+            </div>
+        </div>
+    </div>

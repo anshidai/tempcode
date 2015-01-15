@@ -1,0 +1,40 @@
+.g_recontent{width:1000px;margin:0 auto;}
+.g_recontent .n_l{line-height:30px;}
+
+.login,.l_find{border-right:solid 1px #8e8f8f;}
+.login li,.in_main .a_n a{color:#333;}
+.r_tit2{font-size:16px;color:#51423a;font-weight:700;}
+.register2{border:solid 1px #8e8f8f;overflow:hidden;zoom:1;background-color:#fff;margin:12px 0;padding:15px 70px 25px 40px;}
+.peme{color:#999;}
+.r_left{float:left;width:345px;}
+.login strong{height:64px;line-height:64px;font-size:14px;padding-left:5px;color:#51423a;}
+.rtext{width:220px;height:20px;border:solid 1px #8e8f8f;line-height:20px;padding:0 2px;}
+.login li a{display:block;text-decoration:underline;color:#ff5847;width:140px;margin:20px 0 30px;}
+#LoginEmail{margin-bottom:35px;}
+#LoginUsername{margin-bottom:35px;}
+#bg10 .login li a{color:0;}
+input.l_iput{background:url(images/shopCart_bg.gif) no-repeat scroll left -73px transparent;border:medium none;display:block;height:35px;width:185px;}
+.l_input{width:225px;border:1px solid #ccc;height:22px;line-height:22px;}
+.l_fpl{line-height:16px;font-size:11px;padding:2px 40px 6px 0;}
+li.fg{padding:42px 0 0 15px;}
+input.l_fp{background-color:#e17749;text-align:center;font-size:14px;color:#fff;font-weight:700;height:30px;line-height:30px;border:0;cursor:pointer;border-radius:5px;margin-right:10px;padding:0 15px;}
+li.fg b{font-size:11px;text-decoration:underline;color:#333;cursor:pointer;}
+.rhelp{padding-top:45px;}
+.rhelp li{height:26px;line-height:26px;}
+.rhelp li a{color:#6a7a06;text-decoration:underline;}
+.r_right{float:right;width:520px;}
+.r_right strong{height:53px;line-height:53px;font-size:14px;color:#51423a;padding-left:5px;}
+.r_right li{margin-bottom:8px;color:#51423a;font-size:11px;clear:both;}
+.r_right span{display:block;width:180px;float:left;text-align:right;font-size:12px;margin-top:5px;}
+.r_right p{float:right;width:335px;margin-top:5px;padding:0;}
+.rtext2{width:250px;height:20px;border:solid 1px #999;line-height:20px;padding:0 2px;}
+#cbx_agree{margin-right:5px;}
+#big .r_right li a{color:#5c5c5c;text-decoration:underline;}
+#c_btn{margin-left:185px;}
+#wait1{float:left;margin-left:20px;}
+.rbut1{background:url(images/shopCart_bg.gif) no-repeat scroll left -206px transparent;border:0 none;cursor:pointer;height:40px;width:186px;}
+.in_right .order_tit a{font-size:12px;}
+.registered{background:none repeat scroll 0 0 #fff;border:1px solid #ccc;width:960px;margin:10px auto;padding:20px;}
+.registered p strong{font-size:19px;line-height:25px;}
+input.l_fpu,input.rbut2{background-color:#e17749;text-align:center;font-size:14px;color:#fff;height:30px;line-height:30px;border:0;cursor:pointer;border-radius:5px;float:left;padding:0 15px;}
+input.l_fpu:hover,input.l_fp:hover,input.rbut2:hover{background-color:#ff5847;}

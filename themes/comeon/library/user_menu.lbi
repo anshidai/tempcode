@@ -1,0 +1,53 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="l_tit">My Account</div>
+    <div class="l_conn">
+        <div class="l_line"></div>
+        <dl class="l_list" id="dl_order">
+            <dt><span class="a_le abg1">Order</span></dt>
+            <dd>
+                <ul>
+                    <li><a href="user.php" {if $action eq 'default'}class="curs"{/if}>{$lang.label_welcome}</a></li>
+                    <li><a href="user.php?act=order_list" {if $action eq 'order_list'|| $action eq 'order_detail'}class="curs"{/if}>{$lang.label_order}</a></li>
+                    <li><a href="user.php?act=track_packages" {if $action eq 'track_packages'}class="curs"{/if}>{$lang.label_track_packages}</a></li>
+                    <!-- {if $affiliate.on eq 1} -->
+                    <li><a href="user.php?act=affiliate" {if $action eq 'affiliate'}class="curs"{/if}>{$lang.label_affiliate}</a></li>
+                    <!-- {/if} -->
+                </ul>
+            </dd>
+        </dl>
+        <dl class="l_list" id="dl_coupons">
+            <dt><span class="abg2 a_le">Coupons</span></dt>
+            <dd>
+                <ul>
+                    <li id="li_coupons"><a href="user.php?act=bonus" {if $action eq 'bonus'}class="curs"{/if}>{$lang.label_bonus}</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="l_list" id="dl_message">
+            <dt><span class="abg3 a_le">Message Box</span></dt>
+            <dd>
+                <ul>
+                    <li><a href="user.php?act=message_list" {if $action eq 'message_list'}class="curs"{/if}>{$lang.label_message}</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="l_list" id="dl_person">
+            <dt><span class="abg4 a_le">Personalizatton</span></dt>
+            <dd>
+                <ul>
+                    <li><a href="user.php?act=collection_list" {if $action eq 'collection_list'}class="curs"{/if}>{$lang.label_collection}</a></li>
+                    <li><a href="user.php?act=address_list" {if $action eq 'address_list'}class="curs"{/if}>{$lang.label_address}</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="l_list" id="dl_setting">
+            <dt><span class="abg5 a_le">Settings</span></dt>
+            <dd>
+                <ul>
+                    <li><a href="user.php?act=comment_list" {if $action eq 'comment_list'}class="curs"{/if}>{$lang.label_comment}</a></li>
+                    <li class="la"><a href="user.php?act=account_log" {if $action eq 'account_log'}class="curs"{/if}>{$lang.label_user_surplus}</a></li>
+                    <li><a href="user.php?act=profile" {if $action eq 'profile'}class="curs"{/if}>{$lang.label_profile}</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>

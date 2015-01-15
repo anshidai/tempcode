@@ -1,0 +1,9 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<li id="UserName">
+    {if $user_info}
+    <a href="user.php">{$user_info.username}</a> &nbsp;/&nbsp; <a href="user.php?act=logout">Sign out</a>
+    {else}
+    <a rel="nofollow" href="user.php?act=login">Join / Sign In</a>
+    {/if}
+</li>

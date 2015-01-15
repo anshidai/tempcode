@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+<div class="bborder">
+    <p class="textDesc">&nbsp;</p>
+    <h2>{$info.username} {$lang.welcome_to} {$info.shop_name}！</h2>
+    <p class="textDesc">{$lang.last_time}: {$info.last_time}</p>
+    <p class="textDesc">{$rank_name} {$next_rank_name} </p>
+
+    <table border="0" cellspacing="0" class="tableList">
+        <tbody>
+            <tr>
+                <th width="100">Balance：</th>
+                <td><a href="user.php?act=account_log">US$ 0.00</a></td>
+            </tr>
+            <tr>
+                <th>Coupon：</th>
+                <td><a href="user.php?act=bonus">Total 0 coupon, value US$ 0.00</a><br></td>
+            </tr>
+            <tr>
+                <th>Points：</th>
+                <td>0&nbsp;Points</td>
+            </tr>
+        </tbody>
+    </table>
+    <table border="0" cellspacing="0" class="tableList">
+        <tbody>
+            <tr>
+                <th>Notice</th>
+            </tr>
+            <tr>
+                <td>In recent 30 days, your have submitted  <span class="textStrong">0</span> order(s).</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

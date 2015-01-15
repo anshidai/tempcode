@@ -1,0 +1,88 @@
+<table align="center" width="90%" class="consignee">
+        <tbody>
+            <tr>
+                <td width="15%" align="right">&nbsp;</td>
+                <td rowspan="2">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr class="nameTitle">
+                            <td width="145">First name</td>
+                            <td width="140">Last name</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><input name="consignee" type="text" class="inputBox" id="consignee_{$sn}" value="{$consignee.consignee|escape}" size="21"></td>
+                            <td><input name="tel" type="text" class="inputBox" id="tel_{$sn}" value="{$consignee.tel|escape}" size="21"></td>
+                            <td><span class="require-field">*</span></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><strong>My name :</strong></td>
+            </tr>
+            <tr>
+                <td align="right"><strong>Address Line :</strong></td>
+                <td><input name="address" type="text" class="inputBox" id="address_{$sn}" value="{$consignee.address|escape}" size="50">
+                <span class="require-field">*</span> e.g. Street Address, Company name, c/o</td>
+            </tr>
+            <input name="best_time" type="hidden" id="best_time_{$sn}" value="{$consignee.best_time|escape}" />
+            <tr>
+                <td align="right"><strong>City :</strong></td>
+                <td><input name="sign_building" type="text" class="inputBox" id="sign_building_{$sn}" value="{$consignee.sign_building|escape}" size="30">
+                <span class="require-field">*</span></td>
+            </tr>
+            <tr>
+                <td align="right"><strong>Country/Region :</strong></td>
+                <td>
+                <select name="country" class="inputNowidth" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
+                    <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+                    <!-- {foreach from=$country_list item=country} -->
+                    <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                    <!-- {/foreach} -->
+                </select>
+                <span class="require-field">*</span> </td>
+            </tr>
+            <tr>
+                <td align="right"><strong>State/Province/Region :</strong></td>
+                <td>
+                <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')">
+                    <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                    <!-- {foreach from=$province_list.$sn item=province} -->
+                    <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                    <!-- {/foreach} -->
+                </select>
+                <input type="hidden" id="selCities_{$sn}">
+                <input type="hidden" id="selDistricts_{$sn}">
+                <span class="require-field">*</span> </td>
+            </tr>
+            <tr>
+                <td align="right"><strong>ZIP/Postal Code :</strong></td>
+                <td><input name="zipcode" type="text" class="inputBox" id="zipcode_{$sn}" value="{$consignee.zipcode|escape}" size="30">
+                <span class="require-field">*</span></td>
+            </tr>
+            <tr>
+                <td align="right"><strong>Email address :</strong></td>
+                <td><input name="email" type="text" class="inputBox" id="email_{$sn}" value="{$consignee.email|escape}" size="30">
+                <span class="require-field">*</span></td>
+            </tr>
+            <tr>
+                <td align="right"><strong>Phone number :</strong></td>
+                <td><input name="mobile" type="text" class="inputBox" id="mobile_{$sn}" value="{$consignee.mobile|escape}" size="30">
+                <span class="require-field">*</span> Your phone number is needed just in case we or the shipping carrier need to reach you regarding your order</td>
+            </tr>
+            <tr>
+                <td align="right">&nbsp;</td>
+                <td><input class="btn btn10 btnColor" type="submit" name="Submit" style="margin-top:20px;" value="Ship to this address">
+                <!-- {if $smarty.session.user_id gt 0 and $consignee.address_id gt 0} -->
+                  <!-- 如果登录了，显示删除按钮 -->
+                  <input name="button" type="button" onclick="if (confirm('{$lang.drop_consignee_confirm}')) location.href='flow.php?step=drop_consignee&amp;id={$consignee.address_id}'"  class="bnt_blue" value="{$lang.drop}" />
+                <!-- {/if} -->
+                
+                <input type="hidden" name="step" value="consignee">
+                <input type="hidden" name="act" value="checkout">
+                <input name="address_id" type="hidden" value="{$consignee.address_id}"></td>
+            </tr>
+        </tbody>
+    </table>

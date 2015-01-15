@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="user_center.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="globalWrapper">
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+</div>
+
+<!-- in_main start -->
+ <div class="in_main">
+<div class="a_n">
+    <a href="/">Home</a> &gt; <a href="user.php"> My Account</a> &gt; <span>User Center</span>
+</div>
+
+<!--left begin-->
+<div class="in_left">
+    <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!--left end-->
+
+<!--right begin-->
+<div class="in_right">
+    <div class="r_tit">Welcome to your<span>Temperqueen</span> account</div>
+    
+    <!-- user_main start -->
+    <div class="user_main">
+        <!-- {if $action eq 'default'} -->
+            <!-- #BeginLibraryItem "/library/user_center_default.lbi" --><!-- #EndLibraryItem -->
+        <!--{/if} -->
+        
+        <!-- 我的留言 start-->
+        <!-- {if $action eq 'message_list'} -->
+            <!-- #BeginLibraryItem "/library/user_center_message_list.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} -->
+        <!-- 我的留言 end-->
+        
+        <!-- 收藏商品列表页面 start-->
+        <!--{if $action eq 'collection_list'} -->
+            <!-- #BeginLibraryItem "/library/user_center_collection_list.lbi" --><!-- #EndLibraryItem -->    
+        <!-- {/if} -->
+        <!-- 收藏商品列表页面 end-->
+        
+        <!-- 我的评论 start-->
+        <!-- {if $action eq 'comment_list'} -->
+            <!-- #BeginLibraryItem "/library/user_center_comment_list.lbi" --><!-- #EndLibraryItem -->
+        <!-- {/if} -->
+        <!-- 我的评论 end-->
+        
+        
+    </div>
+    <!-- end user_main -->
+
+</div>
+<!--right end-->
+
+<div class="clear"></div>
+
+</div>
+<!-- end in_main -->
+
+<div class="clear"></div>
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="p:domain_verify" content="9797d31847b7c4b5e7c49f90e9741cf6"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" hreflang="en" href="http://www.temperqueen.com/" />
+</head>
+
+<body>
+
+<div class="g_header">
+    <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+
+</div>
+<!--g_header E  -->
+
+<!--g_content S  -->
+<div class="g_content">
+
+    <div class="con1">
+        <div class="navigator">
+            <div class="hot_type">Hot Categories</div>
+                <ul>
+                    <!--{foreach from=$categories[7]['cat_id'] item=child}-->
+                    <li><a href="{$child.url}">{$child.name}</a></li>
+                    <!--{/foreach}-->
+                </ul>
+        </div>
+        
+          <div class="slide_content">
+            <div class="slide">
+                <ul>
+                    <!-- {if $flashimg} -->
+                    <!--{foreach from=$flashimg item=item}-->
+                        <li><a href="{$item.url}"><img src="{$item.src}" width="760" height="320" /></a></li>
+                    <!--{/foreach}--> 
+                    <!--{/if}-->
+                </ul>
+                <div class="pre"></div>
+                <div class="next"></div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var outerlayer = $(".slide");
+            var numberlayer = $(".mkeNum");
+            var imgwidth = 760;
+            var num = outerlayer.find("li").size();
+            var cnum = 0;
+            outerlayer.find("ul").width(num*imgwidth);
+            
+            $(".next").click(function(){
+                cnum++;
+                if(cnum>(num-1)){
+                    cnum = 0    
+                }
+                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
+            });
+           
+           $(".pre").click(function(){
+                cnum--;
+                if(cnum<0){
+                    cnum = num - 1;    
+                }
+                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
+            }); 
+            
+           function autoPlay(){
+              cnum++;
+                if(cnum>(num-1)){
+                    cnum=0    
+                }
+                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
+            }
+            var Timer = setInterval(autoPlay,4000);
+            $(".slide_content").hover(function(){clearInterval(Timer)},function(){Timer=setInterval(autoPlay,4000);}); 
+        </script>
+        
+        
+        <div class="clear"></div>
+      </div>
+      
+      
+  
+    <!-- {if $new_goods} -->
+    <div class="pd_list">
+        <div class="pd_list_title"> &nbsp;
+            <div class="pd_hotname"><h1 style="font-size:12px;font-weight:400;">Hot Sale Wedding Dresses</h1></div>
+        </div>
+        <ul class="pd_ul">
+            <!--{foreach from=$new_goods item=goods}-->
+            <li>
+                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
+                </div>
+                <div class="pd_info">
+                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
+                    <div class="price">
+                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
+                        <span class="last_price">USD ${$goods.shop_price}</span>
+                  </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!-- {/if} -->
+    
+    <!-- {if $best_goods} -->
+    <div class="pd_list">
+        <div class="pd_list_title"> &nbsp;
+            <div class="pd_hotname">Plus Size Dresses For Special Occasions</div>
+        </div>
+        <ul class="pd_ul">
+            <!--{foreach from=$best_goods item=goods}-->
+            <li>
+                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
+                </div>
+                <div class="pd_info">
+                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
+                    <div class="price">
+                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
+                        <span class="last_price">USD ${$goods.shop_price}</span>
+                  </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!-- {/if} -->
+    
+    
+    <!-- {if $hot_goods} -->
+    <div class="pd_list">
+        <div class="pd_list_title"> &nbsp;
+            <div class="pd_hotname">Discount Wedding Dresses</div>
+        </div>
+        <ul class="pd_ul">
+            <!--{foreach from=$hot_goods item=goods}-->
+            <li>
+                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
+                </div>
+                <div class="pd_info">
+                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
+                    <div class="price">
+                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
+                        <span class="last_price">USD ${$goods.shop_price}</span>
+                  </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!-- {/if} -->
+    
+    
+    <!-- {if $promotion_goods} -->
+    <div class="pd_list">
+        <div class="pd_list_title"> &nbsp;
+            <div class="pd_hotname">Hot Sale Children Dresses</div>
+        </div>
+        <ul class="pd_ul">
+            <!--{foreach from=$promotion_goods item=goods}-->
+            <li>
+                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
+                </div>
+                <div class="pd_info">
+                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
+                    <div class="price">
+                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
+                        <span class="last_price">USD ${$goods.shop_price}</span>
+                  </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!-- {/if} -->
+    
+    
+    <!-- {if $random_goods} -->
+    <div class="pd_list">
+        <div class="pd_list_title"> &nbsp;
+            <div class="pd_hotname">Daily Discount Dresses</div>
+        </div>
+        <ul class="pd_ul">
+            <!--{foreach from=$random_goods item=goods}-->
+            <li>
+                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
+                </div>
+                <div class="pd_info">
+                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
+                    <div class="price">
+                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
+                        <span class="last_price">USD ${$goods.shop_price}</span>
+                  </div>
+                </div>
+            </li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!-- {/if} --> 
+
+    <div class="clear"></div>
+    <div class="index_destxt">
+        <div class="tit"><h3 class="postion">About Us</h3></div>
+        <div class="clearfix buyuslist">
+            <div class="bestWholesale">
+                <h4>Wide Range Wedding Dress &amp; Dress Choice</h4>
+                <p>We can do standard size &amp; custom made a wide range of wedding dresses &amp; Dresses, including world’s most famous brand wedding dresses &amp; dresses. We do wholesale dresses as well as retail. Buy dresses from China dresses factory temperqueen is your best choice.</p>
+            </div>
+            <div class="freeToJoin">
+                <h4>Buy High Quality Dresses with Global Standards</h4>
+                <p>All temperqueen.com factory Dress fabric, lace, Taiwan 395 satin, taffeta, silk, embroidery, top button, and other raw materials are best qualities. temperqueen Dress ensure wedding dresses &amp; dresses in high quality. We do accurate measurement, Dedicated Craftsmanship &amp; undergo an extensive testing and quality control procedure.</p>
+                <p class="joinNow"><a rel="nofollow" href="user.php?act=login"><strong>Join Now</strong></a></p>
+            </div>
+            <br class="clear">
+            <div class="noMinOrders">
+                <h4>Low Prices Direct From Dresses Factory Suppliers</h4>
+                <p>As a China-based Global Wedding Dresses &amp; Dress Factory, we have been engaged in manufacturing and exporting wedding Dresses &amp; Fashion Dresses for more than 10 years. We sold more than 50000 pcs wedding gowns &amp; prom dresses every year, and the feedback is almost 100% satisfaction.</p>
+            </div>
+            <div class="fastDelivery">
+                <h4>Easy &amp; Safe Online Shopping</h4>
+                <p>With a wide variety of payment options to buy dresses, temperqueen offers convenience to customers worldwide. Purchasing options from our dresses factory include Visa, MasterCard, Bank transfer, Western Union, Money Gram. temperqueen has a payment method that works for you, with VeriSign’s world renowned secure payment technology keeping your information safe at all times. Buy dresses safe without hesitate.</p>
+            </div>
+            <br class="clear">
+            <div class="easyToOrder">
+                <h4>Fast Production &amp; Fast Delivery Around The Globe</h4>
+                <p>We do High quality Dresses &amp; Wedding Dresses within fast production. Normally Wedding Dresses will take 16 working days; other high quality dresses will take only 11 working days to finish it. Partnering with internationally trusted logistic service providers such as DHL, UPS&amp; EMS,etc.,temperqueen.com ships to over 200 countries around the world. It will take 2-4 working days to deliver the dresses to all over the world .All Shipping Methods are safe &amp; guaranteed. </p>
+            </div>
+            <div class="secure">
+                <h4>Full Refund Guarantee&amp; Friendly Customer Service</h4>
+                <p>Accept return for any quality issue, full Refund will be honored &amp; Return shipping cost will be our responsibility .We offers excellent, comprehensive customer service every step of the way. Before you buy dresses on our website, make real time inquiries through use of our live chat service. Once you made a purchase, our customer service representatives are always on-hand to answer questions through our website. Shop with confidence and save with temperqueen dresses factory online store!</p>
+            </div>
+         </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

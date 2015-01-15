@@ -1,0 +1,338 @@
+                                                             <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="register.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="globalWrapper">
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+
+<!--g_content-->
+<div class="g_recontent">
+    <div class="n_l">Home&gt; <span>Login</span></div>
+    <div class="r_tit2">Log in or register to complete your purchase</div>
+    
+    <div class="register2">
+            <div class="r_left">
+            
+                <!-- login start -->
+                <form action="user.php" name="formLogin" method="post" id="FormLogin">
+                <ul class="login clearfix">
+                    
+                    <li><strong>I'm A Returning Customer</strong></li>
+                    <li style="position: relative;">
+                        <div style="color: red; position: absolute; top: 42px;width:346px; line-height: 12px;" id="sp_loginErr"></div>
+                    </li>
+                    <li>Username: </li>
+                    <li>
+                        <input type="text" class="rtext" id="LoginUsername" size="30" name="username">
+                    </li>
+                    <li>Password: </li>
+                    <li>
+                        <input type="password" class="rtext" id="LoginPwd" size="30" name="password">
+                    </li>
+                    
+                    <li><a style="text-decoration: underline; cursor: pointer;" id="fp_b">Forgot your password?</a></li>
+                    <li>
+                        <input type="button" value="Sign In" class="l_fpu" id="l_btn" name="act" onclick="UserLogin();" />
+                        <input type="hidden" value="act_login" name="act">
+                        <input type="hidden" value="./index.php" name="back_act">
+                        <input type="hidden" value="1" name="remember" id="remember" />
+                    </li>
+                </ul>
+                </form>
+                <!-- end login --> 
+                
+                <!-- Forget the password -->
+                <form action="user.php" name="getPassword" method="post" id="FormForget">
+                <ul style="display:none" class="l_find">
+                    <li style="height: 32px">
+                        <div style="color: red; height: 32px; width: 230px; line-height: 16px;" id="forgotErr"></div>
+                    </li>
+                    <li>
+                        <span>Username:&nbsp;</span>
+                        <p><input type="text" class="l_input" size="30" name="user_name"></p><br>
+                    </li>
+                    <li>
+                        <span>E-mail:&nbsp;</span>
+                        <p><input type="text" value="" class="l_input" id="ForgetEmail" name="email"></p>
+                    </li>
+                    <li style="line-height: 16px;" class="l_fpl">
+                        Please enter your completed registration Email address.<br>
+                       You will receive an email sending by our system automatically,which will help you reset your password. 
+                    </li>
+                    <li class="fg">
+                        <input type="hidden" value="send_pwd_email" name="act">
+                        <input type="button" value="Find" class="l_fp" id="Forget" name="submit">
+                        <b id="fr_b">Return of Registration</b>
+                    </li>
+                </ul>
+                </form>
+                <!-- end Forget the password  -->
+                
+                <ul class="rhelp">
+                    <li><span>Need Help?</span></li>
+                    <li>Need help with<a href="#">Log in &amp; Register</a> ?</li>
+                    <li>View the<a href="#">Frequently Asked Questions</a>page</li>
+                    <li>View the <a href="#">Customer Service</a>page or <a href="#">Contact Info</a></li>
+                    <li>Have questions about<a href="#">Shipping and Delivery</a>?</li>
+                </ul>
+            </div>
+            <div class="r_right">
+                
+                <!-- register start --> 
+                <form action="user.php" method="post" id="FormCreate" name="formUser">
+                <ul>
+                    <li><strong>I'm A New Customer</strong></li>
+                    <li>Save time and stay informed; track your order online.view your order history.create your favorite list.and more!</li>
+                    <li>
+                        <span><font color='red'>*</font>Username:</span>
+                        <p>
+                            <input type="text" size="50" id="RegUsername" class="rtext2" name="username">
+                        </p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p id="sp_usernametoop">Username length can't less than 3 characters.</p>
+                        <span id="sp_username" style="color: Red; display: block; float: right; width: 335px; text-align: left;"></span>
+                    </li>
+                    <li>
+                        <span><font color='red'>*</font>Emall Address:</span>
+                        <p>
+                            <input type="text" size="50" id="RegEmail" class="rtext2" name="email">
+                        </p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p id="sp_emailtoop">Email address is blank.</p>
+                        <span id="sp_email" style="color: Red; display: block; float: right; width: 335px; text-align: left;"></span>
+                    </li>
+                    <li>
+                        <span><font color='red'>*</font>Password:</span>
+                        <p><input type="password" size="50" id="RegPwd" class="rtext2" name="password"></p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p id="sp_pwdtoop">Password can't less than 6 characters.</p>
+                        <span id="sp_pwd" style="color: Red; display: block; float: right; width: 335px; text-align: left;"></span>
+                    </li>
+                    <li>
+                        <span><font color='red'>*</font>Confirm Password:</span>
+                        <p><input type="password" size="50" id="RegPwdRe" class="rtext2" name="conform_password"></p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked="checked" name="agreement" id="cbx_agree" value="1">I accept 
+                        <a href="#" target="_blank">Terms of Use</a> and
+                        <a href="#" target="_blank">Privacy and Security</a>of temperqueen.com
+                    </li>
+                    <li>
+                        <span id="sp_agree" style="color: Red; display: block; text-align: left; width:440px;"></span>
+                    </li>
+                    <li>
+                        <input type="hidden" value="act_register" name="act">
+                        <input type="hidden" value="" name="back_act">
+                        <input type="button" value="Create My Account" onclick="UserCreate();" class="rbut2" name="Submit" id="c_btn">
+                        <img src="images/waitPage.gif" id="wait2" style="display: none; vertical-align: middle; margin-right: 4px;">
+                    </li>
+                </ul>
+                </form>
+                <!-- end register -->
+                
+            </div>
+        </div>
+        
+</div>
+
+<!--g_content end-->
+
+
+<div class="clear"></div>
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem --> 
+
+<script type="text/javascript">
+var isregistered = false;
+jQuery("#RegUsername").blur(function(){
+    var n = jQuery("#RegUsername").val();
+    jQuery.ajax({
+      url: 'user.php?act=is_registered',
+      data: {username:n},
+      success: function(msg){
+        if(msg == 'false') {
+            isregistered = true;
+            jQuery('#sp_username').html('Username exists, please enter again');
+            jQuery('#sp_usernametoop').hide();                    
+        }else {
+            isregistered = false;
+            jQuery('#sp_username').html('');    
+        }  
+      },
+      dataType: 'text'
+    });
+}); 
+
+jQuery('#fp_b').click(function(){
+    jQuery('ul.login').hide();
+    jQuery('ul.l_find').show();
+});
+jQuery('#fr_b').click(function(){
+    jQuery('ul.l_find').hide();
+    jQuery('ul.login').show();
+});
+String.prototype.Trim = function() {
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function UserLogin() 
+{
+    var n = jQuery("#LoginUsername").val();
+    var p = jQuery("#LoginPwd").val();
+    if (n.Trim() == "") {
+        jQuery('#sp_loginErr').html('UserName can not be Empty');
+        return false;
+    }
+    else if (p == "") {
+        $('#sp_loginErr').html('Password can not be Empty');
+        return false;
+    }
+    else if (p.indexOf(" ") != -1) {
+        jQuery('#sp_loginErr').html("Password can not enter \"<b>space</b>\"");
+    }
+    else {
+        document.getElementById('FormLogin').submit();
+    }
+}
+
+
+function UserCreate() {
+    var email = jQuery("#RegEmail").val().Trim();
+    var username = jQuery("#RegUsername").val().Trim();
+    var pwd = jQuery("#RegPwd").val();
+    var pwdRe = jQuery("#RegPwdRe").val();
+    var agree = document.getElementById("cbx_agree");
+    
+    if(isregistered) {
+        jQuery('#sp_username').html('Username exists, please enter again');
+        jQuery('#sp_usernametoop').hide();
+        return false;    
+    }
+    
+    if (agree.checked == false) {
+        jQuery("#sp_agree").html("*You must accept the Terms of use and Security and privacy of temperqueen.com.");
+        return;
+    }
+    else {
+        jQuery('#sp_agree').html("");
+    }
+    if(username == "") {
+        jQuery("#sp_username").html("Sorry, Username is required.");
+        jQuery('#sp_usernametoop').hide();
+        return false;
+    }
+    else if(username.length <3) {
+        jQuery("#sp_username").html("Sorry, Username length can't less than 3 characters.");
+        jQuery('#sp_usernametoop').hide();
+        return false;
+    }
+    else if (email == "") {
+        jQuery("#sp_email").html("Sorry, e-mail address is required.");
+        jQuery('#sp_emailtoop').hide();
+        return false;
+    }
+    else if (!ValidMail(email)) {
+        jQuery("#sp_email").html('The e-mail address you entered is incorrect. Please try again.');
+        jQuery('#sp_emailtoop').hide();
+        return false;
+    }
+    else {
+        var emailFlag = jQuery("#RegEmailFlag").val();
+        if (emailFlag == "1") {
+            jQuery("#sp_email").html('The e-mail address has been taken. Please try again.');
+            jQuery('#sp_emailtoop').hide();
+            return false;
+        }
+    }
+    if (pwd == "") {
+        jQuery('#sp_pwd').html('Sorry, password is required.');
+        jQuery('#sp_pwdtoop').hide();
+        return false;
+    }
+    else if (!ValidPwd(pwd)) {
+        jQuery('#sp_pwd').html('The password should be 6 to 30 characters and no "<b>spaces</b>".');
+        jQuery('#sp_pwdtoop').hide();
+        return false;
+    }
+    else {
+        jQuery('#sp_pwd').html('');
+        jQuery('#sp_pwdtoop').show();
+    }
+    if (pwdRe == "") {
+        jQuery('#sp_pwd').html('Sorry, Confirm password is required.');
+        jQuery('#sp_pwdtoop').hide();
+    }
+    else if (!ValidPwd(pwdRe)) {
+        jQuery('#sp_pwd').html('The Confirm Password should be 6 to 30 characters and no "<b>spaces</b>".');
+        jQuery('#sp_pwdtoop').hide();
+        return false;
+    }
+    else if (pwd != pwdRe) {
+        jQuery('#sp_pwd').html("Sorry, passwords do not match. Please try again.");
+        jQuery('#sp_pwdtoop').hide();
+        return false;
+    }
+    else {
+        jQuery('#sp_pwd').html('');
+        jQuery('#sp_pwdtoop').show();
+        document.getElementById("FormCreate").submit();
+    }
+}
+
+
+function ValidMail(input) {
+    var reg = /^([a-zA-Z0-9]+[_|\_|\.|\-]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.|\-]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+    if (reg.test(input))
+        return true;
+    else
+        return false;
+}
+
+function ValidPwd(input) {
+    if (!checkByteLength(input, 6, 30)) {
+        return false;
+    }
+    if (input.indexOf(" ") != -1) {
+        return false;
+    }
+    return true;
+}
+
+function checkByteLength(inputstr, x, y) {
+    if (inputstr.length >= parseInt(x) && inputstr.length <= parseInt(y)) {
+        return true;
+    }
+    else
+        return false;
+}
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

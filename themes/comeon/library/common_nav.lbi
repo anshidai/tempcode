@@ -1,0 +1,39 @@
+<div class="nav">
+<ul class="navline">
+<li class="showbut"><a href="/">Home</a></li>/ 
+<!--{foreach from=$categories item=cat name=foo}-->
+    <!--{if $cat.id != '7'}-->
+    <li class="showbut"><a href="{$cat.url}">{$cat.name}</a>
+        <!-- {if $cat.cat_id}-->
+        <div class="magc showbox" style="display: none;"><span></span></div>
+        <div class="menus showbox" style="display: none;">
+            <ul>
+                <!--{foreach from=$cat.cat_id item=child}-->
+                <li><a href="{$child.url}">• {$child.name}</a></li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <!--{/if}-->
+    </li>{if $smarty.foreach.foo.index <=5}/{/if}
+    <!--{/if}-->   
+<!-- {/foreach} -->
+</ul> 
+</div> 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $(function() {
+            $(".showbut").hover(function() {
+                $(this).find(".showbox").show();
+                $(this).addClass("hover")
+            },
+            function() {
+                $(this).find(".showbox").hide();
+                $(this).removeClass("hover")
+            })
+        });
+    
+    });
+</script>
+
+
+

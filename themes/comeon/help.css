@@ -1,0 +1,28 @@
+.help_con{width:1000px;margin:0 auto;padding-top:5px;}
+.help_left{float:left; width:190px;}
+.h_menu{ background-color:#fff;padding:5px 5px 20px;}
+.h_menu dt{height: 25px;line-height: 25px;margin-bottom: 5px;text-transform: uppercase;
+    border-bottom: 1px solid;padding-bottom: 4px;font-size: 15px;}
+.h_menu dd{border-bottom: 1px dashed #ccc;line-height: 22px;}
+.contact{background-color:#fff;padding-top: 5px;position: relative;}
+.contact span.con_us{float: left;width: 173px;height: 25px;line-height: 25px;margin: 5px 5px 0;padding-bottom: 4px;
+    text-transform: uppercase;font-size: 15px;border-bottom: 1px solid;}
+.contact div{float: left;margin-top: 10px;padding: 2px 8px;}
+.contact strong{display: block;float: left;font-weight: normal;}
+.contact span{display: block;float: left;width: 140px;margin-bottom: 5px;}
+.contact_btn{height: 29px;width: 181px;margin: 5px 4px;text-align: center;border-radius: 3px;
+    background-color: #e27c50;border: medium none;color: #fff;cursor: pointer;font-size: 12px;}
+.help_right{float: right;width: 770px;margin-bottom: 10px;padding: 0 15px 15px;background-color:#fff;}
+.help_right .h_n{line-height: 14px;margin-bottom: 5px;padding: 10px 0 4px;}
+.help_right .h_n .nb{float: right;}
+.help_right .h_n a{margin-right: 4px;}
+.h_n .brbd{margin-top: 4px;line-height: 1px;border-bottom: 1px solid #ccc;border-top: 1px solid #fff;}
+.hl_d2{margin: 0 0 0 16px;}
+.hl_d2 dt{padding: 10px 0;line-height: 34px;color: #000;font-size: 18px;}
+.hl_d2 dd{font-size: 12px;margin: 0 0 16px 36px;padding: 0 0 0 16px;}
+.hl_d2 dd ul{margin: 10px 0 0 20px;}
+.hl_d2 dd ul li{line-height: 22px;}
+.hl_d3{margin: 0 0 0 16px;}
+.hl_d3 dt{color: #000;font-size: 16px;line-height: 34px;padding: 10px 0;}
+.hl_d3 dd{color: #666;line-height: 18px;margin: 0 0 16px 36px;padding: 0;}
+.help_contents{padding-left:20px;}

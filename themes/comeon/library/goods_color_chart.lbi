@@ -1,0 +1,429 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+    function change(imgUrl,imgName,tagId){
+        var txt = "<img src=\""+imgUrl+"\"><span>"+imgName+"</span>";
+        document.getElementById(tagId).innerHTML = txt;
+    }
+</script>    
+
+<div id="help_3">
+<div id="poptab2" class="mb">
+<div class="poptab2title">
+<p class="dressp">Color chart for all dresses at weddingdresswell.com</p>
+<p>Considering the difference of lighting and the display of monitor, the color you see from computer may be kind of different from that of the item you received. The actual color should be the color of item you received.</p>
+<a name="top"></a>
+<a href="#A">Satin</a>
+<a href="#B">chiffon</a>
+<a href="#C">Taffeta</a>
+<a href="#D">Organza</a>
+<a href="#E">Elastic Satin</a>
+<a href="#F">Elastic Silk-like Satin</a>
+<a href="#G">Matte Satin</a>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="A"></a>
+<strong>Satin</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cbla" class="cbl"><img src="images/color/A_10.jpg"><span>Dark Brown</span></div>
+<div class="cbr">
+<ul id="color_A">
+<li><img onmouseover="change('images/color/A_1.jpg','Black','cbla')" src="themes/trade-m/images/color/A_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/A_2.jpg','Blue','cbla')" src="themes/trade-m/images/color/A_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/A_3.jpg','Bright Rust Red','cbla')" src="themes/trade-m/images/color/A_3.jpg"><span>Bright Rust Red</span></li>
+<li><img onmouseover="change('images/color/A_4.jpg','Brown','cbla')" src="themes/trade-m/images/color/A_4.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/A_5.jpg','Bud Green','cbla')" src="themes/trade-m/images/color/A_5.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/A_6.jpg','Burgundy','cbla')" src="themes/trade-m/images/color/A_6.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/A_7.jpg','Champagne','cbla')" src="themes/trade-m/images/color/A_7.jpg"><span>Champagne</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/A_8.jpg','Chocolate','cbla')" src="themes/trade-m/images/color/A_8.jpg"><span>Chocolate</span></li>
+<li><img onmouseover="change('images/color/A_9.jpg','Daffodil','cbla')" src="themes/trade-m/images/color/A_9.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/A_10.jpg','Dark Brown','cbla')" src="themes/trade-m/images/color/A_10.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/A_11.jpg','Dark Green','cbla')" src="themes/trade-m/images/color/A_11.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/A_12.jpg','Dark Navy','cbla')" src="themes/trade-m/images/color/A_12.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/A_13.jpg','Dark Royal Blue','cbla')" src="themes/trade-m/images/color/A_13.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/A_14.jpg','Fuchsia','cbla')" src="themes/trade-m/images/color/A_14.jpg"><span>Fuchsia</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/A_15.jpg','Gold','cbla')" src="themes/trade-m/images/color/A_15.jpg"><span>Gold</span></li>
+<li><img onmouseover="change('images/color/A_16.jpg','Grape','cbla')" src="themes/trade-m/images/color/A_16.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/A_17.jpg','Green','cbla')" src="themes/trade-m/images/color/A_17.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/A_18.jpg','Hunter','cbla')" src="themes/trade-m/images/color/A_18.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/A_19.jpg','Ice Blue','cbla')" src="themes/trade-m/images/color/A_19.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/A_20.jpg','Kelly','cbla')" src="themes/trade-m/images/color/A_20.jpg"><span>Kelly</span></li>
+<li><img onmouseover="change('images/color/A_21.jpg','Lavender','cbla')" src="themes/trade-m/images/color/A_21.jpg"><span>Lavender</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/A_22.jpg','Water Melon','cbla')" src="themes/trade-m/images/color/A_22.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/A_23.jpg','Light Sky Blue','cbla')" src="themes/trade-m/images/color/A_23.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/A_24.jpg','Lilac','cbla')" src="themes/trade-m/images/color/A_24.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/A_25.jpg','Ivory','cbla')" src="themes/trade-m/images/color/A_25.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/A_26.jpg','Mint','cbla')" src="themes/trade-m/images/color/A_26.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/A_27.jpg','Orange Red','cbla')" src="themes/trade-m/images/color/A_27.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/A_28.jpg','Org','cbla')" src="themes/trade-m/images/color/A_28.jpg"><span>Org</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/A_29.jpg','Pearl Pink','cbla')" src="themes/trade-m/images/color/A_29.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/A_30.jpg','Pink','cbla')" src="themes/trade-m/images/color/A_30.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/A_31.jpg','Purple','cbla')" src="themes/trade-m/images/color/A_31.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/A_32.jpg','Red','cbla')" src="themes/trade-m/images/color/A_32.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/A_33.jpg','Regency','cbla')" src="themes/trade-m/images/color/A_33.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/A_34.jpg','Royal Blue','cbla')" src="themes/trade-m/images/color/A_34.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/A_35.jpg','Sage','cbla')" src="themes/trade-m/images/color/A_35.jpg"><span>Sage</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/A_36.jpg','Silver','cbla')" src="themes/trade-m/images/color/A_36.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/A_37.jpg','Skin Pink','cbla')" src="themes/trade-m/images/color/A_37.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/A_38.jpg','Light Plum','cbla')" src="themes/trade-m/images/color/A_38.jpg"><span>Light Plum</span></li>
+<li><img onmouseover="change('images/color/A_39.jpg','White','cbla')" src="themes/trade-m/images/color/A_39.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="B"></a>
+<strong>chiffon</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cblb" class="cbl"><img src="images/color/B_9.jpg"><span>Daffodil</span></div>
+<div class="cbr">
+<ul id="color_B">
+<li><img onmouseover="change('images/color/B_1.jpg','Black','cblb')" src="themes/trade-m/images/color/B_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/B_2.jpg','Blue','cblb')" src="themes/trade-m/images/color/B_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/B_3.jpg','Bright Rust Red','cblb')" src="themes/trade-m/images/color/B_3.jpg"><span>Bright Rust Red</span></li>
+<li><img onmouseover="change('images/color/B_4.jpg','Brown','cblb')" src="themes/trade-m/images/color/B_4.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/B_5.jpg','Hunter','cblb')" src="themes/trade-m/images/color/B_5.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/B_6.jpg','Burgundy','cblb')" src="themes/trade-m/images/color/B_6.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/B_7.jpg','Champagne','cblb')" src="themes/trade-m/images/color/B_7.jpg"><span>Champagne</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/B_8.jpg','Chocolate','cblb')" src="themes/trade-m/images/color/B_8.jpg"><span>Chocolate</span></li>
+<li><img onmouseover="change('images/color/B_9.jpg','Daffodil','cblb')" src="themes/trade-m/images/color/B_9.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/B_10.jpg','Dark Brown','cblb')" src="themes/trade-m/images/color/B_10.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/B_11.jpg','Dark Green','cblb')" src="themes/trade-m/images/color/B_11.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/B_12.jpg','Dark Navy','cblb')" src="themes/trade-m/images/color/B_12.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/B_13.jpg','Dark Royal Blue','cblb')" src="themes/trade-m/images/color/B_13.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/B_14.jpg','Fuchsia','cblb')" src="themes/trade-m/images/color/B_14.jpg"><span>Fuchsia</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/B_15.jpg','Gold','cblb')" src="themes/trade-m/images/color/B_15.jpg"><span>Gold</span></li>
+<li><img onmouseover="change('images/color/B_16.jpg','Grape','cblb')" src="themes/trade-m/images/color/B_16.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/B_17.jpg','Green','cblb')" src="themes/trade-m/images/color/B_17.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/B_18.jpg','Bud Green','cblb')" src="themes/trade-m/images/color/B_18.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/B_19.jpg','Ice Blue','cblb')" src="themes/trade-m/images/color/B_19.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/B_20.jpg','Kelly','cblb')" src="themes/trade-m/images/color/B_20.jpg"><span>Kelly</span></li>
+<li><img onmouseover="change('images/color/B_21.jpg','Lilac','cblb')" src="themes/trade-m/images/color/B_21.jpg"><span>Lilac</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/B_22.jpg','Light Plum','cblb')" src="themes/trade-m/images/color/B_22.jpg"><span>Light Plum</span></li>
+<li><img onmouseover="change('images/color/B_23.jpg','Light Sky Blue','cblb')" src="themes/trade-m/images/color/B_23.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/B_24.jpg','Lavender','cblb')" src="themes/trade-m/images/color/B_24.jpg"><span>Lavender</span></li>
+<li><img onmouseover="change('images/color/B_25.jpg','Ivory','cblb')" src="themes/trade-m/images/color/B_25.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/B_26.jpg','Mint','cblb')" src="themes/trade-m/images/color/B_26.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/B_27.jpg','Orange Red','cblb')" src="themes/trade-m/images/color/B_27.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/B_28.jpg','Org','cblb')" src="themes/trade-m/images/color/B_28.jpg"><span>Org</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/B_29.jpg','Pearl Pink','cblb')" src="themes/trade-m/images/color/B_29.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/B_30.jpg','Pink','cblb')" src="themes/trade-m/images/color/B_30.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/B_31.jpg','Purple','cblb')" src="themes/trade-m/images/color/B_31.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/B_32.jpg','Red','cblb')" src="themes/trade-m/images/color/B_32.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/B_33.jpg','Regency','cblb')" src="themes/trade-m/images/color/B_33.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/B_34.jpg','Royal Blue','cblb')" src="themes/trade-m/images/color/B_34.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/B_35.jpg','Sage','cblb')" src="themes/trade-m/images/color/B_35.jpg"><span>Sage</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/B_36.jpg','Silver','cblb')" src="themes/trade-m/images/color/B_36.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/B_37.jpg','Skin Pink','cblb')" src="themes/trade-m/images/color/B_37.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/B_38.jpg','Water Melon','cblb')" src="themes/trade-m/images/color/B_38.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/B_39.jpg','White','cblb')" src="themes/trade-m/images/color/B_39.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="C"></a>
+<strong>Taffeta</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cblc" class="cbl"><img src="images/color/C_2.jpg"><span>Blue</span></div>
+<div class="cbr">
+<ul id="color_C">
+<li><img onmouseover="change('images/color/C_1.jpg','Black','cblc')" src="themes/trade-m/images/color/C_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/C_2.jpg','Blue','cblc')" src="themes/trade-m/images/color/C_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/C_3.jpg','Bright Rust Red','cblc')" src="themes/trade-m/images/color/C_3.jpg"><span>Bright Rust Red</span></li>
+<li><img onmouseover="change('images/color/C_4.jpg','Brown','cblc')" src="themes/trade-m/images/color/C_4.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/C_5.jpg','Bud Green','cblc')" src="themes/trade-m/images/color/C_5.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/C_6.jpg','Burgundy','cblc')" src="themes/trade-m/images/color/C_6.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/C_7.jpg','Champagne','cblc')" src="themes/trade-m/images/color/C_7.jpg"><span>Champagne</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/C_8.jpg','Chocolate','cblc')" src="themes/trade-m/images/color/C_8.jpg"><span>Chocolate</span></li>
+<li><img onmouseover="change('images/color/C_9.jpg','Daffodil','cblc')" src="themes/trade-m/images/color/C_9.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/C_10.jpg','Dark Brown','cblc')" src="themes/trade-m/images/color/C_10.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/C_11.jpg','Dark Green','cblc')" src="themes/trade-m/images/color/C_11.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/C_12.jpg','Dark Navy','cblc')" src="themes/trade-m/images/color/C_12.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/C_13.jpg','Dark Royal Blue','cblc')" src="themes/trade-m/images/color/C_13.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/C_14.jpg','Fuchsia','cblc')" src="themes/trade-m/images/color/C_14.jpg"><span>Fuchsia</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/C_15.jpg','Gold','cblc')" src="themes/trade-m/images/color/C_15.jpg"><span>Gold</span></li>
+<li><img onmouseover="change('images/color/C_16.jpg','Grape','cblc')" src="themes/trade-m/images/color/C_16.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/C_17.jpg','Green','cblc')" src="themes/trade-m/images/color/C_17.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/C_18.jpg','Hunter','cblc')" src="themes/trade-m/images/color/C_18.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/C_19.jpg','Ice Blue','cblc')" src="themes/trade-m/images/color/C_19.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/C_20.jpg','Sage','cblc')" src="themes/trade-m/images/color/C_20.jpg"><span>Sage</span></li>
+<li><img onmouseover="change('images/color/C_21.jpg','Lavender','cblc')" src="themes/trade-m/images/color/C_21.jpg"><span>Lavender</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/C_22.jpg','Water Melon','cblc')" src="themes/trade-m/images/color/C_22.jpg"><span>Light Plum</span></li>
+<li><img onmouseover="change('images/color/C_23.jpg','Light Sky Blue','cblc')" src="themes/trade-m/images/color/C_23.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/C_24.jpg','Lilac','cblc')" src="themes/trade-m/images/color/C_24.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/C_25.jpg','Ivory','cblc')" src="themes/trade-m/images/color/C_25.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/C_26.jpg','Mint','cblc')" src="themes/trade-m/images/color/C_26.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/C_27.jpg','Orange Red','cblc')" src="themes/trade-m/images/color/C_27.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/C_28.jpg','Org','cblc')" src="themes/trade-m/images/color/C_28.jpg"><span>Org</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/C_29.jpg','Pearl Pink','cblc')" src="themes/trade-m/images/color/C_29.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/C_30.jpg','Pink','cblc')" src="themes/trade-m/images/color/C_30.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/C_31.jpg','Purple','cblc')" src="themes/trade-m/images/color/C_31.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/C_32.jpg','Red','cblc')" src="themes/trade-m/images/color/C_32.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/C_33.jpg','Regency','cblc')" src="themes/trade-m/images/color/C_33.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/C_34.jpg','Royal Blue','cblc')" src="themes/trade-m/images/color/C_34.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/C_35.jpg','Sage','cblc')" src="themes/trade-m/images/color/C_35.jpg"><span>Sage</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/C_36.jpg','Silver','cblc')" src="themes/trade-m/images/color/C_36.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/C_37.jpg','Skin Pink','cblc')" src="themes/trade-m/images/color/C_37.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/C_38.jpg','Light Plum','cblc')" src="themes/trade-m/images/color/C_38.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/C_39.jpg','White','cblc')" src="themes/trade-m/images/color/C_39.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="D"></a>
+<strong>Organza</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cbld" class="cbl"><img src="images/color/D_2.jpg"><span>Blue</span></div>
+<div class="cbr">
+<ul id="color_D">
+<li><img onmouseover="change('images/color/D_1.jpg','Black','cbld')" src="themes/trade-m/images/color/D_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/D_2.jpg','Blue','cbld')" src="themes/trade-m/images/color/D_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/D_3.jpg','Brown','cbld')" src="themes/trade-m/images/color/D_3.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/D_4.jpg','Bud Green','cbld')" src="themes/trade-m/images/color/D_4.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/D_5.jpg','Burgundy','cbld')" src="themes/trade-m/images/color/D_5.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/D_6.jpg','Champagne','cbld')" src="themes/trade-m/images/color/D_6.jpg"><span>Champagne</span></li>
+<li><img onmouseover="change('images/color/D_7.jpg','Chocolate','cbld')" src="themes/trade-m/images/color/D_7.jpg"><span>Chocolate</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/D_8.jpg','Daffodil','cbld')" src="themes/trade-m/images/color/D_8.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/D_9.jpg','Dark Brown','cbld')" src="themes/trade-m/images/color/D_9.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/D_10.jpg','Dark Green','cbld')" src="themes/trade-m/images/color/D_10.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/D_11.jpg','Dark Navy','cbld')" src="themes/trade-m/images/color/D_11.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/D_12.jpg','Dark Royal Blue','cbld')" src="themes/trade-m/images/color/D_12.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/D_13.jpg','Fuchsia','cbld')" src="themes/trade-m/images/color/D_13.jpg"><span>Fuchsia</span></li>
+<li><img onmouseover="change('images/color/D_14.jpg','Gold','cbld')" src="themes/trade-m/images/color/D_14.jpg"><span>Gold</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/D_15.jpg','Grape','cbld')" src="themes/trade-m/images/color/D_15.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/D_16.jpg','Green','cbld')" src="themes/trade-m/images/color/D_16.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/D_17.jpg','Hunter','cbld')" src="themes/trade-m/images/color/D_17.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/D_18.jpg','Ice Blue','cbld')" src="themes/trade-m/images/color/D_18.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/D_19.jpg','Lavender','cbld')" src="themes/trade-m/images/color/D_19.jpg"><span>Lavender</span></li>
+<li><img onmouseover="change('images/color/D_20.jpg','Light Plum','cbld')" src="themes/trade-m/images/color/D_20.jpg"><span>Light Plum</span></li>
+<li><img onmouseover="change('images/color/D_21.jpg','Light Sky Blue','cbld')" src="themes/trade-m/images/color/D_21.jpg"><span>Light Sky Blue</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/D_22.jpg','Lilac','cbld')" src="themes/trade-m/images/color/D_22.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/D_23.jpg','Ivory','cbld')" src="themes/trade-m/images/color/D_23.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/D_24.jpg','Mint','cbld')" src="themes/trade-m/images/color/D_24.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/D_25.jpg','Orange Red','cbld')" src="themes/trade-m/images/color/D_25.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/D_26.jpg','Org','cbld')" src="themes/trade-m/images/color/D_26.jpg"><span>Org</span></li>
+<li><img onmouseover="change('images/color/D_27.jpg','Pearl Pink','cbld')" src="themes/trade-m/images/color/D_27.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/D_28.jpg','Pink','cbld')" src="themes/trade-m/images/color/D_28.jpg"><span>Pink</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/D_29.jpg','Purple','cbld')" src="themes/trade-m/images/color/D_29.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/D_30.jpg','Red','cbld')" src="themes/trade-m/images/color/D_30.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/D_31.jpg','Regency','cbld')" src="themes/trade-m/images/color/D_31.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/D_32.jpg','Royal Blue','cbld')" src="themes/trade-m/images/color/D_32.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/D_33.jpg','Sage','cbld')" src="themes/trade-m/images/color/D_33.jpg"><span>Sage</span></li>
+<li><img onmouseover="change('images/color/D_34.jpg','Silver','cbld')" src="themes/trade-m/images/color/D_34.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/D_35.jpg','Skin Pink','cbld')" src="themes/trade-m/images/color/D_35.jpg"><span>Skin Pink</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/D_36.jpg','Water Melon','cbld')" src="themes/trade-m/images/color/D_36.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/D_37.jpg','White','cbld')" src="themes/trade-m/images/color/D_37.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="E"></a>
+<strong>Elastic Satin</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cble" class="cbl"><img src="images/color/E_9.jpg"><span>Dark Green</span></div>
+<div class="cbr">
+<ul id="color_E">
+<li><img onmouseover="change('images/color/E_1.jpg','Black','cble')" src="themes/trade-m/images/color/E_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/E_2.jpg','Blue','cble')" src="themes/trade-m/images/color/E_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/E_3.jpg','Brown','cble')" src="themes/trade-m/images/color/E_3.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/E_4.jpg','Bud Green','cble')" src="themes/trade-m/images/color/E_4.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/E_5.jpg','Burgundy','cble')" src="themes/trade-m/images/color/E_5.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/E_6.jpg','Champagne','cble')" src="themes/trade-m/images/color/E_6.jpg"><span>Champagne</span></li>
+<li><img onmouseover="change('images/color/E_7.jpg','Chocolate','cble')" src="themes/trade-m/images/color/E_7.jpg"><span>Chocolate</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/E_8.jpg','Dark Brown','cble')" src="themes/trade-m/images/color/E_8.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/E_9.jpg','Dark Green','cble')" src="themes/trade-m/images/color/E_9.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/E_10.jpg','Dark Navy','cble')" src="themes/trade-m/images/color/E_10.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/E_11.jpg','Dark Royal Blue','cble')" src="themes/trade-m/images/color/E_11.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/E_12.jpg','Fuchsia','cble')" src="themes/trade-m/images/color/E_12.jpg"><span>Fuchsia</span></li>
+<li><img onmouseover="change('images/color/E_13.jpg','Grape','cble')" src="themes/trade-m/images/color/E_13.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/E_14.jpg','Green','cble')" src="themes/trade-m/images/color/E_14.jpg"><span>Green</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/E_15.jpg','Hunter','cble')" src="themes/trade-m/images/color/E_15.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/E_16.jpg','Ice Blue','cble')" src="themes/trade-m/images/color/E_16.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/E_17.jpg','Lavender','cble')" src="themes/trade-m/images/color/E_17.jpg"><span>Lavender</span></li>
+<li><img onmouseover="change('images/color/E_18.jpg','Light Sky Blue','cble')" src="themes/trade-m/images/color/E_18.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/E_19.jpg','Lilac','cble')" src="themes/trade-m/images/color/E_19.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/E_20.jpg','Ivory','cble')" src="themes/trade-m/images/color/E_20.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/E_21.jpg','Mint','cble')" src="themes/trade-m/images/color/E_21.jpg"><span>Mint</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/E_22.jpg','Orange Red','cble')" src="themes/trade-m/images/color/E_22.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/E_23.jpg','Org','cble')" src="themes/trade-m/images/color/E_23.jpg"><span>Org</span></li>
+<li><img onmouseover="change('images/color/E_24.jpg','Pearl Pink','cble')" src="themes/trade-m/images/color/E_24.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/E_25.jpg','Pink','cble')" src="themes/trade-m/images/color/E_25.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/E_26.jpg','Purple','cble')" src="themes/trade-m/images/color/E_26.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/E_27.jpg','Red','cble')" src="themes/trade-m/images/color/E_27.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/E_28.jpg','Regency','cble')" src="themes/trade-m/images/color/E_28.jpg"><span>Regency</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/E_29.jpg','Royal Blue','cble')" src="themes/trade-m/images/color/E_29.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/E_30.jpg','Sage','cble')" src="themes/trade-m/images/color/E_30.jpg"><span>Sage</span></li>
+<li><img onmouseover="change('images/color/E_31.jpg','Silver','cble')" src="themes/trade-m/images/color/E_31.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/E_32.jpg','Skin Pink','cble')" src="themes/trade-m/images/color/E_32.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/E_33.jpg','Water Melon','cble')" src="themes/trade-m/images/color/E_33.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/E_34.jpg','White','cble')" src="themes/trade-m/images/color/E_34.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="F"></a>
+<strong>Elastic Silk-like Satin</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cblf" class="cbl"><img src="images/color/F_4.jpg"><span>Brown</span></div>
+<div class="cbr">
+<ul id="color_F">
+<li><img onmouseover="change('images/color/F_1.jpg','Black','cblf')" src="themes/trade-m/images/color/F_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/F_2.jpg','Blue','cblf')" src="themes/trade-m/images/color/F_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/F_3.jpg','Bright Rust Red','cblf')" src="themes/trade-m/images/color/F_3.jpg"><span>Bright Rust Red</span></li>
+<li><img onmouseover="change('images/color/F_4.jpg','Brown','cblf')" src="themes/trade-m/images/color/F_4.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/F_5.jpg','Bud Green','cblf')" src="themes/trade-m/images/color/F_5.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/F_6.jpg','Burgundy','cblf')" src="themes/trade-m/images/color/F_6.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/F_7.jpg','Champagne','cblf')" src="themes/trade-m/images/color/F_7.jpg"><span>Champagne</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/F_8.jpg','Chocolate','cblf')" src="themes/trade-m/images/color/F_8.jpg"><span>Chocolate</span></li>
+<li><img onmouseover="change('images/color/F_9.jpg','Daffodil','cblf')" src="themes/trade-m/images/color/F_9.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/F_10.jpg','Dark Brown','cblf')" src="themes/trade-m/images/color/F_10.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/F_11.jpg','Dark Green','cblf')" src="themes/trade-m/images/color/F_11.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/F_12.jpg','Dark Navy','cblf')" src="themes/trade-m/images/color/F_12.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/F_13.jpg','Dark Royal Blue','cblf')" src="themes/trade-m/images/color/F_13.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/F_14.jpg','Fuchsia','cblf')" src="themes/trade-m/images/color/F_14.jpg"><span>Fuchsia</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/F_15.jpg','Gold','cblf')" src="themes/trade-m/images/color/F_15.jpg"><span>Gold</span></li>
+<li><img onmouseover="change('images/color/F_16.jpg','Grape','cblf')" src="themes/trade-m/images/color/F_16.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/F_17.jpg','Green','cblf')" src="themes/trade-m/images/color/F_17.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/F_18.jpg','Hunter','cblf')" src="themes/trade-m/images/color/F_18.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/F_19.jpg','Ice Blue','cblf')" src="themes/trade-m/images/color/F_19.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/F_20.jpg','Lavender','cblf')" src="themes/trade-m/images/color/F_20.jpg"><span>Lavender</span></li>
+<li><img onmouseover="change('images/color/F_21.jpg','Light Plum','cblf')" src="themes/trade-m/images/color/F_21.jpg"><span>Light Plum</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/F_22.jpg','Light Sky Blue','cblf')" src="themes/trade-m/images/color/F_22.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/F_23.jpg','Lilac','cblf')" src="themes/trade-m/images/color/F_23.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/F_24.jpg','Ivory','cblf')" src="themes/trade-m/images/color/F_24.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/F_25.jpg','Mint','cblf')" src="themes/trade-m/images/color/F_25.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/F_26.jpg','Orange Red<','cblf')" src="themes/trade-m/images/color/F_26.jpg"><span>Orange Red&lt;</span></li>
+<li><img onmouseover="change('images/color/F_27.jpg','Org','cblf')" src="themes/trade-m/images/color/F_27.jpg"><span>Org</span></li>
+<li><img onmouseover="change('images/color/F_28.jpg','Pearl Pink','cblf')" src="themes/trade-m/images/color/F_28.jpg"><span>Pearl Pink</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/F_29.jpg','Pink','cblf')" src="themes/trade-m/images/color/F_29.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/F_30.jpg','Purple','cblf')" src="themes/trade-m/images/color/F_30.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/F_31.jpg','Red','cblf')" src="themes/trade-m/images/color/F_31.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/F_32.jpg','Regency','cblf')" src="themes/trade-m/images/color/F_32.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/F_33.jpg','Royal Blue','cblf')" src="themes/trade-m/images/color/F_33.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/F_34.jpg','Sage','cblf')" src="themes/trade-m/images/color/F_34.jpg"><span>Sage</span></li>
+<li><img onmouseover="change('images/color/F_35.jpg','Silver','cblf')" src="themes/trade-m/images/color/F_35.jpg"><span>Silver</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/F_36.jpg','Skin Pink','cblf')" src="themes/trade-m/images/color/F_36.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/F_37.jpg','Water Melon','cblf')" src="themes/trade-m/images/color/F_37.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/F_38.jpg','White','cblf')" src="themes/trade-m/images/color/F_38.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="colorbar">
+<div class="cbt">
+<a name="G"></a>
+<strong>Matte Satin</strong>
+<a href="#top">^TOP</a>
+<div class="clear"></div>
+</div>
+<div id="cblg" class="cbl"><img src="images/color/G_4.jpg"><span>Brown</span></div>
+<div class="cbr">
+<ul id="color_G">
+<li><img onmouseover="change('images/color/G_1.jpg','Black','cblg')" src="themes/trade-m/images/color/G_1.jpg"><span>Black</span></li>
+<li><img onmouseover="change('images/color/G_2.jpg','Blue','cblg')" src="themes/trade-m/images/color/G_2.jpg"><span>Blue</span></li>
+<li><img onmouseover="change('images/color/G_3.jpg','Bright Rust Red','cblg')" src="themes/trade-m/images/color/G_3.jpg"><span>Bright Rust Red</span></li>
+<li><img onmouseover="change('images/color/G_4.jpg','Brown','cblg')" src="themes/trade-m/images/color/G_4.jpg"><span>Brown</span></li>
+<li><img onmouseover="change('images/color/G_5.jpg','Bud Green','cblg')" src="themes/trade-m/images/color/G_5.jpg"><span>Bud Green</span></li>
+<li><img onmouseover="change('images/color/G_6.jpg','Burgundy','cblg')" src="themes/trade-m/images/color/G_6.jpg"><span>Burgundy</span></li>
+<li><img onmouseover="change('images/color/G_7.jpg','Champagne','cblg')" src="themes/trade-m/images/color/G_7.jpg"><span>Champagne</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/G_8.jpg','Chocolate','cblg')" src="themes/trade-m/images/color/G_8.jpg"><span>Chocolate</span></li>
+<li><img onmouseover="change('images/color/G_9.jpg','Daffodil','cblg')" src="themes/trade-m/images/color/G_9.jpg"><span>Daffodil</span></li>
+<li><img onmouseover="change('images/color/G_10.jpg','Dark Brown','cblg')" src="themes/trade-m/images/color/G_10.jpg"><span>Dark Brown</span></li>
+<li><img onmouseover="change('images/color/G_11.jpg','Dark Green','cblg')" src="themes/trade-m/images/color/G_11.jpg"><span>Dark Green</span></li>
+<li><img onmouseover="change('images/color/G_12.jpg','Dark Navy','cblg')" src="themes/trade-m/images/color/G_12.jpg"><span>Dark Navy</span></li>
+<li><img onmouseover="change('images/color/G_13.jpg','Dark Royal Blue','cblg')" src="themes/trade-m/images/color/G_13.jpg"><span>Dark Royal Blue</span></li>
+<li><img onmouseover="change('images/color/G_14.jpg','Fuchsia','cblg')" src="themes/trade-m/images/color/G_14.jpg"><span>Fuchsia</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/G_15.jpg','Gold','cblg')" src="themes/trade-m/images/color/G_15.jpg"><span>Gold</span></li>
+<li><img onmouseover="change('images/color/G_16.jpg','Grape','cblg')" src="themes/trade-m/images/color/G_16.jpg"><span>Grape</span></li>
+<li><img onmouseover="change('images/color/G_17.jpg','Green','cblg')" src="themes/trade-m/images/color/G_17.jpg"><span>Green</span></li>
+<li><img onmouseover="change('images/color/G_18.jpg','Hunter','cblg')" src="themes/trade-m/images/color/G_18.jpg"><span>Hunter</span></li>
+<li><img onmouseover="change('images/color/G_19.jpg','Ice Blue','cblg')" src="themes/trade-m/images/color/G_19.jpg"><span>Ice Blue</span></li>
+<li><img onmouseover="change('images/color/G_20.jpg','Kelly','cblg')" src="themes/trade-m/images/color/G_20.jpg"><span>Kelly</span></li>
+<li><img onmouseover="change('images/color/G_21.jpg','Lavender','cblg')" src="themes/trade-m/images/color/G_21.jpg"><span>Lavender</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/G_22.jpg','Light Plum','cblg')" src="themes/trade-m/images/color/G_22.jpg"><span>Light Plum</span></li>
+<li><img onmouseover="change('images/color/G_23.jpg','Light Sky Blue','cblg')" src="themes/trade-m/images/color/G_23.jpg"><span>Light Sky Blue</span></li>
+<li><img onmouseover="change('images/color/G_24.jpg','Lilac','cblg')" src="themes/trade-m/images/color/G_24.jpg"><span>Lilac</span></li>
+<li><img onmouseover="change('images/color/G_25.jpg','Ivory','cblg')" src="themes/trade-m/images/color/G_25.jpg"><span>Ivory</span></li>
+<li><img onmouseover="change('images/color/G_26.jpg','Mint','cblg')" src="themes/trade-m/images/color/G_26.jpg"><span>Mint</span></li>
+<li><img onmouseover="change('images/color/G_27.jpg','Orange Red','cblg')" src="themes/trade-m/images/color/G_27.jpg"><span>Orange Red</span></li>
+<li><img onmouseover="change('images/color/G_28.jpg','Org','cblg')" src="themes/trade-m/images/color/G_28.jpg"><span>Org</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/G_29.jpg','Pearl Pink','cblg')" src="themes/trade-m/images/color/G_29.jpg"><span>Pearl Pink</span></li>
+<li><img onmouseover="change('images/color/G_30.jpg','Pink','cblg')" src="themes/trade-m/images/color/G_30.jpg"><span>Pink</span></li>
+<li><img onmouseover="change('images/color/G_31.jpg','Purple','cblg')" src="themes/trade-m/images/color/G_31.jpg"><span>Purple</span></li>
+<li><img onmouseover="change('images/color/G_32.jpg','Red','cblg')" src="themes/trade-m/images/color/G_32.jpg"><span>Red</span></li>
+<li><img onmouseover="change('images/color/G_33.jpg','Regency','cblg')" src="themes/trade-m/images/color/G_33.jpg"><span>Regency</span></li>
+<li><img onmouseover="change('images/color/G_34.jpg','Royal Blue','cblg')" src="themes/trade-m/images/color/G_34.jpg"><span>Royal Blue</span></li>
+<li><img onmouseover="change('images/color/G_35.jpg','Sage','cblg')" src="themes/trade-m/images/color/G_35.jpg"><span>Sage</span></li>
+<div class="clear"></div>
+<li><img onmouseover="change('images/color/G_36.jpg','Silver','cblg')" src="themes/trade-m/images/color/G_36.jpg"><span>Silver</span></li>
+<li><img onmouseover="change('images/color/G_37.jpg','Skin Pink','cblg')" src="themes/trade-m/images/color/G_37.jpg"><span>Skin Pink</span></li>
+<li><img onmouseover="change('images/color/G_38.jpg','Water Melon','cblg')" src="themes/trade-m/images/color/G_38.jpg"><span>Water Melon</span></li>
+<li><img onmouseover="change('images/color/G_39.jpg','White','cblg')" src="themes/trade-m/images/color/G_39.jpg"><span>White</span></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+
+</div>

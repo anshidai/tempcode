@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$article.title} - Temper Queen</title>
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="help.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+
+<!--help_con-->
+<div class="help_con">
+    <div class="help_left">
+        <div class="h_menu">
+            <dl>
+                <dt>Feature Categories</dt>
+                <dd><a href="/article-5-About-Temperqueencom.html">About Temperqueen.com</a></dd>
+                <dd><a href="/article-4-Contact-Us.html">Contact Us</a></dd>
+                <dd><a href="/article-3-Wholesale.html">Wholesale</a></dd>
+                <dd><a href="/article-2-Privacy-and-Security.html">Privacy and Security</a></dd>
+                <dd><a href="/article-1-Privacy-Terms-of-Use.html">Privacy &Terms of Use</a></dd>
+            </dl>
+        </div>
+        <div class="contact">
+            <span class="con_us">Contact Us</span>
+            <div><strong>Email:&nbsp;</strong><span>service@temperqueen.com</span></div>
+            <input type="button" value="Click here and send e-mail to us" class="contact_btn" name="" onclick="location.href='#';">
+        </div>
+        <script type="text/javascript">
+            function searchQues() {
+                txt = document.getElementById("searchTxt").value;
+                location.href = ""+"/help/" + txt + "/";
+            }
+        </script>
+    </div>
+    <!-- help_left end-->
+
+    <div class="help_right">
+        <div class="h_n">
+            <span class="nb"><a href="#">{$article.title|escape:html}</a></span>
+            <a href="/">Home</a> &gt;Help Center
+            <div class="brbd"></div>
+        </div>
+        
+        <dl class="hl_d2">
+            <dt>{$article.title|escape:html}</dt>
+        </dl>
+       
+       <div class="help_contents">
+            {$article.content}
+       </div> 
+        
+    </div>
+    <!-- help_right end-->
+
+</div>
+<!--help_con end-->
+<div class="clear"></div>
+
+
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem --> 
+
+</body>
+</html>
