@@ -371,7 +371,7 @@ if ($act == 'insert') {
         $post_attr = cj_parse_attr($_POST['attr']); //解析采集商品属性
         
         //替换属性 属性名称要改成小写
-        $post_attr = replaceparams($post_attr, array('embellishment'=>'embellishments'));
+        $post_attr = replaceparams($post_attr, array('hemline'=>'hemline/train','trend collection'=>'trend collections','color family'=>'color2'));
         if($post_attr) {
             foreach($post_attr as $k=>$v) {
                 if(in_array($k, $attr_index)) {
@@ -413,6 +413,7 @@ if ($act == 'insert') {
         }
         
         //根据商品属性拼接商品名称
+        
         $seotitle = $seokeyword = '';
         $seotitleattr = array('Silhouette','Color','Hemline/Train','Embellishments','Neckline','Back Details','Fabric','Sleeve Length','Body Shape','Occasion','Shown Color','Celebrity Style','Trend');
         $new_attr['color']['attr_value'] = $randcolor; //把color随机取2个
@@ -429,8 +430,14 @@ if ($act == 'insert') {
             }    
         }
         if($seotitle && !empty($_POST['attr'])) {
-            $seotitle = filterstr(trim($seotitle));
-            $seokeyword = $seotitle;
+            //拼接商品名称
+            //$seotitle = filterstr(trim($seotitle));
+            //$seokeyword = $seotitle;
+            
+            //不拼接商品名称
+            $goods_name = filterstr(trim($goods_name));
+            $seokeyword = filterstr(trim($seotitle));
+            
             $sql = "UPDATE ".$ecs->table("goods"). " SET goods_name = '{$seotitle}',keywords='{$seokeyword}' WHERE goods_id = '{$goods_id}' LIMIT 1" ;
             $db->query($sql);
         }

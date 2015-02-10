@@ -346,7 +346,26 @@ elseif ($_REQUEST['act'] == 'info')
             $row['brand_name'] = '';
             $row['package_goods_list'] = get_package_goods($row['goods_id']);
         }
-
+        
+        //自定义尺码
+        if($row['custom_shoulder_width']) {
+            $row['custom_attr'] .= "Shoulder Width(cm)：{$row['custom_shoulder_width']}, ";       
+        }
+        if($row['custom_bust_size']) {
+            $row['custom_attr'] .= "Bust Size(cm)：{$row['custom_bust_size']}, ";       
+        }
+        if($row['custom_waist_size']) {
+            $row['custom_attr'] .= "Waist Size(cm)：{$row['custom_waist_size']}, ";       
+        }
+        if($row['custom_hip_size']) {
+            $row['custom_attr'] .= "Hip Size(cm)：{$row['custom_hip_size']}, ";       
+        }
+        if($row['custom_hollow_to_floor']) {
+            $row['custom_attr'] .= "Hollow to floor(cm)：{$row['custom_hollow_to_floor']}, ";       
+        }
+        if($row['custom_hollow_to_knee']) {
+            $row['custom_attr'] .= "Hollow to Knee(cm)：{$row['custom_hollow_to_knee']}, ";       
+        }
         $goods_list[] = $row;
     }
 

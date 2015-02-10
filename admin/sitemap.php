@@ -98,6 +98,12 @@ else
     $xmlstr .= '<loc>'.$ecs->url().'sitemap_goods_en_1.xml</loc>'."\n";
     $xmlstr .= '<lastmod>'.$today.'</lastmod>'."\n";
     $xmlstr .= '</sitemap>'."\n";
+    
+    $xmlstr .= '<sitemap>'."\n";
+    $xmlstr .= '<loc>'.$ecs->url().'sitemap/sitemap_detail_index.xml</loc>'."\n";
+    $xmlstr .= '<lastmod>'.$today.'</lastmod>'."\n";
+    $xmlstr .= '</sitemap>'."\n";
+    
     $xmlstr .= '</sitemapindex>'."\n";
      
     if(file_put_contents('../sitemap.xml', $xmlstr)) {

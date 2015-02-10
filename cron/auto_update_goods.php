@@ -24,10 +24,12 @@ $date = getfile_log(); //获取本次执行的具体日期
 
 $today = date('Ymd'); 
 $h = date('H');
+ 
 
 //每天只执行一次，根据小时执行
-if($date == 'first' || ($today == $date['date'] && $h == $date['hours']) ) {
-    $rand_total = rand(100, 150);  //随机审核商品数量
+if($date == 'first' || ($today == $date['date'] && $h == $date['hours']) || (strtotime($date['date']) - strtotime('-3 day') <0)) {
+    //$rand_total = rand(100, 150);  //随机审核商品数量
+    $rand_total = 300;
     $sql = "UPDATE ".$GLOBALS['ecs']->table('goods')." SET is_on_sale=1 WHERE is_delete=0 AND is_on_sale=0 ORDER BY goods_id LIMIT $rand_total";
     $GLOBALS['db']->query($sql);
     putfile_log($sql);       

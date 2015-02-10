@@ -3,13 +3,13 @@
 <li class="showbut"><a href="/">Home</a></li>/ 
 <!--{foreach from=$categories item=cat name=foo}-->
     <!--{if $cat.id != '7'}-->
-    <li class="showbut"><a href="{$cat.url}">{$cat.name}</a>
+    <li class="showbut"><a href="/{$cat.url}">{$cat.name}</a>
         <!-- {if $cat.cat_id}-->
         <div class="magc showbox" style="display: none;"><span></span></div>
         <div class="menus showbox" style="display: none;">
             <ul>
                 <!--{foreach from=$cat.cat_id item=child}-->
-                <li><a href="{$child.url}">• {$child.name}</a></li>
+                <li><a href="/{$child.url}">• {$child.name}</a></li>
                 <!--{/foreach}-->
             </ul>
         </div>

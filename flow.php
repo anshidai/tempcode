@@ -1717,6 +1717,38 @@ elseif ($_REQUEST['step'] == 'done')
             " FROM " .$ecs->table('cart') .
             " WHERE session_id = '".SESS_ID."' AND rec_type = '$flow_type'";
     $db->query($sql);
+    
+    //如果有自定义尺寸 更新自定义尺码数据
+    if(!empty($cart_goods[0])) {
+        $custom_attr = explode('|||', $cart_goods[0]['custom_attr']);
+        foreach($custom_attr as $k=>$val) {
+            $tms = explode(':', $val);
+            if($tms[0] == 'shoulder_width') {
+                $shoulder_width = $tms[1];   
+            } 
+            else if($tms[0] == 'bust_size') {
+                $bust_size = $tms[1];
+            } 
+            else if($tms[0] == 'waist_size') {
+                $waist_size = $tms[1];    
+            } 
+            else if($tms[0] == 'hip_size') {
+                $hip_size = $tms[1];
+            } 
+            else if($tms[0] == 'hollow_to_floor') {
+                $hollow_to_floor = $tms[1];    
+            } 
+            else if($tms[0] == 'hollow_to_knee') {
+               $hollow_to_knee = $tms[1];    
+            }           
+        }
+        $customsql = "UPDATE ".$ecs->table('order_goods')." SET 
+                    custom_shoulder_width='{$shoulder_width}', custom_bust_size='{$bust_size}',
+                    custom_waist_size='{$waist_size}',custom_hip_size='{$hip_size}',
+                    custom_hollow_to_floor='{$hollow_to_floor}',custom_hollow_to_knee='{$hollow_to_knee}' WHERE order_id='{$new_order_id}'";
+        $db->query($customsql);        
+    }
+    
     /* 修改拍卖活动状态 */
     if ($order['extension_code']=='auction')
     {

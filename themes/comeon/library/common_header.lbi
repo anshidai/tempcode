@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert_scripts files='jquery-1.4.2.min.js'} 
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script> 
 <script type="text/javascript">
 var process_request = "{$lang.process_request}";
 </script>
@@ -20,7 +20,8 @@ var process_request = "{$lang.process_request}";
                     </ul>
                     </div>
                 </li>
-                {insert_scripts files='transport.js,utils.js'}
+                <script type="text/javascript" src="/js/transport.js"></script>
+                <script type="text/javascript" src="/js/utils.js"></script>
                 {insert name='member_info'}
                 <!--
                 <li class="currshow">

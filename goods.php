@@ -165,22 +165,22 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
     {
         //关键词自动内链_新增加 开始 by www.yoja365.com
         
-        $sql = "SELECT key_id,key_name,key_url FROM ".$GLOBALS['ecs']->table('content_key')." B JOIN (SELECT CEIL(MAX(key_id)*RAND()) AS ID FROM ".$GLOBALS['ecs']->table('content_key').") AS m ON B.key_id >= m.ID LIMIT 20";
+        $maxid = $GLOBALS['db']->getOne("SELECT max(qid) FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE status=1"); 
+
+        $multi_qid = multi_rand(1, $maxid, 20);
+        $sql = "SELECT qid,query_url,query_str FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE qid in(".implode(',', $multi_qid).") LIMIT 20";
         $cachekey = md5($sql.$goods_id);
         
         include('includes/cls_memcached.php');
         $memcached = new cls_memcached();
         $memcached->init();
         $cachedata = $memcached->get($cachekey);
-
         if(!$cachedata) {
             $res_k = $GLOBALS['db']->query($sql);
             while($row_k = $GLOBALS['db']->fetchRow($res_k))
             {
-                if($row_k['key_url']) {
-                    $cachedata[$row_k['key_id']]['key_url'] = $row_k['key_url'];  
-                    $cachedata[$row_k['key_id']]['key_name'] = $row_k['key_name'];
-                } 
+                $cachedata[$row_k['qid']]['key_url'] = $host."/product-detail/{$row_k['query_url']}.html";  
+                $cachedata[$row_k['qid']]['key_name'] = $row_k['query_str'];
             }
             $memcached->set($cachekey,serialize($cachedata), 86400*30);        
         }else {
@@ -909,6 +909,35 @@ function get_comment_total($goods_id, $date = 'all')
         $where .= " AND add_time>='{$time}' AND add_time<=".time(); 
     }
     return $GLOBALS['db']->getOne("SELECT count(*) FROM ".$GLOBALS['ecs']->table('comment')." WHERE {$where}");
+}
+
+//取多个不重复的随机数
+function multi_rand($begin, $end, $count)
+{
+    $rand_array = array();
+    if($count>($end - $begin + 1)) {
+        $count = ($end - $begin + 1);
+    }
+    for($i = 0;$i < $count; $i++ ) {
+        $is_ok = false;
+        $num = 0;
+        while(!$is_ok){
+            $num = rand($begin,$end);
+            $is_out = 1;
+            foreach($rand_array as $v) {
+                if($v == $num ) {
+                    $is_ok = false;
+                    $is_out = 0;
+                    break;
+                }
+            }
+            if($is_out == 1) {
+                $is_ok = true;
+            }
+        }
+        $rand_array[] = $num;
+    }
+    return $rand_array;
 }
 
 ?>

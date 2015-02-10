@@ -211,7 +211,7 @@
     <td><div align="right">{$goods.formated_goods_price}</div></td>
     <td><div align="right">{$goods.goods_number}
     </div></td>
-    <td>{$goods.goods_attr|nl2br}</td>
+    <td>{$goods.goods_attr|nl2br} {if $goods.custom_attr}<br>自定义尺码：{$goods.custom_attr}{/if}</td>
     <td><div align="right">{$goods.storage}</div></td>
     <td><div align="right">{$goods.formated_subtotal}</div></td>
   </tr>

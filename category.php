@@ -22,6 +22,11 @@ if ((DEBUG_MODE & 2) != 2)
     $smarty->caching = true;
 }
 
+$host = $_SERVER['HTTP_HOST'];
+if(!strpos('http://', $host)) {
+    $host = 'http://'.$host;    
+}
+
 /*------------------------------------------------------ */
 //-- INPUT
 /*------------------------------------------------------ */
@@ -328,31 +333,31 @@ if (!$smarty->is_cached('category.dwt', $cache_id))
 
     assign_template('c', array($cat_id));
 
-    //关键词自动内链_新增加 开始 by www.yoja365.com
-        
-    $sql = "SELECT key_id,key_name,key_url FROM ".$GLOBALS['ecs']->table('content_key')." B JOIN (SELECT CEIL(MAX(key_id)*RAND()) AS ID FROM ".$GLOBALS['ecs']->table('content_key').") AS m ON B.key_id >= m.ID LIMIT 20";
+    //关键词自动内链_新增加 开始 by
+
+    $maxid = $GLOBALS['db']->getOne("SELECT max(qid) FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE status=1"); 
+
+    $multi_qid = multi_rand(1, $maxid, 20);
+    $sql = "SELECT qid,query_url,query_str FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE qid in(".implode(',', $multi_qid).") LIMIT 20";
     $cachekey = md5($sql.$cat_id);
     
     include('includes/cls_memcached.php');
     $memcached = new cls_memcached();
     $memcached->init();
     $cachedata = $memcached->get($cachekey);
-
     if(!$cachedata) {
         $res_k = $GLOBALS['db']->query($sql);
         while($row_k = $GLOBALS['db']->fetchRow($res_k))
         {
-            if($row_k['key_url']) {
-                $cachedata[$row_k['key_id']]['key_url'] = $row_k['key_url'];  
-                $cachedata[$row_k['key_id']]['key_name'] = $row_k['key_name'];
-            } 
+            $cachedata[$row_k['qid']]['key_url'] = $host."/product-detail/{$row_k['query_url']}.html";  
+            $cachedata[$row_k['qid']]['key_name'] = $row_k['query_str'];
         }
         $memcached->set($cachekey,serialize($cachedata), 86400*30);        
     }else {
         $cachedata = unserialize($cachedata);    
     }
     $smarty->assign('keytaglist', $cachedata);
-    //关键词自动内链_新增加 结束 by www.yoja365.com
+    //关键词自动内链_新增加 结束
     
     
     $position = assign_ur_here($cat_id, $brand_name);
@@ -713,6 +718,35 @@ function get_attribute_value($cat_id = '2')
     }
     return $res;
 } 
+
+//取多个不重复的随机数
+function multi_rand($begin, $end, $count)
+{
+    $rand_array = array();
+    if($count>($end - $begin + 1)) {
+        $count = ($end - $begin + 1);
+    }
+    for($i = 0;$i < $count; $i++ ) {
+        $is_ok = false;
+        $num = 0;
+        while(!$is_ok){
+            $num = rand($begin,$end);
+            $is_out = 1;
+            foreach($rand_array as $v) {
+                if($v == $num ) {
+                    $is_ok = false;
+                    $is_out = 0;
+                    break;
+                }
+            }
+            if($is_out == 1) {
+                $is_ok = true;
+            }
+        }
+        $rand_array[] = $num;
+    }
+    return $rand_array;
+}
 
 
 

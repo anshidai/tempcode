@@ -1,0 +1,189 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{$list.info.query_str} - TemperQueen.com</title>
+<meta name="Keywords" content="{$list.info.query_str}">
+<meta name="Description" content="Temperqueen provide you with the latest and most {$list.info.query_str} goods and related information, which includes: {$list.info.query_str}, {$list.info.query_str} price, {$list.info.query_str} pictures, {$list.info.query_str} parameters, {$list.info.query_str} comments, etc., also includes other specific commodity information, want to learn more about {$list.info.query_str} relevant content on temperqueen.com.">
+<link href="/themes/comeon/global.css" rel="stylesheet" type="text/css">
+<link href="/themes/comeon/keyword_detail.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+
+
+<!--主要内容开始-->
+<div class="g_content">
+ <p class="g_content_p"><span>Your Position:Home > <a href="http://www.temperqueen.com/product-detail/{$list.info.query_url}.html">{$list.info.query_str}</a></span></p> 
+ <div class="g_con_ul">
+ 
+    <!-- 循环体star -->
+    <!--{if $list}-->
+    <!-- {foreach from=$list.list item=goods  key=k} -->
+    <div class="g_con_ul_div">
+        <div class="g_con_ul_left">
+            <p class="g_con_ul_left_title"><a href="{$goods.url}">{$goods.goods_name}</a></p>
+            <div class="g_con_left_main">
+                <div class="box">
+                    <div class="tb-booth tb-pic tb-s310">
+                        <a href="{$goods.url}"><img src="{$goods.goods_thumb}" class="jqzoom{$k}" /></a>
+                    </div>
+                    
+                    <div style="width:458px;height:305px;margin-left:250px;margin-top:-310px;">
+                        <div class="g_ul_left_top">
+                            <div class="g_ul_left_top_first">
+                                <p class="top_first_p">Market Price:<span style="text-decoration:line-through">USD ${$goods.market_price}</span></p>
+                                <p class="top_first_color">Price: USD $ {$goods.shop_price}</p>
+                                <p class="top_first_span">
+                                    <span class="top_span"><img src="/themes/comeon/images/shop_03.jpg" align="center"></span>
+                                    <span class="top_span">Reviews ({$goods.comment_total})</span>
+                                    <span class="top_span" style=" background:url(images/goods_15.jpg) left center no-repeat;"><a href="{$goods.url}##rwt">Write a review</a></span>
+                                    <span class="top_span" style="border:0;">
+                                        <a href="javascript:;" onclick="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title));" class="facebook"><img src="/themes/comeon/images/goods_06.jpg"></a>
+                                        <a href="javascript:;" onclick="javascript:window.open('http://pinterest.com/pin/create/button/?url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)+'&media='+encodeURIComponent('http://www.temperqueen.com/{$goods.original_img}')+'&description='+encodeURIComponent('{$goods.goods_name}')+'&is_video=false');" class="pinterest"><img src="/themes/comeon/images/goods_08.jpg"></a>
+                                        <a href="javascript:;" onclick="javascript:window.open('https://twitter.com/share?url='+encodeURIComponent(document.location.href)+'%3Futm_medium%3Dtwitter%26utm_source%3Dtwitter.com&text='+encodeURIComponent(document.title));" class="twitter"><img src="/themes/comeon/images/goods_10.jpg"></a>
+                                        <a href="javascript:;" onclick="javascript:window.open('https://plus.google.com/share?url='+encodeURIComponent(document.location.href)+'%3Futm_medium%3Dgoogleplus&hl=en-US');" class="googleplus"><img src="/themes/comeon/images/goods_12.jpg"></a>   
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="top_select">
+                                <p>
+                                <select>
+                                    <option value="">Select Color</option>
+                                    <option value="White">White</option>
+                                    <option value="Ivory">Ivory</option>
+                                    <option value="Champagne">Champagne</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Purple">Purple</option>
+                                    <option value="Pink">Pink</option>
+                                    <option value="Grape">Grape</option>
+                                    <option value="Brown">Brown</option>
+                                    <option value="Burgundy">Burgundy</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="Gold">Gold</option>
+                                    <option value="Silver">Silver</option>
+                                    <option value="Gray">Gray</option>
+                                    <option value="Daffodil">Daffodil</option>
+                                    <option value="Fuchsia">Fuchsia</option>
+                                    <option value="Dark Champagne">Dark Champagne</option>
+                                    <option value="Leopard">Leopard</option>
+                                    <option value="Multi">Multi</option>
+                                    <option value="Lilac">Lilac</option>
+                                    <option value="Lavender">Lavender</option>
+                                    <option value="Light Purple">Light Purple</option>
+                                    <option value="Light Sky Blue">Light Sky Blue</option>
+                                    <option value="Light Slate Gray">Light Slate Gray</option>
+                                    <option value="Sky Blue">Sky Blue</option>
+                                    <option value="Royal Blue">Royal Blue</option>
+                                    <option value="Dark Navy">Dark Navy</option>
+                                    <option value="Sage Green">Sage Green</option>
+                                    <option value="Hunter Green">Hunter Green</option>
+                                    <option value="Dark Green">Dark Green</option>
+                                    <option value="light green">light green</option>
+                                </select>
+                                </p>
+                                <p>
+                                <select>
+                                    <option value="">Select Size</option>
+                                    <option value="US2-UK6-EUR32">US2-UK6-EUR32</option>
+                                    <option value="US4-UK8-EUR34">US4-UK8-EUR34</option>
+                                    <option value="US6-UK10-EUR36">US6-UK10-EUR36</option>
+                                    <option value="US8-UK12-EUR38">US8-UK12-EUR38</option>
+                                    <option value="US10-UK14-EUR40">US10-UK14-EUR40</option>
+                                    <option value="US12-UK16-EUR42">US12-UK16-EUR42</option>
+                                    <option value="US14-UK18-EUR44">US14-UK18-EUR44</option>
+                                    <option value="US16-UK20-EUR46">US16-UK20-EUR46</option>
+                                    <option value="US14W-UK18-EUR44">US14W-UK18-EUR44</option>
+                                    <option value="US16W-UK20-EUR46">US16W-UK20-EUR46</option>
+                                    <option value="US18W-UK22-EUR48">US18W-UK22-EUR48</option>
+                                    <option value="US20W-UK24-EUR50">US20W-UK24-EUR50</option>
+                                    <option value="US22W-UK26-EUR52">US22W-UK26-EUR52</option>
+                                    <option value="US24W-UK28-EUR54">US24W-UK28-EUR54</option>
+                                    <option value="US26W-UK30-EUR56">US26W-UK30-EUR56</option>
+                                </select>
+                                </p>
+                                <span class="ckeckbox_span" style="color:#f00;">The product supports custom size</span>
+                            </div>
+                            
+                            
+                        </div> <!-- end g_ul_left_top -->
+                        
+                        <ul class="tb-thumb" id="thumblist{$k}">
+                            <p>Detail display:</p>
+                            <li><div class="tb-pic tb-s40"><a href="javascript:;" rel_class="jqzoom{$k}"><img src="{$goods.goods_thumb}" big="{$goods.original_img}" width="64" height="94"></a></div></li>   
+                        <!--{if $goods.img_list}-->
+                        <!-- {foreach from=$goods.img_list item=img} --> 
+                           <li><div class="tb-pic tb-s40"><a href="javascript:;" rel_class="jqzoom{$k}"><img src="{$img.thumb_url}" big="{$img.img_url}" width="64" height="94"></a></div></li>
+                        <!-- {/foreach}-->
+                        <!--{/if}-->
+                        </ul>
+                        
+                    </div>
+                </div> <!-- end box -->
+            </div> <!-- end g_con_left_main -->
+        </div> <!-- end g_con_ul_left -->
+        
+        <div class="g_con_ul_right">
+            <p class="g_con_ul_right_p">Detail description:</p>
+            <!--{if $goods.attr_list}-->
+            <ul>
+            <!-- {foreach from=$goods.attr_list item=attr} --> 
+                <li><p><strong>{$attr.attr_name} :</strong></p><p>{$attr.attr_value}</p></li>
+            <!-- {/foreach}-->
+            </ul>
+            <!--{/if}-->
+            
+        </div> <!--  end g_con_ul_right --> 
+    </div> <!-- end g_con_ul_div -->
+    <!-- {/foreach}-->
+    <!--{/if}-->
+    <!-- 循环体end -->
+
+  <!--结束-->
+  <div class="g_main_bottom">
+     <p class="g_main_bottom_title">
+        <span>{$list.info.query_str}Related Content Description</span>
+     </p>
+     {$list.desc_content}
+  </div> 
+  <div class="g_main_bottom">
+     <p class="g_main_bottom_title"><span>{$list.info.query_str}Related Top Categories</span></p>
+      <div class="rand_list">
+      <!--{if $list.rand_list}-->
+      <!-- {foreach from=$list.rand_list item=val} -->
+        <span><a href="{$val.url}">{$val.query_str}</a></span>
+      <!-- {/foreach}-->
+      <!--{/if}-->
+      </div>
+  </div> 
+ </div>
+  
+</div>
+<!--主要内容结束-->
+
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".tb-thumb li a").click(function(){
+        var class_id = $(this).attr('rel_class');
+        $("."+class_id).attr('src', $(this).find("img").attr("big"));
+    });
+});
+</script>
+
+</body>
+</html>
