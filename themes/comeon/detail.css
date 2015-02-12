@@ -853,7 +853,7 @@ border-right: 1px solid #E5E5E5;border-top: 1px solid #E5E5E5;cursor: pointer;fl
 .form-right .form-dl .required-entry{width:97%;height:150px;padding:4px;}
 .form-right .comment-btn{padding:2px 4px;}
 
-.custom_ments{width:390px;height:380px;padding-left:10px;background:url(images/custom_shoulder.gif) no-repeat right 40px;}
+.custom_ments{width:390px;height:410px;padding-left:10px;background:url(images/custom_shoulder.gif) no-repeat right 40px;}
 .cus_from input{width:150px;height:20px;line-height:20px;}
 .custom_ments p{line-height: 20px;}
 .custom_ments .cus_from{line-height:20px;margin-top:15px;}
@@ -893,3 +893,9 @@ border-right: 1px solid #E5E5E5;border-top: 1px solid #E5E5E5;cursor: pointer;fl
 .delivery{padding: 20px 0;}
 .delivery .dtit{font-weight: normal;margin: 20px 0 10px 0;font-family: Verdana;}
 .delivery .ddesc{line-height: 20px;font-family: Arial;color: #666;}
+
+.nums_sale{background:url(images/nums_sale.png) no-repeat;}
+.nums_sale .ratio, .nums_sale .off{display:block;color:#fff;text-align:center;text-decoration:none;}
+.nums_sale .ratio i{font-size:16px;}
+.nums_sale .ratio{height:24px;line-height:24px;font-size:24px;padding-top:8px;}
+.nums_sale .off{height:16px;line-height:16px;font-size:16px;padding-top:2px;}

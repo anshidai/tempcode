@@ -97,7 +97,7 @@
                     <dl class="l_g_s">
                         <dd>
                             <a href="{$goods.url}" class="imgc_a">
-                            <span class="offsale sale_{$goods.sale_num}"></span>
+                            <span class="offsale nums_sale"><s class="ratio">{$goods.sale_num}<i>%</i></s><s class="off">OFF</s></span>
                             <img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="imgChange"></a>
                         </dd>
                         <dt>

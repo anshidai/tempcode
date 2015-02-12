@@ -829,6 +829,7 @@ function get_package_goods_list($goods_id)
 
 function count_price($price)
 {
+    return intval($price);
     $num = 5;
     if($price >5 && $price <= 10) {
         $num = 10;                       

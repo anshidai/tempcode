@@ -348,6 +348,9 @@ elseif ($_REQUEST['act'] == 'info')
         }
         
         //自定义尺码
+        if($row['custom_height']) {
+            $row['custom_attr'] .= "Height(cm)：{$row['custom_height']}, ";       
+        }
         if($row['custom_shoulder_width']) {
             $row['custom_attr'] .= "Shoulder Width(cm)：{$row['custom_shoulder_width']}, ";       
         }

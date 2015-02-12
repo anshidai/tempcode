@@ -382,3 +382,9 @@ i.stars[title="4"], i.stars[title="4.0"], i.stars[title="4.1"], i.stars[title="4
 .l_star40 {background-position:left -65px}
 .l_star45 {background-position:left -65px}
 .l_star50 {background-position:left -81px}
+
+.nums_sale{background:url(images/nums_sale.png) no-repeat;}
+.nums_sale .ratio, .nums_sale .off{display:block;color:#fff;text-align:center;text-decoration:none;}
+.nums_sale .ratio i{font-size:16px;}
+.nums_sale .ratio{height:24px;line-height:24px;font-size:24px;padding-top:8px;}
+.nums_sale .off{height:16px;line-height:16px;font-size:16px;padding-top:2px;}

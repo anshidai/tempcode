@@ -8,7 +8,8 @@
 <link href="global.css" rel="stylesheet" type="text/css" />
 <link href="detail.css" rel="stylesheet" type="text/css" />
 <link rel="alternate" hreflang="en" href="http://www.temperqueen.com/" />
-{insert_scripts files='common.js,transport.js,mzp-packed.js'}
+<script type="text/javascript" src="js/common.js?dTime=201502121150"></script>
+{insert_scripts files='transport.js,mzp-packed.js'}
 <script type="text/javascript">
 function $id(element) {
   return document.getElementById(element);
@@ -61,7 +62,7 @@ function $id(element) {
                         <span class="after" id="gobottom"></span>
                     </div>
                     <div class="bigzoom_thumbs">
-                        <span class="offsale sale_{$goods.sale_num}" style="right:-5px;"></span>
+                        <span class="offsale nums_sale" style="right:-5px;"><s class="ratio">{$goods.sale_num}<i>%</i></s><s class="off">OFF</s></span>
                         <a href="{$goods.goods_img}" id="zoom1" class="MagicZoom MagicThumb">
                             <img src="{$goods.original_img}" id="main_img" class="main_img" style="width:390px; height:540px;" />
                         </a>
@@ -196,6 +197,8 @@ function $id(element) {
              <div class="custom_ments clearfix" id="custom_measurements" style="display:none;">
                 <p>Looking for a perfect fit? For an additional $ 19.9, our tailors will use your exact measurements to create a made-to-order dress just for you.</p>
                 <dl class="cus_from clearfix">
+                    <dt>Height:</dt>
+                    <dd><input id="cus_height" type="text" name="cus_height"> cm</dd>
                     <dt>A. Shoulder Width:</dt>
                     <dd><input id="cus_shoulder_width" type="text" name="cus_shoulder_width"> cm</dd>
                     <dt>B. Bust Size:</dt>
@@ -222,7 +225,7 @@ function $id(element) {
                   <li class="iteminfo"><a href="#tabs" rel="nofollow">Item Information</a></li>
                     <li class="OriginalDesign"><a href="#tabs" rel="nofollow">Original Design</a></li>
                     <li class="sizecha"><a href="#tabs" rel="nofollow">Size Chart</a></li>
-                    <!-- <li class="ColorChart"><a class="property" href="#tabs" rel="nofollow">Color Chart</a></li> -->
+                    <li class="ColorChart"><a class="property" href="#tabs" rel="nofollow">Color Chart</a></li>
                     <li class="measgu"><a href="#tabs" rel="nofollow">Measuring Guide</a></li>
                     <li class="FAQs"><a class="property" href="#tabs" rel="nofollow">FAQS</a></li>
                     <li class="QualityGuarantee"><a class="property" href="#tabs" rel="nofollow">Quality Guarantee</a></li>
@@ -319,6 +322,7 @@ function $id(element) {
                 <ul id="tabs">
                     <li class="select" tab="tab1">Item Information</li>
                     <li tab="tab2">Size Chart</li>
+                    <li tab="tab2">Color Chart</li>
                     <li tab="tab4">Delivery</li>
                     <li tab="tab5">Measuring Guide</li>
                     <li tab="tab6">Original Design</li>
@@ -366,7 +370,7 @@ function $id(element) {
         
         <!-- tab_con3 start -->
         <div id="tab3" class="goods_con tab_con" style="display:none;">
-                
+            <!-- #BeginLibraryItem "/library/goods_color.lbi" --><!-- #EndLibraryItem -->        
         </div>
         
         <!-- tab_con4 start -->

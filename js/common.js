@@ -25,7 +25,14 @@ function addToCart(goodsId, parentId)
   color_size[1] = formBuy.elements['attrSize'].value;
   
   //检查自定义属性
+  
   if(formBuy.elements['custom'].checked == true) {
+
+      if(formBuy.elements['cus_height'].value == '' && formBuy.elements['cus_shoulder_width'].value == '' && formBuy.elements['cus_bust_size'].value == '' && formBuy.elements['cus_waist_size'].value == '' && formBuy.elements['cus_hip_size'].value == '' && formBuy.elements['cus_hollow_to_floor'].value == '' && formBuy.elements['cus_hollow_to_knee'].value == '') {
+        alert('Please fill in at least one.');
+        return false;    
+      } 
+    /*  
     if(formBuy.elements['cus_shoulder_width'].value == '') {
         alert('Please enter shoulder width.');
         return false;
@@ -44,13 +51,15 @@ function addToCart(goodsId, parentId)
     } else if(formBuy.elements['cus_hollow_to_knee'].value == '') {
         alert('Please enter hollow to knee.');
         return false;
-    } 
+    }
+    */ 
     custom_attr[0] = formBuy.elements['cus_shoulder_width'].value;        
     custom_attr[1] = formBuy.elements['cus_bust_size'].value;        
     custom_attr[2] = formBuy.elements['cus_waist_size'].value;        
     custom_attr[3] = formBuy.elements['cus_hip_size'].value;        
     custom_attr[4] = formBuy.elements['cus_hollow_to_floor'].value;        
     custom_attr[5] = formBuy.elements['cus_hollow_to_knee'].value;        
+    custom_attr[6] = formBuy.elements['cus_height'].value;        
   }
   
   // 检查是否有商品规格 

@@ -233,6 +233,7 @@ function customAttr()
         jQuery('#cus_hip_size').val('');
         jQuery('#cus_hollow_to_floor').val('');
         jQuery('#cus_hollow_to_knee').val('');
+        jQuery('#cus_height').val('');
         jQuery("#attrSize").removeAttr("disabled");
     }
 }

@@ -514,7 +514,9 @@ elseif ($_REQUEST['step'] == 'checkout')
                 $custom_attr = explode('|||', $val['custom_attr']); 
                 foreach($custom_attr as $k3=>$val3) {
                     $tms = explode(':', $val3);
-                    if($tms[0] == 'shoulder_width') {
+                    if($tms[0] == 'height') {
+                        $custom[$k3]['custom_name'] = 'Height';    
+                    } else if($tms[0] == 'shoulder_width') {
                         $custom[$k3]['custom_name'] = 'Shoulder Width';    
                     } else if($tms[0] == 'bust_size') {
                         $custom[$k3]['custom_name'] = 'Bust Size';    
@@ -534,7 +536,9 @@ elseif ($_REQUEST['step'] == 'checkout')
         }
         
     }
-    
+    if(isset($_GET['debug'])) {
+        var_dump($cart_goods);
+    }
     $smarty->assign('goods_list', $cart_goods);
 
     /* 对是否允许修改购物车赋值 */
@@ -1740,12 +1744,15 @@ elseif ($_REQUEST['step'] == 'done')
             } 
             else if($tms[0] == 'hollow_to_knee') {
                $hollow_to_knee = $tms[1];    
+            }
+            else if($tms[0] == 'height') {
+               $height = $tms[1];    
             }           
         }
         $customsql = "UPDATE ".$ecs->table('order_goods')." SET 
                     custom_shoulder_width='{$shoulder_width}', custom_bust_size='{$bust_size}',
                     custom_waist_size='{$waist_size}',custom_hip_size='{$hip_size}',
-                    custom_hollow_to_floor='{$hollow_to_floor}',custom_hollow_to_knee='{$hollow_to_knee}' WHERE order_id='{$new_order_id}'";
+                    custom_hollow_to_floor='{$hollow_to_floor}',custom_hollow_to_knee='{$hollow_to_knee}',custom_height='{$height}' WHERE order_id='{$new_order_id}'";
         $db->query($customsql);        
     }
     
@@ -2211,7 +2218,9 @@ else
                 $custom_attr = explode('|||', $val['custom_attr']); 
                 foreach($custom_attr as $k3=>$val3) {
                     $tms = explode(':', $val3);
-                    if($tms[0] == 'shoulder_width') {
+                    if($tms[0] == 'height') {
+                        $custom[$k3]['custom_name'] = 'Height';    
+                    } else if($tms[0] == 'shoulder_width') {
                         $custom[$k3]['custom_name'] = 'Shoulder Width';    
                     } else if($tms[0] == 'bust_size') {
                         $custom[$k3]['custom_name'] = 'Bust Size';    
@@ -2223,7 +2232,7 @@ else
                         $custom[$k3]['custom_name'] = 'Hollow To Floor';    
                     } else if($tms[0] == 'hollow_to_knee') {
                         $custom[$k3]['custom_name'] = 'Hollow To Knee';    
-                    }       
+                    }        
                     $custom[$k3]['custom_value'] = $tms[1];          
                 }
                 $cart_goods['goods_list'][$k]['custom'] = $custom;    

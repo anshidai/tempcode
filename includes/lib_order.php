@@ -1142,7 +1142,8 @@ function addto_cart($goods_id, $num = 1, $spec = array(), $parent = 0, $color_si
         $parent['custom_attr'] .= "waist_size:{$custom[2]}|||";
         $parent['custom_attr'] .= "hip_size:{$custom[3]}|||";
         $parent['custom_attr'] .= "hollow_to_floor:{$custom[4]}|||";
-        $parent['custom_attr'] .= "hollow_to_knee:{$custom[5]}";
+        $parent['custom_attr'] .= "hollow_to_knee:{$custom[5]}|||";
+        $parent['custom_attr'] .= "height:{$custom[6]}";
     }
 
     /* 如果该配件在添加为基本件的配件时，所设置的“配件价格”比原价低，即此配件在价格上提供了优惠， */

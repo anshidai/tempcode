@@ -563,7 +563,8 @@ function category_get_goods($children, $brand, $min, $max, $ext, $size, $page, $
 
 
 function count_price($price)
-{
+{    
+    return intval($price);
     $num = 5;
     if($price >5 && $price <= 10) {
         $num = 10;                       
