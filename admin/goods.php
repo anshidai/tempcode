@@ -16,11 +16,11 @@
 define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
+
 require_once(ROOT_PATH . '/' . ADMIN_PATH . '/includes/lib_goods.php');
 include_once(ROOT_PATH . '/includes/cls_image.php');
 $image = new cls_image($_CFG['bgcolor']);
 $exc = new exchange($ecs->table('goods'), $db, 'goods_id', 'goods_name');
-
 /*------------------------------------------------------ */
 //-- 商品列表，商品回收站
 /*------------------------------------------------------ */
@@ -76,6 +76,11 @@ if ($_REQUEST['act'] == 'list' || $_REQUEST['act'] == 'trash')
     $smarty->assign('suppliers_list', ($suppliers_list_count == 0 ? 0 : $suppliers_list)); // 取供货商列表
 
     $goods_list = goods_list($_REQUEST['act'] == 'list' ? 0 : 1, ($_REQUEST['act'] == 'list') ? (($code == '') ? 1 : 0) : -1);
+    if($goods_list['goods']) {
+        foreach($goods_list['goods'] as $k=>$val) {
+            $goods_list['goods'][$k]['url'] = build_uri('goods', array('gid' => $val['goods_id']), $val['goods_name']);
+        }  
+    }
     $smarty->assign('goods_list',   $goods_list['goods']);
     $smarty->assign('filter',       $goods_list['filter']);
     $smarty->assign('record_count', $goods_list['record_count']);
@@ -1636,6 +1641,11 @@ elseif ($_REQUEST['act'] == 'query')
     if (isset($handler_list[$code]))
     {
         $smarty->assign('add_handler',      $handler_list[$code]);
+    }
+    if($goods_list['goods']) {
+        foreach($goods_list['goods'] as $k=>$val) {
+            $goods_list['goods'][$k]['url'] = build_uri('goods', array('gid' => $val['goods_id']), $val['goods_name']);
+        }  
     }
     $smarty->assign('code',         $code);
     $smarty->assign('goods_list',   $goods_list['goods']);

@@ -693,6 +693,9 @@ function build_attr_html($cat_id, $goods_id = 0)
         '27' => 'select_size',
         '38' => 'price',
         '41' => 'color2',
+        '57' => 'processing',
+        '58' => 'color_family',
+        '59' => 'skirt_type',
         
         '28' => 'occasion',
         '29' => 'body_shape',
@@ -716,6 +719,9 @@ function build_attr_html($cat_id, $goods_id = 0)
         '51' => 'select_size',
         '52' => 'color2',
         '50' => 'color',
+        '60' => 'processing',
+        '61' => 'color_family',
+        '62' => 'skirt_type',
     );
     
     foreach ($attr AS $key => $val)

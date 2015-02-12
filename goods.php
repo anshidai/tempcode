@@ -335,8 +335,7 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
 
         $properties = get_goods_properties($goods_id);  //获得商品的规格和属性
 
-        $goods_attr_tmp = $db->getRow("SELECT silhouette,hemline_train,wedding_venues,trend_collections,neckline,body_shape,fabric,style,season,
-                        sleeve_length,sleeve_style,embellishments,back_details,waist,select_size,price,color FROM ".$ecs->table('goods_attr_extend')." WHERE goods_id=".$goods['goods_id']." LIMIT 1");
+        $goods_attr_tmp = $db->getRow("SELECT * FROM ".$ecs->table('goods_attr_extend')." WHERE goods_id=".$goods['goods_id']." LIMIT 1");
         if($goods_attr_tmp) {
             $goods_attr['Wedding Venues']['name'] = 'Wedding Venues';            
             $goods_attr['Wedding Venues']['value'] = $goods_attr_tmp['wedding_venues'];
@@ -379,6 +378,15 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
             
             $goods_attr['Waist']['name'] = 'Waist';            
             $goods_attr['Waist']['value'] = $goods_attr_tmp['waist'];
+            
+            $goods_attr['Skirt Type']['name'] = 'Skirt Type';            
+            $goods_attr['Skirt Type']['value'] = $goods_attr_tmp['skirt_type'];
+            
+            $goods_attr['Color Family']['name'] = 'Color Family';            
+            $goods_attr['Color Family']['value'] = $goods_attr_tmp['color_family'];
+            
+            $goods_attr['Processing']['name'] = 'Processing';            
+            $goods_attr['Processing']['value'] = $goods_attr_tmp['processing'];
             
                         
         }

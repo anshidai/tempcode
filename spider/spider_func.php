@@ -258,6 +258,9 @@ function compareattr($attr)
             'shown_color',
             'celebrity_style',
             'trend',
+            'processing',
+            'color_family',
+            'skirt_type',
         );
         foreach($attr as $k=>$v) {
             $key = str_replace(array(' ','/'),'_',strtolower($k));
