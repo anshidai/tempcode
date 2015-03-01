@@ -2,7 +2,7 @@
 
 
 /**
-* 导入商品评论 
+* 导出商品 
 */
 
 define('IN_ECS', true);
@@ -49,14 +49,14 @@ $categorys = array(
 foreach($categorys as $k=>$val) {
     //var_dump($k,$val);exit;
     
-    $result = $GLOBALS['db']->getAll("SELECT goods_id,goods_name FROM tmp_goods WHERE cat_id='{$k}' order by goods_id");
+    $result = $GLOBALS['db']->getAll("SELECT goods_id,goods_name FROM tmp_goods WHERE cat_id='{$k}' AND is_delete=0 order by goods_id");
     if($result) {
         $csv = "URL,商品名称\n";
         foreach($result as $k2=>$val2) {
             $url = 'http://www.temperqueen.com/'.build_uri('goods', array('gid' => $val2['goods_id']), $val2['goods_name']);
             $csv .= "{$url},{$val2['goods_name']}\n";
         }
-        file_put_contents("/tmp/goods_{$k}_{$val}.csv", $csv);     
+        file_put_contents("/tmp/goods/goods_{$k}_{$val}.csv", $csv);     
     }
 }
 

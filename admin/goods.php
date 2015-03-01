@@ -885,17 +885,23 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
             'waist',
             'select_size',
             'color',
+            'processing',
+            'color_family',
+            'skirt_type',
         );
         if($_POST['attr_extend']) {
             $sqlset = '';
             foreach($attr_extend as $k=>$v) {
-                if($_POST['attr_extend'][$v]) {
+                if(isset($_POST['attr_extend'][$v]) && $_POST['attr_extend'][$v]) {
                     $sqlset .= $v.'='."'{$_POST['attr_extend'][$v]}',";    
                 }
             }
-            $sqlset = rtrim($sqlset,','); 
-            $sql_extend = "UPDATE ".$ecs->table("goods_attr_extend"). " SET $sqlset WHERE goods_id = '{$_REQUEST['goods_id']}' LIMIT 1" ;
-            $db->query($sql_extend); 
+            $sqlset = rtrim($sqlset,',');
+            if($sqlset) {
+                $sql_extend = "UPDATE ".$ecs->table("goods_attr_extend"). " SET $sqlset WHERE goods_id = '{$_REQUEST['goods_id']}' LIMIT 1" ;
+                $db->query($sql_extend);     
+            }
+             
         }
         
         /* 如果有上传图片，删除原来的商品图 */
