@@ -678,6 +678,10 @@ class cls_template
             {
                  $p = $this->_compile_smarty_ref($t);
             }
+            
+            if($t[0] == 'const'){
+                return strtoupper($t[1]);
+            }
             else
             {
                 $p = '$this->_var[\'' . $_var_name . '\']';
