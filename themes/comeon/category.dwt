@@ -103,7 +103,7 @@
                         <dt>
                             <h3>
                                 <a href="{$goods.url}" title="{$goods.name|escape:html} Weeding Derss" class="dname">
-                                    {$goods.name|escape:html} Weeding Derss
+                                    {$goods.name|escape:html}
                                 </a>
                             </h3>
                         </dt>

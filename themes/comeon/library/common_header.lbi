@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="http://www.temperqueen.com/js/jquery-1.4.2.min.js"></script> 
 <script type="text/javascript">
 var process_request = "{$lang.process_request}";
 </script>
@@ -11,17 +11,17 @@ var process_request = "{$lang.process_request}";
                 <li class="accountbt showbut"><a rel="nofollow" href="user.php?act=order_list">My Account<span class="mysan"></span></a>
                     <div class="my-account-con showbox" style="display: none;">
                     <ul>
-                        <li><a class="order" href="/user.php?act=order_list" rel="nofollow"><span></span>Order</a></li>
-                        <li><a class="credits" href="/user.php?act=bonus" rel="nofollow"><span></span>Coupons</a></li>
-                        <li><a class="favorites" href="/user.php?act=collection_list" rel="nofollow"><span></span>Favorites</a></li>
-                        <li><a class="as" href="/user.php?act=account_log" rel="nofollow"><span></span>Account Details</a></li>
-                        <li><a class="ifg" href="/user.php?act=profile" rel="nofollow"><span></span>My Information</a></li>
+                        <li><a class="order" href="http://www.temperqueen.com/user.php?act=order_list" rel="nofollow"><span></span>Order</a></li>
+                        <li><a class="credits" href="http://www.temperqueen.com/user.php?act=bonus" rel="nofollow"><span></span>Coupons</a></li>
+                        <li><a class="favorites" href="http://www.temperqueen.com/user.php?act=collection_list" rel="nofollow"><span></span>Favorites</a></li>
+                        <li><a class="as" href="http://www.temperqueen.com/user.php?act=account_log" rel="nofollow"><span></span>Account Details</a></li>
+                        <li><a class="ifg" href="http://www.temperqueen.com/user.php?act=profile" rel="nofollow"><span></span>My Information</a></li>
                         <li id="userLogOut"></li>
                     </ul>
                     </div>
                 </li>
-                <script type="text/javascript" src="/js/transport.js"></script>
-                <script type="text/javascript" src="/js/utils.js"></script>
+                <script type="text/javascript" src="http://www.temperqueen.com/js/transport.js"></script>
+                <script type="text/javascript" src="http://www.temperqueen.com/js/utils.js"></script>
                 {insert name='member_info'}
                 <!--
                 <li class="currshow">
@@ -39,8 +39,20 @@ var process_request = "{$lang.process_request}";
         <div class="search">
             <div class="buy_car">{insert name='cart_info'}</div>
             <div class="search_mode">
-                <div class="search_box"><input class="input_search" name="" value="" type="text" /></div>
-                <div class="bt_search"><input class="bt_searchr" name="" value="" type="button" /></div>
+                <form action="http://search.temperqueen.com/search.php" method="get" onsubmit="return searchFm(this);">
+                <div class="search_box"><input class="input_search" name="k" value="{$kwd}" type="text" /></div>
+                <div class="bt_search"><input class="bt_searchr" value="" type="submit" /></div>
+                </form>
+                <script type="text/javascript">
+                    function searchFm(obj)
+                    {
+                        if(obj.k.value == '' || obj.k.value.replace(/(^\s*)|(\s*$)/g, "") == '') {
+                            alert('Please input the search content.');
+                            return false;
+                        }
+                        return true;    
+                    }        
+                </script>
             </div>
         </div>
     </div>

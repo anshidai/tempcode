@@ -1,15 +1,15 @@
 <div class="nav">
 <ul class="navline">
-<li class="showbut"><a href="/">Home</a></li>/ 
+<li class="showbut"><a href="http://www.temperqueen.com/">Home</a></li>/ 
 <!--{foreach from=$categories item=cat name=foo}-->
     <!--{if $cat.id != '7'}-->
-    <li class="showbut"><a href="/{$cat.url}">{$cat.name}</a>
+    <li class="showbut"><a href="http://www.temperqueen.com/{$cat.url}">{$cat.name}</a>
         <!-- {if $cat.cat_id}-->
         <div class="magc showbox" style="display: none;"><span></span></div>
         <div class="menus showbox" style="display: none;">
             <ul>
                 <!--{foreach from=$cat.cat_id item=child}-->
-                <li><a href="/{$child.url}">• {$child.name}</a></li>
+                <li><a href="http://www.temperqueen.com/{$child.url}">• {$child.name}</a></li>
                 <!--{/foreach}-->
             </ul>
         </div>

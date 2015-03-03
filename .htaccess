@@ -11,6 +11,7 @@ RewriteRule ^(.*)/file/(.*)\.php(.*)$ /404.php
 
 RewriteCond %{HTTP_HOST} ^temperqueen\.com$ [NC]
 RewriteRule ^(.*)$ http://www.temperqueen.com/$1 [L,R=301]
+RewriteRule ^index\.php$  http://www.temperqueen.com/ [NC,R=301]
 
 # direct one-word access
 RewriteRule ^index\.html$    index\.php [L]
@@ -31,6 +32,8 @@ RewriteRule ^Sort-(.*)-c([0-9]+)(.*)\.html$                                     
 
 #RewriteRule ^goods-([0-9]+)(.*)\.html$  goods\.php\?id=$1 [QSA,L]
 RewriteRule ^Goods-(.*)-g([0-9]+)\.html$  goods\.php\?id=$2 [QSA,L]
+
+RewriteRule ^product-detail\/(.*)\.html$  keyword_detail\.php\?url=$1 [QSA,L]
 
 RewriteRule ^article_cat-([0-9]+)-([0-9]+)-(.+)-([a-zA-Z]+)(.*)\.html$  article_cat\.php\?id=$1&page=$2&sort=$3&order=$4  [QSA,L]
 RewriteRule ^article_cat-([0-9]+)-([0-9]+)-(.+)(.*)\.html$              article_cat\.php\?id=$1&page=$2&keywords=$3 [QSA,L]

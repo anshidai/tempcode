@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{$goods.goods_name}, {$catinfo.cat_name} - {$sitename}</title>
+<title>{$goods.goods_name} - {$sitename}</title>
 <meta name="Keywords" content="<!--{if $keywords}-->{$keywords}<!--{else}-->{$goods.goods_name}At a reasonable price to sell, Temperqueen has a variety of similar goods, buy cheap {$goods.goods_name} goods and similar goods on the Temperqueen.com<!--{/if}-->" /> 
 <meta name="Description" content="{$goods.goods_name}, <!--{if $seodescription}-->{$seodescription}<!--{else}-->{$goods.goods_name}At a reasonable price to sell, Temperqueen has a variety of similar goods, buy cheap {$goods.goods_name} goods and similar goods on the Temperqueen.com<!--{/if}-->, {$sitename}" />
 <link href="global.css" rel="stylesheet" type="text/css" />
@@ -74,7 +74,7 @@ function $id(element) {
         
         <!--right S  -->        
         <div class="right">
-            <h1>{$goods.goods_name} {$catinfo.cat_name} <span> ItemCode:{$goods.goods_sn}</span></h1>
+            <h1>{$goods.goods_name} <span> ItemCode:{$goods.goods_sn}</span></h1>
             
             <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
             <div class="market">

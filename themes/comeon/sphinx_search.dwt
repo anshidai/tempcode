@@ -2,19 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{$page_title} {$smarty.const.SITEURL}</title> 
+<title>{$page_title}</title> 
 <meta name="Keywords" content="{$keywords}" />
 <meta name="Description" content="{$description}" />
-<link href="{$template_dir}/global.css" rel="stylesheet" type="text/css" />
-<link href="{$template_dir}/pd_list.css" rel="stylesheet" type="text/css" />
+<link href="http://www.temperqueen.com/themes/comeon/global.css" rel="stylesheet" type="text/css" />
+<link href="http://www.temperqueen.com/themes/comeon/pd_list.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 .g_content_r, .g_content_r #right{float:none;}
 .garrery_01, .g_content_r #right{width:auto;}
 #right .garrery_01 .l_g_s{width:225px;height:400px;margin: 0 25px 0 0;}
 </style>
 
-<script type="text/javascript" src="{$siteurl}/js/common.js"></script>
-<script type="text/javascript" src="{$siteurl}/js/mzp-packed.js"></script>
+<script type="text/javascript" src="http://www.temperqueen.com/js/common.js"></script>
+<script type="text/javascript" src="http://www.temperqueen.com/js/mzp-packed.js"></script>
 <script type="text/javascript">
 function $id(element) {
   return document.getElementById(element);
@@ -25,98 +25,13 @@ function $id(element) {
 
    <!--g_header S  -->
 <div class="g_header">
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="{$siteurl}/js/jquery-1.4.2.min.js"></script> 
-<script type="text/javascript">
-var process_request = "{$lang.process_request}";
-</script>
-<div class="logo"><a href="http://www.temperqueen.com">temperqueen</a></div>
-    <div class="header_r">
-        <div class="top_nav">
-            <ul class="usertool">
-                <!-- <li class="chatbt"><a rel="nofollow" target="_blank" href="#">Live Chat </a></li>-->
-                <li class="accountbt showbut"><a rel="nofollow" href="{$siteurl}user.php?act=order_list">My Account<span class="mysan"></span></a>
-                    <div class="my-account-con showbox" style="display: none;">
-                    <ul>
-                        <li><a class="order" href="{$siteurl}/user.php?act=order_list" rel="nofollow"><span></span>Order</a></li>
-                        <li><a class="credits" href="{$siteurl}/user.php?act=bonus" rel="nofollow"><span></span>Coupons</a></li>
-                        <li><a class="favorites" href="{$siteurl}/user.php?act=collection_list" rel="nofollow"><span></span>Favorites</a></li>
-                        <li><a class="as" href="{$siteurl}/user.php?act=account_log" rel="nofollow"><span></span>Account Details</a></li>
-                        <li><a class="ifg" href="{$siteurl}/user.php?act=profile" rel="nofollow"><span></span>My Information</a></li>
-                        <li id="userLogOut"></li>
-                    </ul>
-                    </div>
-                </li>
-                <script type="text/javascript" src="{$siteurl}/js/transport.js"></script>
-                <script type="text/javascript" src="{$siteurl}/js/utils.js"></script>
-                {insert name='member_info'}
-                <!--
-                <li class="currshow">
-                    <div class="currency form_select showbut">
-                    <span class="showbt" id="CurrencyHuobidiv">USD<span class="mysan"></span></span>
-                    <ul id="currencyul" class="showul showbox" style="display: none;">
-                        <li>USD</li>
-                    </ul>
-                    </div>
-                </li>
-                 -->
-            </ul>
-        </div>
-        
-        <div class="search">
-            <div class="buy_car">{insert name='cart_info'}</div>
-            <div class="search_mode">
-                 <form action="http://search.temperqueen.com/search.php" method="get">
-                    <div class="search_box"><input class="input_search" name="k" value="{$keywords}" type="text" /></div>
-                    <div class="bt_search"><input class="bt_searchr" value="" type="submit" /></div>
-                </form>
-            </div>
-        </div>
-    </div>
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
     
     <!-- common nav -->
-    
-    <div class="nav">
-<ul class="navline">
-<li class="showbut"><a href="{$siteurl}">Home</a></li>/ 
-<!--{foreach from=$categories item=cat name=foo}-->
-    <!--{if $cat.id != '7'}-->
-    <li class="showbut"><a href="{$siteurl}/{$cat.url}">{$cat.name}</a>
-        <!-- {if $cat.cat_id}-->
-        <div class="magc showbox" style="display: none;"><span></span></div>
-        <div class="menus showbox" style="display: none;">
-            <ul>
-                <!--{foreach from=$cat.cat_id item=child}-->
-                <li><a href="{$siteurl}/{$child.url}">• {$child.name}</a></li>
-                <!--{/foreach}-->
-            </ul>
-        </div>
-        <!--{/if}-->
-    </li>{if $smarty.foreach.foo.index <=5}/{/if}
-    <!--{/if}-->   
-<!-- {/foreach} -->
-</ul> 
-</div> 
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        $(function() {
-            $(".showbut").hover(function() {
-                $(this).find(".showbox").show();
-                $(this).addClass("hover")
-            },
-            function() {
-                $(this).find(".showbox").hide();
-                $(this).removeClass("hover")
-            })
-        });
-    
-    });
-</script>
-    
-    
-    <div class="banners"><img src="{$template_dir}/images/banner2.jpg" width="1000" height="90" /> </div>
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="http://www.temperqueen.com/images/banner2.jpg" width="1000" height="90" /> </div> -->
 </div>
-<!--g_header E  --> 
+<!--g_header E  -->
 
 <!--g_content S  -->
 <div class="g_content">
@@ -126,15 +41,15 @@ var process_request = "{$lang.process_request}";
         <div class="g_content_r">
              <div id="right">
                 <div class="postion_rde">
-                    <h1 class="point">{$keywords}</h1><span>We have<em>{$record_count}</em>commodity</span></h1>
+                    <h1 class="point">{$kwd}</h1><span>We have<em>{$record_count}</em>commodity</span></h1>
                 </div>
                 <div class="clear"></div>
                 <div id="view_selects">
                     <span> 
-                        <a <!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC">on time</a> |
-                        <a <!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=DESC">last update</a> |
-                        <a <!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=ASC">lowest price</a> |
-                        <a <!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} -->class="popular"<!-- {/if} --> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=DESC">highest price</a>
+                        <a <!-- {if $sort == 'time' && $order == 'desc'} -->class="popular"<!-- {/if} --> href="search.php?k={$kwd}&page={$page}&sort=time&order=desc">on time</a> |
+                        <a <!-- {if $sort == 'time' && $order == 'asc'} -->class="popular"<!-- {/if} --> href="search.php?k={$kwd}&page={$page}&sort=time&order=asc">last update</a> |
+                        <a <!-- {if $sort == 'price' && $order == 'asc'} -->class="popular"<!-- {/if} --> href="search.php?k={$kwd}&page={$page}&sort=price&order=asc">lowest price</a> |
+                        <a <!-- {if $sort == 'price' && $order == 'desc'} -->class="popular"<!-- {/if} --> href="search.php?k={$kwd}&page={$page}&sort=price&order=desc">highest price</a>
                     </span>
                 </div>
                 
@@ -145,13 +60,13 @@ var process_request = "{$lang.process_request}";
                     <!-- {if $goods.goods_id} -->
                     <dl class="l_g_s">
                         <dd>
-                            <a href="{$goods.url}" class="imgc_a">
+                            <a href="http://www.temperqueen.com/{$goods.url}" class="imgc_a" target="_blank">
                             <span class="offsale nums_sale"><s class="ratio">{$goods.sale_num}<i>%</i></s><s class="off">OFF</s></span>
-                            <img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="imgChange"></a>
+                            <img src="http://www.temperqueen.com/{$goods.goods_thumb}" alt="{$goods.goods_name}" class="imgChange"></a>
                         </dd>
                         <dt>
                             <h3>
-                                <a href="{$goods.url}" title="{$goods.name|escape:html} Weeding Derss" class="dname">
+                                <a href="http://www.temperqueen.com/{$goods.url}" title="{$goods.name|escape:html} Weeding Derss" target="_blank" class="dname">
                                     {$goods.name|escape:html} Weeding Derss
                                 </a>
                             </h3>
@@ -166,7 +81,7 @@ var process_request = "{$lang.process_request}";
                         </dd>
                         <dd class="last">
                             <div class="l_star50"></div>
-                            <span class="fc000"><a rel="nofollow" href="{$goods.url}#wrr">
+                            <span class="fc000"><a rel="nofollow" target="_blank" href="http://www.temperqueen.com/{$goods.url}#wrr">
                             Reviews({$goods.comment_count})</a></span>
                         </dd>
                     </dl>
