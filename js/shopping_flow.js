@@ -546,13 +546,13 @@ function checkConsignee(frm)
   var msg = new Array();
   var err = false;
 
-  if (Utils.isEmpty(frm.elements['consignee'].value))
+  if (Utils.isEmpty(frm.elements['first_name'].value))
   {
     err = true;
     msg.push(no_firstname);
   }
 
-  if (Utils.isEmpty(frm.elements['tel'].value))
+  if (Utils.isEmpty(frm.elements['last_name'].value))
   {
     err = true;
     msg.push(no_lastname);
@@ -569,12 +569,14 @@ function checkConsignee(frm)
     err = true;
     msg.push(no_city);
   }
-
+  
+  /*
   if (frm.elements['country'] && frm.elements['country'].value == 0)
   {
     msg.push(country_not_null);
     err = true;
   }
+  */
 
   if (frm.elements['province'] && frm.elements['province'].value == 0 && frm.elements['province'].length > 1)
   {
@@ -597,8 +599,19 @@ function checkConsignee(frm)
   if (Utils.isEmpty(frm.elements['mobile'].value))
   {
     err = true;
-    msg.push(no_telphone);
+    msg.push(no_telmobile);
   }
+  if (!Utils.isTel(frm.elements['mobile'].value))
+  {
+    err = true;
+    msg.push(mobile_invaild);
+  }
+  if (!Utils.isEmpty(frm.elements['tel'].value) && !Utils.isTel(frm.elements['tel'].value))
+  {
+    err = true;
+    msg.push(tele_invaild);
+  }
+  
 
   if (err)
   {

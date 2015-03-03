@@ -177,6 +177,8 @@ a,area{ blr:expression(this.onFocus=this.blur()) } /* for IE */
 .bank .ico_paypal{width:67px; background-position:-250px top;}
 .bank .ico_ems{width:92px; background-position:-434px 5px;}
 .bank .ico_dhl{width:105px; background-position:-529px 4px;}
+.bank .ico_visa{width:76px;height:51px; background:url(images/ico_visa.png) no-repeat 0 0;}
+.bank .ico_mastercard{width:76px;height:51px; background:url(images/ico_mastercard.png) no-repeat 0 0;}
 .bank .ico_norton{width:100px;height:72px; background:url(images/getseal.gif) no-repeat 0 0;}
 
 .foot2 p a{ padding-right:6px; margin-right:6px; border-right:1px solid #CCC;}

@@ -29,8 +29,7 @@ $back_act='';
 
 
 // 不需要登录的操作或自己验证是否登录（如ajax处理）的act
-$not_login_arr =
-array('login','act_login','register','act_register','act_edit_password','get_password','send_pwd_email','password', 'signin', 'add_tag', 'collect', 'return_to_cart', 'logout', 'email_list', 'validate_email', 'send_hash_mail', 'order_query', 'is_registered', 'check_email','clear_history','qpassword_name', 'get_passwd_question', 'check_answer');
+$not_login_arr = array('login','act_login','register','act_register','act_edit_password','get_password','send_pwd_email','password', 'signin', 'add_tag', 'collect', 'return_to_cart', 'logout', 'email_list', 'validate_email', 'send_hash_mail', 'order_query', 'is_registered', 'check_email','clear_history','qpassword_name', 'get_passwd_question', 'check_answer');
 
 /* 显示页面的action列表 */
 $ui_arr = array('register', 'login', 'profile', 'order_list', 'order_detail', 'address_list', 'collection_list',
@@ -38,6 +37,7 @@ $ui_arr = array('register', 'login', 'profile', 'order_list', 'order_detail', 'a
 'account_deposit', 'account_log', 'account_detail', 'act_account', 'pay', 'default', 'bonus', 'group_buy', 'group_buy_detail', 'affiliate', 'comment_list','validate_email','track_packages', 'transform_points','qpassword_name', 'get_passwd_question', 'check_answer');
 
 $smarty->assign('categories',      get_categories_tree()); // 分类树
+
 
 /* 未登录处理 */
 if (empty($_SESSION['user_id']))
@@ -98,9 +98,6 @@ if ($action == 'default')
     include_once(ROOT_PATH .'includes/lib_clips.php');
     if ($rank = get_rank_info())
     {
-        if(isset($_GET['debug'])) {
-            var_dump($rank);exit;
-        }
         $smarty->assign('rank_name', sprintf($_LANG['your_level'], $rank['rank_name']));
         if (!empty($rank['next_rank_name']))
         {
@@ -976,12 +973,14 @@ elseif ($action == 'act_edit_address')
     $address = array(
         'user_id'    => $user_id,
         'address_id' => intval($_POST['address_id']),
-        'country'    => isset($_POST['country'])   ? intval($_POST['country'])  : 0,
+        'first_name'   => isset($_POST['first_name'])  ? compile_str(trim($_POST['first_name'])) : 0,
+        'last_name'   => isset($_POST['last_name'])  ? compile_str(trim($_POST['last_name'])) : 0,
+        'consignee'  => compile_str(trim($_POST['first_name'])).' '.compile_str(trim($_POST['last_name'])),
+        'country'    => isset($_POST['country'])   ? intval($_POST['country'])     : 0,
         'province'   => isset($_POST['province'])  ? intval($_POST['province']) : 0,
         'city'       => isset($_POST['city'])      ? intval($_POST['city'])     : 0,
         'district'   => isset($_POST['district'])  ? intval($_POST['district']) : 0,
         'address'    => isset($_POST['address'])   ? compile_str(trim($_POST['address']))    : '',
-        'consignee'  => isset($_POST['consignee']) ? compile_str(trim($_POST['consignee']))  : '',
         'email'      => isset($_POST['email'])     ? compile_str(trim($_POST['email']))      : '',
         'tel'        => isset($_POST['tel'])       ? compile_str(make_semiangle(trim($_POST['tel']))) : '',
         'mobile'     => isset($_POST['mobile'])    ? compile_str(make_semiangle(trim($_POST['mobile']))) : '',
@@ -2022,11 +2021,13 @@ elseif ($action == 'act_edit_payment')
 elseif ($action == 'save_order_address')
 {
     include_once(ROOT_PATH .'includes/lib_transaction.php');
-    
+
     $address = array(
-        'consignee' => isset($_POST['consignee']) ? compile_str(trim($_POST['consignee']))  : '',
         'email'     => isset($_POST['email'])     ? compile_str(trim($_POST['email']))      : '',
-        'address'   => isset($_POST['address'])   ? compile_str(trim($_POST['address']))    : '',
+        'first_name'  => isset($_POST['first_name'])     ? compile_str(trim($_POST['first_name']))      : '',
+        'last_name'   => isset($_POST['first_name'])     ? compile_str(trim($_POST['last_name']))      : '',
+        'consignee' => compile_str(trim($_POST['first_name'])).' '.compile_str(trim($_POST['last_name'])),
+        'address'   => isset($_POST['address'])   ? compile_str(trim($_POST['last_name']))    : '',
         'zipcode'   => isset($_POST['zipcode'])   ? compile_str(make_semiangle(trim($_POST['zipcode']))) : '',
         'tel'       => isset($_POST['tel'])       ? compile_str(trim($_POST['tel']))        : '',
         'mobile'    => isset($_POST['mobile'])    ? compile_str(trim($_POST['mobile']))     : '',

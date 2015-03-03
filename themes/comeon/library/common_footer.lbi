@@ -44,6 +44,8 @@
             <a href="javascript:void(0)" rel="nofollow">Sitemap</a>
         </p>
        <div class="bank">
+            <span class="ico_visa"></span>
+            <span class="ico_mastercard"></span>
             <span class="ico_ems"></span>
             <span class="ico_dhl"></span>
             <span class="ico_norton"></span>
