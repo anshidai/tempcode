@@ -324,6 +324,12 @@
             {insert_scripts files='region.js,utils.js'}
             <script type="text/javascript">
               region.isAdmin = false;
+              var no_firstname = "Please enter firstname";
+              var no_lastname = "Please enter lastname";
+              var no_telphone = "Please enter phone number";
+              var no_telmobile = "Please enter mobile number";
+              var no_zip = "Please enter zip code";
+              var no_city = "Please enter city";
               {foreach from=$lang.flow_js item=item key=key}
               var {$key} = "{$item}";
               {/foreach}

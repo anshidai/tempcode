@@ -380,7 +380,9 @@ elseif ($_REQUEST['step'] == 'consignee')
          */
         $consignee = array(
             'address_id'    => empty($_POST['address_id']) ? 0  :   intval($_POST['address_id']),
-            'consignee'     => empty($_POST['consignee'])  ? '' :   compile_str(trim($_POST['consignee'])),
+            'first_name'     => empty($_POST['first_name'])  ? '' :   compile_str(trim($_POST['first_name'])),
+            'last_name'     => empty($_POST['last_name'])  ? '' :   compile_str(trim($_POST['last_name'])),
+            'consignee'     => compile_str(trim($_POST['first_name'])).' '.compile_str(trim($_POST['last_name'])),
             'country'       => empty($_POST['country'])    ? '' :   intval($_POST['country']),
             'province'      => empty($_POST['province'])   ? '' :   intval($_POST['province']),
             'city'          => empty($_POST['city'])       ? '' :   intval($_POST['city']),
