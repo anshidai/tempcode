@@ -425,7 +425,7 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         
         foreach($description_arr as $v) {
             if($attribute_tmp[$v]) {
-                $seodescription .= $attribute_tmp[$v];
+                $seodescription .= " {$attribute_tmp[$v]}";
             }
         } 
         $smarty->assign('seodescription', $seodescription);

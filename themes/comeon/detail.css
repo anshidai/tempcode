@@ -262,11 +262,11 @@ ul.maters li .notes{line-height:20px; margin:0 15px;width:431px; font-size:12px;
 
 .zoom_thumbs{width:475px;background-color:red;}
 .small_thumbs{float:left; width:62px;position:relative;}
-.small_thumbs .before{display: block;margin:0 auto;width:18px;height: 20px;cursor: pointer;background:url(images/newroll.png) no-repeat scroll;}
-.small_thumbs .after{display: block;margin:0 auto;width:18px;height: 20px;cursor: pointer;background:url(images/newroll.png) no-repeat scroll bottom;}
+.small_thumbs .smallImgUp{display: block;margin:0 auto;width:18px;height: 20px;cursor: pointer;background:url(images/newroll.png) no-repeat scroll;}
+.small_thumbs .smallImgDown{display: block;margin:0 auto;width:18px;height: 20px;cursor: pointer;background:url(images/newroll.png) no-repeat scroll bottom;}
 .innserimg img{display: block;width:60px;height:90px;border: 1px solid #ccc;text-align:center;margin-bottom: 10px;}
 .bigzoom_thumbs{float:right;}
-.smoll{height:500px;overflow:hidden;position:relative;}
+.smoll{height:510px;overflow:hidden;position:relative;}
 
 /*--------right--------------*/
 #product .right{ float:right; width:510px;padding-bottom:10px;padding-left: 10px;}

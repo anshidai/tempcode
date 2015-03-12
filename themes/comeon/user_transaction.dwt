@@ -311,11 +311,6 @@
                             <span class="require-field">*</span><br> Your phone number is needed just in case we or the shipping carrier need to reach you regarding your order</td>
                         </tr>
                         <tr>
-                            <td align="right"><strong>Phone number :</strong></td>
-                            <td><input name="tel" type="text" class="inputBox" id="tel_{$sn}" value="{$consignee.tel|escape}" size="30">
-                            </td>
-                        </tr>
-                        <tr>
                             <td align="right">&nbsp;</td>
                             <td><input class="btn btn10 btnColor" type="submit" name="Submit" style="margin-top:20px;padding:4px 5px;" value="Add a new place of receipt">
                             <!-- {if $smarty.session.user_id gt 0 and $consignee.address_id gt 0} -->

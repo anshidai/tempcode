@@ -15,7 +15,7 @@ require(dirname(__FILE__).'/../includes/init.php');
 
 $maxid = $GLOBALS['db']->getOne("SELECT max(qid) FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE status=1");
 //$rand = rand(200, 300);
-$rand = rand(500);
+$rand = 500;
 
 $sql = "SELECT qid,status FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE status=0 AND qid>{$maxid} ORDER BY qid LIMIT {$rand}";
 $result = $GLOBALS['db']->getAll($sql);

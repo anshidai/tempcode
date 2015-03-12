@@ -79,7 +79,7 @@ setcookie('ECS[display]', $display, gmtime() + 86400 * 7);
 /* 页面的缓存ID */
 $cache_id = sprintf('%X', crc32($cat_id . '-' . $display . '-' . $sort  .'-' . $order  .'-' . $page . '-' . $size . '-' . $_SESSION['user_rank'] . '-' .
     $_CFG['lang'] .'-'. $brand. '-' . $price_max . '-' .$price_min . '-' . $filter_attr_str));
-
+   
 if (!$smarty->is_cached('category.dwt', $cache_id))
 {
     /* 如果页面没有被缓存则重新获取页面的内容 */
@@ -437,9 +437,14 @@ if (!$smarty->is_cached('category.dwt', $cache_id))
 
     assign_pager('category',            $cat_id, $count, $size, $sort, $order, $page, '', $brand, $price_min, $price_max, $display, $filter_attr_str); // 分页
     assign_dynamic('category'); // 动态内容
+    
+    $smarty->assign('hotgoods', get_hot_goods(5));
+    $smarty->assign('hot_comment', get_hot_comment($cat_id, 5));
+
 }
 
-$smarty->display('category.dwt', $cache_id);
+$smarty->display('category_dress.dwt', $cache_id);
+
 
 /*------------------------------------------------------ */
 //-- PRIVATE FUNCTION
@@ -747,6 +752,65 @@ function multi_rand($begin, $end, $count)
         $rand_array[] = $num;
     }
     return $rand_array;
+}
+
+function get_hot_goods($limit = 5)
+{
+    $sql = "SELECT goods_id,goods_name,market_price,shop_price,goods_thumb,goods_img FROM ".$GLOBALS['ecs']->table('goods')." WHERE is_delete='0' AND is_on_sale='1' ORDER BY click_count DESC LIMIT $limit";
+    $res = $GLOBALS['db']->getAll($sql);
+    if($res) {
+        foreach($res as $k=>$row) {
+            $res[$k]['name']             = $row['goods_name'];
+            $res[$k]['market_price']     = price_format($row['market_price']);
+            $res[$k]['shop_price']       = price_format($row['shop_price']);
+            $res[$k]['goods_thumb']      = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+            $res[$k]['goods_img']        = get_image_path($row['goods_id'], $row['goods_img']);
+            $res[$k]['url']              = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
+        }
+    }
+    return $res;
+}
+
+function get_hot_comment($cat_id = 0, $limit = 5)
+{      
+    include_once('includes/cls_memcached.php');
+    $memcached = new cls_memcached();
+    $memcached->init();
+    
+    $sql = "SELECT * FROM ".$GLOBALS['ecs']->table('comment')." AS t1 
+            JOIN (SELECT ROUND(RAND() * ((SELECT MAX(comment_id) FROM ".$GLOBALS['ecs']->table('comment').")-(SELECT MIN(comment_id) 
+            FROM ".$GLOBALS['ecs']->table('comment')."))+(SELECT MIN(comment_id) FROM ".$GLOBALS['ecs']->table('comment').")) AS comment_id) AS t2 WHERE t1.comment_id >= t2.comment_id ORDER BY t1.comment_id LIMIT $limit";
+    $cachekey = md5($sql.$cat_id);
+    $cachedata = $memcached->get($cachekey);
+    if(!$cachedata) {
+        $comment = $GLOBALS['db']->getAll($sql);
+        if($comment) {
+            foreach($comment as $k=>$row) {
+                $comment[$row['id_value']]['content'] = $row['content'];
+                $goods_ids[] = $row['id_value'];  
+            }
+            if($goods_ids) {
+                $goods_ids = implode(',', $goods_ids);
+                $sql = "SELECT goods_id,goods_name,goods_thumb,goods_img FROM ".$GLOBALS['ecs']->table('goods')." WHERE goods_id in($goods_ids)";
+                $goods = $GLOBALS['db']->getAll($sql);
+                
+                foreach($goods as $k=>$val) {
+                    $row['name'] = $val['goods_name'];
+                    $row['goods_id'] = $val['goods_id'];
+                    $row['goods_thumb'] = get_image_path($val['goods_id'], $val['goods_thumb'], true);
+                    $row['goods_img'] = get_image_path($val['goods_id'], $val['goods_thumb']);
+                    $row['url'] = build_uri('goods', array('gid'=>$val['goods_id']), $val['goods_name']);
+                    $row['content'] =  $comment[$val['goods_id']]['content']; 
+                    $cachedata[] = $row;   
+                }
+                $memcached->set($cachekey,serialize($cachedata), 86400*30);   
+            } 
+        }         
+        
+    }else {
+        $cachedata = unserialize($cachedata);
+    }
+    return $cachedata; 
 }
 
 

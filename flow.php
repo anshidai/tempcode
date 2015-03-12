@@ -390,7 +390,7 @@ elseif ($_REQUEST['step'] == 'consignee')
             'email'         => empty($_POST['email'])      ? '' :   compile_str($_POST['email']),
             'address'       => empty($_POST['address'])    ? '' :   compile_str($_POST['address']),
             'zipcode'       => empty($_POST['zipcode'])    ? '' :   compile_str(make_semiangle(trim($_POST['zipcode']))),
-            'tel'           => empty($_POST['tel'])        ? '' :   compile_str(make_semiangle(trim($_POST['tel']))),
+            'tel'           => empty($_POST['mobile'])        ? '' :   compile_str(make_semiangle(trim($_POST['mobile']))),
             'mobile'        => empty($_POST['mobile'])     ? '' :   compile_str(make_semiangle(trim($_POST['mobile']))),
             'sign_building' => empty($_POST['sign_building']) ? '' :compile_str($_POST['sign_building']),
             'best_time'     => empty($_POST['best_time'])  ? '' :   compile_str($_POST['best_time']),

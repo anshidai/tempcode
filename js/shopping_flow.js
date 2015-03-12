@@ -599,16 +599,13 @@ function checkConsignee(frm)
     err = true;
     msg.push(no_telmobile);
   }
-  if (!Utils.isTel(frm.elements['mobile'].value))
-  {
-    err = true;
-    msg.push(mobile_invaild);
-  }
-  if (!Utils.isEmpty(frm.elements['tel'].value) && !Utils.isTel(frm.elements['tel'].value))
+  /*
+  if (Utils.isEmpty(frm.elements['tel'].value))
   {
     err = true;
     msg.push(tele_invaild);
-  }
+  } 
+  */
   
 
   if (err)

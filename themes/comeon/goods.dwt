@@ -47,7 +47,7 @@ function $id(element) {
            <!-- zoom-img begin -->
                 <div class="zoom_thumbs">
                     <div class="small_thumbs">
-                        <span class="before" id="gotop"></span>
+                        <span class="scrollbutton smallImgUp disabled"></span>
                             <div class="smoll" id="showArea">
                                 <div class="innserimg">
                                     <a href="{$goods.original_img}" rel="zoom1" rev="{$goods.original_img}"><img src="{$goods.goods_thumb}" /></a>
@@ -59,7 +59,7 @@ function $id(element) {
                                 </div>
                             </div>
                         
-                        <span class="after" id="gobottom"></span>
+                        <span class="scrollbutton smallImgDown"></span>
                     </div>
                     <div class="bigzoom_thumbs">
                         <span class="offsale nums_sale" style="right:-5px;"><s class="ratio">{$goods.sale_num}<i>%</i></s><s class="off">OFF</s></span>
@@ -674,6 +674,29 @@ function $id(element) {
     }
     
 </script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    // 图片上下滚动
+    var count = jQuery(".innserimg a").length - 1;
+    var interval = jQuery(".innserimg a:first").height();
+    var curIndex = 0;
+    
+    jQuery('.scrollbutton').click(function(){
+        if(jQuery(this).hasClass('disabled')) {
+            return false;
+        }
+
+        if (jQuery(this).hasClass('smallImgUp')) ++curIndex;
+        else --curIndex;
+        
+        jQuery('.scrollbutton').removeClass('disabled');
+        if (curIndex == 0) jQuery('.smallImgUp').addClass('disabled');
+        if (curIndex < -1) jQuery('.smallImgDown').addClass('disabled');
+        
+        jQuery(".innserimg").stop(false, true).animate({"marginTop" : curIndex*interval + "px"}, 600);
+    });   
+});
+</script>  
 
 {insert_scripts files='jquery.LoadImage.js,goods.js'} 
 
@@ -689,5 +712,27 @@ function $id(element) {
         });
     });
 </script>
+
+<!-- return top star -->
+<div class="go-top topdn" id="go-top"><a href="javascript:;" class="go"></a></div>
+<script type="text/javascript">
+   
+
+
+    jQuery(function(){
+        showScroll();
+        function showScroll(){
+            jQuery(window).scroll( function() { 
+                var scrollValue=jQuery(window).scrollTop();
+                scrollValue > 100 ? jQuery('.go-top').fadeIn():jQuery('.go-top').fadeOut();
+            } );    
+            jQuery('#go-top').click(function(){
+                jQuery("html,body").animate({scrollTop:0},200);    
+            });    
+        }
+    })
+</script>
+<!-- return top end -->
+
 </body>
 </html>

@@ -1132,7 +1132,8 @@ function addto_cart($goods_id, $num = 1, $spec = array(), $parent = 0, $color_si
         'extension_code'=> $goods['extension_code'],
         'is_gift'       => 0,
         'is_shipping'   => $goods['is_shipping'],
-        'rec_type'      => CART_GENERAL_GOODS
+        'rec_type'      => CART_GENERAL_GOODS,
+        'addtime'       => date('Y-m-d H:i:s'),
     );
     
     //用户自定义商品尺寸

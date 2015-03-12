@@ -174,5 +174,24 @@
 
 <!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+
+<!-- return top star -->
+<div class="go-top topdn" id="go-top"><a href="javascript:;" class="go"></a></div>
+<script type="text/javascript">
+    jQuery(function(){
+        showScroll();
+        function showScroll(){
+            jQuery(window).scroll( function() { 
+                var scrollValue=jQuery(window).scrollTop();
+                scrollValue > 100 ? jQuery('.go-top').fadeIn():jQuery('.go-top').fadeOut();
+            } );    
+            jQuery('#go-top').click(function(){
+                jQuery("html,body").animate({scrollTop:0},200);    
+            });    
+        }
+    })
+</script>
+<!-- return top end -->
+
 </body>
 </html>

@@ -73,13 +73,13 @@ div.fshipping{background: url("images/add_new/fshipping.gif") no-repeat scroll 0
 div.Fabric ul > li a.enabled.selected { background-position: -50px -17px; color: #666666;}
 
 .Fabric {margin: 0px;padding-top: 15px;line-height: 16px; text-transform: uppercase;}
-.Fabric dt {cursor: pointer;font-family: Verdana;color:#000;background:url(images/add_new/tu.png) no-repeat left 5px;padding-left: 14px;text-transform:capitalize;height:25px}
+.Fabric dt {font-family: Verdana;color:#000;background:url(images/add_new/tu.png) no-repeat left 5px;padding-left: 14px;text-transform:capitalize;height:25px}
 .Fabric dl{border-bottom:1px solid #ccc;}
 .Fabric dd {padding: 0px 0 10px 5px;line-height: 16px;color: #7A675C;overflow-x: hidden;overflow-y: auto;}
 .Fabric dd.scon{border: 1px solid rgb(204, 204, 204); height: 135px;border-bottom:none}
 div.Fabric ul {clear: both;}
 div.Fabric ul li {list-style: none outside none; margin: 5px 0;overflow:hidden}
-div.Fabric ul li a {background: url("images/add_new/checkbox.gif") no-repeat scroll -10px -57px transparent;/*box替换*/ clear: both;cursor: default;display: block;float: left;font-size: 12px;padding: 1px 0 1px 15px;text-transform:lowercase;}
+div.Fabric ul li a {background: url("images/add_new/checkbox.gif") no-repeat scroll -10px -57px transparent;/*box替换*/ clear: both;display: block;float: left;font-size: 12px;padding: 1px 0 1px 15px;text-transform:lowercase;}
 div.Fabric ul li a .fuhao{padding:0}
 div.Fabric ul li a:hover {text-decoration: none;}
 div.Fabric ul li a.selected {background-position: -30px -37px;color: #DDDDDD;cursor: pointer;}
@@ -388,3 +388,24 @@ i.stars[title="4"], i.stars[title="4.0"], i.stars[title="4.1"], i.stars[title="4
 .nums_sale .ratio i{font-size:16px;}
 .nums_sale .ratio{height:24px;line-height:24px;font-size:24px;padding-top:8px;}
 .nums_sale .off{height:16px;line-height:16px;font-size:16px;padding-top:2px;}
+
+.hot-goods .tit{margin:10px 0;padding-bottom:5px;border-bottom:2px solid #000;color:#999;}
+.hot-goods li{width:180px;margin:0 auto 10px;}
+.hot-goods .imgChange{width:180px;height:250px;margin-bottom:4px;display:block;}
+.hot-goods li .imgChange:hover{box-shadow:1px 1px 15px #666}
+.hot-goods .market-price{display:block;padding:2px 0; color:#999;}
+.hot-goods .shop-price{display:block; padding:2px 0; color:#f00;font-size:16px;}
+
+.cate-comment-list{}
+.cate-comment-list .tit{font-size:18px;padding-bottom:8px;border-bottom:1px solid #ccc;color:#ff5948;}
+.cate-comment-list li{padding:5px 0 10px;margin-bottom:8px;border-bottom:1px solid #ccc;}
+.cate-comment-list li .imgChange{width:100px;height:150px;display:inline;float:left;}
+.cate-comment-list li .imgChange:hover{box-shadow:1px 1px 15px #666}    
+.cate-comment-list li .reviews-right{width:660px;float:left;margin-left:10px;}
+.cate-comment-list li .reviews-right .title{display:block;margin:10px 0;}
+.cate-comment-list li .reviews-right p{margin-top:15px;}
+.catetaglist{width:auto;}
+.catetaglist .tag_tit .tit{background-color:#fff;color:#000;}
+.catetaglist .tag_tit{border-bottom:2px solid #ccc;}
+
+div.fabric-dress ul li a{text-transform:none; }

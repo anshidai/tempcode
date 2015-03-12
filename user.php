@@ -982,7 +982,7 @@ elseif ($action == 'act_edit_address')
         'district'   => isset($_POST['district'])  ? intval($_POST['district']) : 0,
         'address'    => isset($_POST['address'])   ? compile_str(trim($_POST['address']))    : '',
         'email'      => isset($_POST['email'])     ? compile_str(trim($_POST['email']))      : '',
-        'tel'        => isset($_POST['tel'])       ? compile_str(make_semiangle(trim($_POST['tel']))) : '',
+        'tel'        => isset($_POST['mobile'])       ? compile_str(make_semiangle(trim($_POST['mobile']))) : '',
         'mobile'     => isset($_POST['mobile'])    ? compile_str(make_semiangle(trim($_POST['mobile']))) : '',
         'best_time'  => isset($_POST['best_time']) ? compile_str(trim($_POST['best_time']))  : '',
         'sign_building' => isset($_POST['sign_building']) ? compile_str(trim($_POST['sign_building'])) : '',
