@@ -42,10 +42,18 @@ if(!$smarty->is_cached('keyword_detail.dwt', $cache_id)) {
         $relategoods = explode(',', trim($all_goods, ','));
         $relategoods = implode(',', array_slice($relategoods, 0, $show_limit));
 
-        $sql = "SELECT goods_id,goods_name,market_price,shop_price,goods_thumb,goods_img,original_img 
+        $sql = "SELECT cat_id,goods_id,goods_name,market_price,shop_price,goods_thumb,goods_img,original_img 
                 FROM ".$ecs->table('goods')." 
                 WHERE goods_id in({$relategoods}) ORDER BY goods_id DESC";    
         $list['list'] = $db->getAll($sql);
+        
+        $cat_ids = array();
+        if($list['list']) {
+            foreach($list['list'] as $k=>$val) {
+                $cat_ids[] = $val['cat_id'];    
+            }
+        }
+        $categorylist = get_categoryname($cat_ids);
         
         //获取商品的属性-值
         $sql = "SELECT a.goods_id,b.attr_id,b.attr_name,a.attr_value 
@@ -58,7 +66,7 @@ if(!$smarty->is_cached('keyword_detail.dwt', $cache_id)) {
                 $row_attr['attr_id'] = $val['attr_id'];
                 $row_attr['attr_name'] = $val['attr_name'];
                 $row_attr['attr_value'] = $val['attr_value'];
-                $attr_list[$val['goods_id']][$val['attr_id']] = $row_attr;
+                $attr_list[$val['goods_id']][] = $row_attr;
             }
         }
         
@@ -78,7 +86,7 @@ if(!$smarty->is_cached('keyword_detail.dwt', $cache_id)) {
 
         //获取评论数
         
-        
+        $cat_ids = array();
         //数据组合
         if($list['list']) {
             foreach($list['list'] as $k=>$val) {
@@ -89,10 +97,10 @@ if(!$smarty->is_cached('keyword_detail.dwt', $cache_id)) {
                 $list['list'][$k]['url'] = $host.'/'.build_uri('goods', array('gid'=>$val['goods_id']), $val['goods_name']);
                 $list['list'][$k]['attr_list'] = $attr_list[$val['goods_id']];        
                 $list['list'][$k]['img_list'] = array_slice($img_list[$val['goods_id']],0, 5);
+                $list['list'][$k]['catname'] = $categorylist[$val['cat_id']]['cat_name'];
                 
                 $list['comment_list'][$val['goods_id']] = get_goods_comment($val['goods_id']);
-                $list['list'][$k]['comment_total'] = $list['comment_list'][$val['goods_id']]? count($list['comment_list'][$val['goods_id']]): 0;
-                        
+                $list['list'][$k]['comment_total'] = $list['comment_list'][$val['goods_id']]? count($list['comment_list'][$val['goods_id']]): 0;       
             }
         }
         $list['desc_content'] = get_rand_desc($list['info']['query_str']); //获取随机描述
@@ -105,6 +113,7 @@ if(!$smarty->is_cached('keyword_detail.dwt', $cache_id)) {
 //var_dump($list['list']);
 $smarty->assign('list', $list);
 $smarty->assign('categories', get_categories_tree());  // 分类树
+$smarty->assign('hot_comment', get_hot_comment($relategoods, 5));
 $smarty->display('keyword_detail.dwt');
 
 
@@ -141,5 +150,82 @@ function get_goods_comment($goods_id)
     }
     return $res;
 }
+
+function get_hot_comment($ids = 0, $limit = 5)
+{      
+    if(empty($ids)) return false;
+    
+    include_once('includes/cls_memcached.php');
+    $memcached = new cls_memcached();
+    $memcached->init();
+    
+    $sql = "SELECT * FROM ".$GLOBALS['ecs']->table('comment')." WHERE id_value in($ids) LIMIT $limit";
+    
+    $cachekey = md5($sql.$ids);
+    $cachedata = $memcached->get($cachekey);
+    if(!$cachedata) {
+        $comment = $GLOBALS['db']->getAll($sql);
+        if(empty($comment)) {
+            $sql = "SELECT * FROM ".$GLOBALS['ecs']->table('comment')." AS t1 
+                JOIN (SELECT ROUND(RAND() * ((SELECT MAX(comment_id) FROM ".$GLOBALS['ecs']->table('comment').")-(SELECT MIN(comment_id) 
+                FROM ".$GLOBALS['ecs']->table('comment')."))+(SELECT MIN(comment_id) FROM ".$GLOBALS['ecs']->table('comment').")) AS comment_id) AS t2 WHERE t1.comment_id >= t2.comment_id ORDER BY t1.comment_id LIMIT $limit";    
+            $comment = $GLOBALS['db']->getAll($sql);  
+        }
+        if($comment) {
+            foreach($comment as $k=>$row) {
+                $comment[$row['id_value']]['content'] = $row['content'];
+                $goods_ids[] = $row['id_value'];  
+            }
+            if($goods_ids) {
+                $goods_ids = implode(',', $goods_ids);
+                $sql = "SELECT goods_id,goods_name,goods_thumb,goods_img FROM ".$GLOBALS['ecs']->table('goods')." WHERE goods_id in($goods_ids)";
+                $goods = $GLOBALS['db']->getAll($sql);
+                
+                foreach($goods as $k=>$val) {
+                    $row['name'] = $val['goods_name'];
+                    $row['goods_id'] = $val['goods_id'];
+                    $row['goods_thumb'] = get_image_path($val['goods_id'], $val['goods_thumb'], true);
+                    $row['goods_img'] = get_image_path($val['goods_id'], $val['goods_thumb']);
+                    $row['url'] = build_uri('goods', array('gid'=>$val['goods_id']), $val['goods_name']);
+                    $row['content'] =  $comment[$val['goods_id']]['content']; 
+                    $cachedata[] = $row;   
+                }
+                $memcached->set($cachekey,serialize($cachedata), 86400*30);   
+            }      
+        }
+    } else {
+        $cachedata = unserialize($cachedata);
+    }
+    return $cachedata;
+}
+
+function get_categoryname($category = array())
+{
+   if(empty($category) || !is_array($category)) return false;
+   
+   include_once('includes/cls_memcached.php');
+   $memcached = new cls_memcached();
+   $memcached->init();
+   
+   $category = implode(',', $category);
+   $sql = "SELECT cat_id,cat_name FROM ".$GLOBALS['ecs']->table('category')." WHERE cat_id in($category)";
+   
+   $cachekey = md5($sql);
+   $cachedata = $memcached->get($cachekey);
+   if(!$cachedata) {
+        $res = $GLOBALS['db']->getAll($sql);
+        if($res) {
+           foreach($res as $val) {
+               $cachedata[$val['cat_id']] = $val;
+           }
+           $memcached->set($cachekey,serialize($cachedata), 86400*30); 
+       }  
+   } else {
+       $cachedata = unserialize($cachedata);   
+   }
+
+   return $cachedata; 
+}
+
 
 ?>

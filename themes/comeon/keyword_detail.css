@@ -19,7 +19,7 @@
 .g_con_ul_right_p{width:240px;height:30px;background:#eeeeee;line-height:30px;font-weight:bold;padding-left:10px;}
 .g_con_ul_right ul{width:230px;height:auto;margin:0 auto;}
 .g_con_ul_right ul li{height:36px;width:240px;line-height:36px;}
-.g_con_ul_right ul li p{height:36px;width:120px;float:left; text-align:left;}
+.g_con_ul_right ul li p{height:36px;width:120px;float:left; text-align:left;overflow:hidden;}
 
 .g_main_bottom{width:1000px;margin:0 auto;font-size:14px;line-height:20px;margin-top:20px;}
 .g_main_bottom_title{width:1000px;height:30px;border-bottom:2px #fd4a33 solid;}
@@ -46,3 +46,27 @@
 div.zoomDiv{z-index:999;position:absolute;top:0px;left:0px;width:200px;height:200px;background:#ffffff;border:1px solid #CCCCCC;display:none;text-align:center;overflow:hidden;}
 div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0 0 transparent;cursor:move;z-index:1;}
 .rand_list span{width:250px;height:28px;line-height: 28px; display: inline-block;float:left;overflow: hidden;}
+
+.title-h1{border-bottom:1px solid #ccc;padding-bottom:10px;}
+.title-h1 h1{font-weight:400;font-size:18px;padding-top:10px;}
+
+.cate-comment-list{}
+.cate-comment-list .tit{font-size:18px;padding-bottom:8px;border-bottom:1px solid #ccc;color:#ff5948;}
+.cate-comment-list li{padding:5px 0 10px;margin-bottom:8px;border-bottom:1px solid #ccc;}
+.cate-comment-list li .imgChange{width:100px;height:150px;display:inline;float:left;}
+.cate-comment-list li .imgChange:hover{box-shadow:1px 1px 15px #666}    
+.cate-comment-list li .reviews-right{width:660px;float:left;margin-left:10px;}
+.cate-comment-list li .reviews-right .title{display:block;margin:10px 0;}
+.cate-comment-list li .reviews-right p{margin-top:15px;}
+.l_star0,.l_star05,.l_star10,.l_star15,.l_star20,.l_star25,.l_star30,.l_star35,.l_star40,.l_star45,.l_star50 {background:url(images/star.png) no-repeat 0 0;float:left;height:12px;line-height:12px;margin-top:0px;overflow:hidden;width:70px}
+.l_star0 {background-position:left top}
+.l_star05 {background-position:left -17px}
+.l_star10 {background-position:left -17px}
+.l_star15 {background-position:left -17px}
+.l_star20 {background-position:left -33px}
+.l_star25 {background-position:left -33px}
+.l_star30 {background-position:left -49px}
+.l_star35 {background-position:left -49px}
+.l_star40 {background-position:left -65px}
+.l_star45 {background-position:left -65px}
+.l_star50 {background-position:left -81px}

@@ -23,6 +23,8 @@
 <!--主要内容开始-->
 <div class="g_content">
  <p class="g_content_p"><span>Your Position:Home > <a href="http://www.temperqueen.com/product-detail/{$list.info.query_url}.html">{$list.info.query_str}</a></span></p> 
+ <div class="title-h1"><h1>{$list.info.query_str}</h1></div>
+ 
  <div class="g_con_ul">
  
     <!-- 循环体star -->
@@ -137,14 +139,17 @@
         
         <div class="g_con_ul_right">
             <p class="g_con_ul_right_p">Detail description:</p>
-            <!--{if $goods.attr_list}-->
             <ul>
-            <!-- {foreach from=$goods.attr_list item=attr} --> 
+            <!--{if $goods.attr_list}-->
+            <!-- {foreach from=$goods.attr_list item=attr key=k} -->
+                <!--{if $k <= 6}-->    
                 <li><p><strong>{$attr.attr_name} :</strong></p><p>{$attr.attr_value}</p></li>
+                <!--{/if}-->
             <!-- {/foreach}-->
-            </ul>
             <!--{/if}-->
-            
+            <li><p><strong>Category :</strong></p><p>{$goods.catname}</p></li>
+            </ul>
+
         </div> <!--  end g_con_ul_right --> 
     </div> <!-- end g_con_ul_div -->
     <!-- {/foreach}-->
@@ -152,6 +157,29 @@
     <!-- 循环体end -->
 
   <!--结束-->
+  
+  <div class="clear"></div>
+    <div class="cate-comment-list">
+        <p class="g_main_bottom_title"><span>{$list.info.query_str} Related Comments</span></p>
+        <ul>
+            <!-- {if $hot_comment} -->
+            <!--{foreach from=$hot_comment item=comment}-->
+            <li class="clearfix">
+                <a href="{$comment.url}"><img class="imgChange" alt="{$comment.name}" src="http://www.temperqueen.com/{$comment.goods_thumb}"></a>
+                <div class="reviews-right clearfix">
+                    <span class="title">{$comment.name|escape:html}</span>
+                    <div class="clearfix">
+                        <div class="l_star50"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="fc000"><a href="{$comment.url}#wrr" rel="nofollow">Reviews(0)</a></span>
+                    </div>
+                    <p>{$comment.content}</p>
+                </div>
+            </li>
+            <!--{/foreach}-->
+            <!--{/if}--> 
+        </ul>
+    </div> <!-- cate-comment-list end -->
+  
   <div class="g_main_bottom">
      <p class="g_main_bottom_title">
         <span>{$list.info.query_str}Related Content Description</span>

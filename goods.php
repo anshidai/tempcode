@@ -166,25 +166,26 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         //关键词自动内链_新增加 开始 by www.yoja365.com
         
         $maxid = $GLOBALS['db']->getOne("SELECT max(qid) FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE status=1"); 
-
-        $multi_qid = multi_rand(1, $maxid, 20);
-        $sql = "SELECT qid,query_url,query_str FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE qid in(".implode(',', $multi_qid).") LIMIT 20";
-        $cachekey = md5($sql.$goods_id);
-        
-        include('includes/cls_memcached.php');
-        $memcached = new cls_memcached();
-        $memcached->init();
-        $cachedata = $memcached->get($cachekey);
-        if(!$cachedata) {
-            $res_k = $GLOBALS['db']->query($sql);
-            while($row_k = $GLOBALS['db']->fetchRow($res_k))
-            {
-                $cachedata[$row_k['qid']]['key_url'] = $host."/product-detail/{$row_k['query_url']}.html";  
-                $cachedata[$row_k['qid']]['key_name'] = $row_k['query_str'];
+        if(!empty($maxid)) {
+            $multi_qid = multi_rand(1, $maxid, 20);
+            $sql = "SELECT qid,query_url,query_str FROM ".$GLOBALS['ecs']->table('keywords_detail')." WHERE qid in(".implode(',', $multi_qid).") LIMIT 20";
+            $cachekey = md5($sql.$goods_id);
+            
+            include('includes/cls_memcached.php');
+            $memcached = new cls_memcached();
+            $memcached->init();
+            $cachedata = $memcached->get($cachekey);
+            if(!$cachedata) {
+                $res_k = $GLOBALS['db']->query($sql);
+                while($row_k = $GLOBALS['db']->fetchRow($res_k))
+                {
+                    $cachedata[$row_k['qid']]['key_url'] = $host."/product-detail/{$row_k['query_url']}.html";  
+                    $cachedata[$row_k['qid']]['key_name'] = $row_k['query_str'];
+                }
+                $memcached->set($cachekey,serialize($cachedata), 86400*30);        
+            }else {
+                $cachedata = unserialize($cachedata);    
             }
-            $memcached->set($cachekey,serialize($cachedata), 86400*30);        
-        }else {
-            $cachedata = unserialize($cachedata);    
         }
         $smarty->assign('keytaglist', $cachedata);
         //关键词自动内链_新增加 结束 by www.yoja365.com
