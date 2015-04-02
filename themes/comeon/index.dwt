@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<base target="_parent" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="p:domain_verify" content="9797d31847b7c4b5e7c49f90e9741cf6"/>
 <title>{$page_title}</title>

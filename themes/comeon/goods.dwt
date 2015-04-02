@@ -118,43 +118,50 @@ function $id(element) {
             <div id="order">
                 <ul class="size">
                     <li>
-                        <select name="attrColor" id="attrColor" class="d_s">
-                            <option value="">Select Color</option>
-                            <option value="White">White</option>
-                            <option value="Ivory">Ivory</option>
-                            <option value="Champagne">Champagne</option>
-                            <option value="Black">Black</option>
-                            <option value="Red">Red</option>
-                            <option value="Orange">Orange</option>
-                            <option value="Green">Green</option>
-                            <option value="Blue">Blue</option>
-                            <option value="Purple">Purple</option>
-                            <option value="Pink">Pink</option>
-                            <option value="Grape">Grape</option>
-                            <option value="Brown">Brown</option>
-                            <option value="Burgundy">Burgundy</option>
-                            <option value="Yellow">Yellow</option>
-                            <option value="Gold">Gold</option>
-                            <option value="Silver">Silver</option>
-                            <option value="Gray">Gray</option>
-                            <option value="Daffodil">Daffodil</option>
-                            <option value="Fuchsia">Fuchsia</option>
-                            <option value="Dark Champagne">Dark Champagne</option>
-                            <option value="Leopard">Leopard</option>
-                            <option value="Multi">Multi</option>
-                            <option value="Lilac">Lilac</option>
-                            <option value="Lavender">Lavender</option>
-                            <option value="Light Purple">Light Purple</option>
-                            <option value="Light Sky Blue">Light Sky Blue</option>
-                            <option value="Light Slate Gray">Light Slate Gray</option>
-                            <option value="Sky Blue">Sky Blue</option>
-                            <option value="Royal Blue">Royal Blue</option>
-                            <option value="Dark Navy">Dark Navy</option>
-                            <option value="Sage Green">Sage Green</option>
-                            <option value="Hunter Green">Hunter Green</option>
-                            <option value="Dark Green">Dark Green</option>
-                            <option value="light green">light green</option>
-                        </select> 
+                        <div class="goods-color-enable">
+                            Select Color：<span class="color-enable">
+                                <i></i>
+                                <img src="images/goods_color/black.jpg" width="20" height="20" title="black" />
+                            </span>
+                            <span class="change-color-btn"></span>
+                        </div>
+                        <input type="hidden" name="attrColor" id="attrColor" value="" />
+                        <div class="select-color-block clearfix">
+                            <span class="close"></span>
+                            <dl class="show-color clearfix">
+                                <dt><img id="default-clorimg" src="images/goods_color/black.jpg" /><strong class="color-tit">Black</strong></dt>
+                                <dd><i class="curr"></i><img class="selectColorHover curr" src="images/goods_color/black.jpg" width="20" height="20" title="Black" /></dd>
+                                <dd><i></i><img src="images/goods_color/blue.jpg" width="20" height="20" title="Blue" /></dd>
+                                <dd><i></i><img src="images/goods_color/bright_rust_red.jpg" width="20" height="20" title="Bright Rust Red" /></dd>
+                                <dd><i></i><img src="images/goods_color/brown.jpg" width="20" height="20" title="Brown" /></dd>
+                                <dd><i></i><img src="images/goods_color/bud_green.jpg" width="20" height="20" title="Bud Green" /></dd>
+                                <dd><i></i><img src="images/goods_color/burgundy.jpg" width="20" height="20" title="Burgundy" /></dd>
+                                <dd><i></i><img src="images/goods_color/champagne.jpg" width="20" height="20" title="Champagne" /></dd>
+                                <dd><i></i><img src="images/goods_color/chocolate.jpg" width="20" height="20"title="Chocolate" /></dd>
+                                <dd><i></i><img src="images/goods_color/daffodil.jpg" width="20" height="20" title="Daffodil" /></dd>
+                                <dd><i></i><img src="images/goods_color/dark_brown.jpg" width="20" height="20" title="Dark Brown" /></dd>
+                                
+                                <dd><i></i><img src="images/goods_color/kelly.jpg" width="20" height="20" title="Kelly" /></dd>
+                                <dd><i></i><img src="images/goods_color/lavender.jpg" width="20" height="20" title="Lavender" /></dd>
+                                <dd><i></i><img src="images/goods_color/light_plum.jpg" width="20" height="20" title="Light Plum" /></dd>
+                                <dd><i></i><img src="images/goods_color/light_sky_blue.jpg" width="20" height="20" title="Light Sky Blue" /></dd>
+                                <dd><i></i><img src="images/goods_color/lilac.jpg" width="20" height="20" title="Lilac" /></dd>
+                                <dd><i></i><img src="images/goods_color/mint.jpg" w idth="20" height="20"title="Mint" /></dd>
+                                <dd><i></i><img src="images/goods_color/navy.jpg" width="20" height="20" title="Navy" /></dd>
+                                <dd><i></i><img src="images/goods_color/orange.jpg" width="20" height="20" title="Orange" /></dd>
+                                <dd><i></i><img src="images/goods_color/orange_red.jpg" width="20" height="20" title="Orange Red" /></dd>
+                                <dd><i></i><img src="images/goods_color/pearl_pink.jpg" width="20" height="20" title="Pearl Pink" /></dd>
+                                
+                                <dd><i></i><img src="images/goods_color/pink.jpg" width="20" height="20" title="Pink" /></dd>
+                                <dd><i></i><img src="images/goods_color/purple.jpg" width="20" height="20" title="Purple" /></dd>
+                                <dd><i></i><img src="images/goods_color/red.jpg" width="20" height="20" title="Red" /></dd>
+                                <dd><i></i><img src="images/goods_color/regency.jpg" width="20" height="20" title="Regency" /></dd>
+                                <dd><i></i><img src="images/goods_color/royal_blue.jpg" width="20" height="20" title="Royal Blue" /></dd>
+                                <dd><i></i><img src="images/goods_color/sage.jpg" width="20" height="20" title="Sage" /></dd>
+                                <dd><i></i><img src="images/goods_color/silver.jpg"  width="20" height="20"title="Silver" /></dd>
+                            
+                            </dl>
+                        </div>
                     </li>
                     
                     <li>
@@ -716,10 +723,39 @@ jQuery(document).ready(function(){
 <!-- return top star -->
 <div class="go-top topdn" id="go-top"><a href="javascript:;" class="go"></a></div>
 <script type="text/javascript">
-   
-
-
     jQuery(function(){
+    
+        //select-color 
+        jQuery(".change-color-btn").click(function(){
+            jQuery(".select-color-block").toggle('slow');
+        });
+        
+        jQuery(".select-color-block .close").click(function(){
+            jQuery(".select-color-block").toggle('slow').hide();
+        });
+    
+        jQuery(".show-color dd").click(function(){
+            var _this = jQuery(this);
+            var imgObj = _this.find("img");
+            jQuery(".show-color dd").find("i").removeClass('curr');
+            _this.find("i").addClass('curr');
+
+            jQuery("#default-clorimg").attr("src", imgObj.attr('src'));
+            jQuery(".color-tit").html(imgObj.attr('title'));
+            jQuery(".color-enable i").addClass("curr");
+            jQuery(".color-enable img").attr("src", imgObj.attr('src'));
+            jQuery("#attrColor").val(imgObj.attr('title'));
+        });
+        
+        jQuery(".show-color dd").hover(function(){
+            var _this = jQuery(this);
+            var imgObj = _this.find("img");
+            jQuery("#default-clorimg").attr("src", imgObj.attr('src'));
+            jQuery(".color-tit").html(imgObj.attr('title'));
+        });
+        //select-color end
+    
+    
         showScroll();
         function showScroll(){
             jQuery(window).scroll( function() { 

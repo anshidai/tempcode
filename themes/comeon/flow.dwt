@@ -408,14 +408,14 @@
                   <td bgcolor="#ffffff" align="right">{$goods.formated_subtotal}</td>
                 </tr>
                 <!-- {/foreach} -->
-                <!--{if $goods.custom}-->
+                <!--{if $custom_num}-->
                 <tr>
                     <td bgcolor="#ffffff"><span style="color:#FF0000">Commodity Prices Customization</span></td>
                     <td bgcolor="#ffffff"></td>
-                    <td bgcolor="#ffffff" align="right">20</td>
-                    <td bgcolor="#ffffff" align="right">20</td>
-                    <td bgcolor="#ffffff" align="right">1</td>
-                    <td bgcolor="#ffffff" align="right">20</td>
+                    <td bgcolor="#ffffff" align="right">{$custom_money}</td>
+                    <td bgcolor="#ffffff" align="right">{$custom_money}</td>
+                    <td bgcolor="#ffffff" align="right">{$custom_num}</td>
+                    <td bgcolor="#ffffff" align="right">{$custom_money}</td>
                 </tr>
                 <!--{/if}-->
                 <!-- {if !$gb_deposit} 团购且有保证金时不显示 -->

@@ -577,15 +577,26 @@ elseif ($_REQUEST['step'] == 'checkout')
      */
     $total = order_fee($order, $cart_goods, $consignee);
     
+    //echo '<pre>';
+    //var_dump($cart_goods);
+    
     //如果是自定义款式则增加20美元 libaoan
-    if($cart_goods[0]['custom_attr']) {
-        $total['goods_price_formated'] = (int)$total['goods_price_formated'] + 20;
-        $total['goods_price_formated'] = number_format($total['goods_price_formated'], 2, '.', '');    
-        $total['amount_formated'] = (int)$total['amount_formated'] + 20;
-        $total['amount_formated'] = number_format($total['amount_formated'], 2, '.', '');    
+    $custom_num = 0;
+    if($cart_goods) {
+        foreach($cart_goods as $k=>$val) {
+           if($val['custom_attr']) {
+                $custom_num++;
+                $total['goods_price_formated'] = (int)$total['goods_price_formated'] + 20;
+                $total['goods_price_formated'] = number_format($total['goods_price_formated'], 2, '.', '');    
+                $total['amount_formated'] = (int)$total['amount_formated'] + 20;
+                $total['amount_formated'] = number_format($total['amount_formated'], 2, '.', '');       
+           } 
+        }  
     }
+    $smarty->assign('custom_num', $custom_num); 
+    $smarty->assign('custom_money', $custom_num*20); 
     $smarty->assign('total', $total);
-    $smarty->assign('shopping_money', sprintf($_LANG['shopping_money'], $total['formated_goods_price']));
+    $smarty->assign('shopping_money', sprintf($_LANG['shopping_money'], $total['formated_goods_price']+($custom_num*20)));
     $smarty->assign('market_price_desc', sprintf($_LANG['than_market_price'], $total['formated_market_price'], $total['formated_saving'], $total['save_rate']));
 
     /* 取得配送列表 */
@@ -1616,9 +1627,14 @@ elseif ($_REQUEST['step'] == 'done')
     $order['card_fee']      = $total['card_fee'];
 
     //如果是自定义属性订单价格增加20美元 libaoan
-    if($cart_goods[0]['custom_attr']) {  
-        $total['amount'] = (int)$total['amount'] + 20;
-        $order['goods_amount'] = (int)$order['goods_amount'] + 20;
+    //var_dump($cart_goods);exit;
+    if($cart_goods) {
+        foreach($cart_goods as $k=>$val) {
+            if($val['custom_attr']) {
+                $total['amount'] = (int)$total['amount'] + 20;
+                $order['goods_amount'] = (int)$order['goods_amount'] + 20;    
+            }    
+        } 
     }
     
     $order['order_amount']  = number_format($total['amount'], 2, '.', '');
@@ -1725,37 +1741,43 @@ elseif ($_REQUEST['step'] == 'done')
     $db->query($sql);
     
     //如果有自定义尺寸 更新自定义尺码数据
-    if(!empty($cart_goods[0])) {
-        $custom_attr = explode('|||', $cart_goods[0]['custom_attr']);
-        foreach($custom_attr as $k=>$val) {
-            $tms = explode(':', $val);
-            if($tms[0] == 'shoulder_width') {
-                $shoulder_width = $tms[1];   
-            } 
-            else if($tms[0] == 'bust_size') {
-                $bust_size = $tms[1];
-            } 
-            else if($tms[0] == 'waist_size') {
-                $waist_size = $tms[1];    
-            } 
-            else if($tms[0] == 'hip_size') {
-                $hip_size = $tms[1];
-            } 
-            else if($tms[0] == 'hollow_to_floor') {
-                $hollow_to_floor = $tms[1];    
-            } 
-            else if($tms[0] == 'hollow_to_knee') {
-               $hollow_to_knee = $tms[1];    
-            }
-            else if($tms[0] == 'height') {
-               $height = $tms[1];    
-            }           
-        }
-        $customsql = "UPDATE ".$ecs->table('order_goods')." SET 
+    if($cart_goods) {
+        foreach($cart_goods as $v) {
+            if($v['custom_attr']) {
+                $custom_attr = explode('|||', $v['custom_attr']);
+                
+                foreach($custom_attr as $k=>$val) {
+                    $tms = explode(':', $val);
+                    if($tms[0] == 'shoulder_width') {
+                        $shoulder_width = $tms[1];   
+                    } 
+                    else if($tms[0] == 'bust_size') {
+                        $bust_size = $tms[1];
+                    } 
+                    else if($tms[0] == 'waist_size') {
+                        $waist_size = $tms[1];    
+                    } 
+                    else if($tms[0] == 'hip_size') {
+                        $hip_size = $tms[1];
+                    } 
+                    else if($tms[0] == 'hollow_to_floor') {
+                        $hollow_to_floor = $tms[1];    
+                    } 
+                    else if($tms[0] == 'hollow_to_knee') {
+                       $hollow_to_knee = $tms[1];    
+                    }
+                    else if($tms[0] == 'height') {
+                       $height = $tms[1];    
+                    }           
+               }
+            
+                $customsql = "UPDATE ".$ecs->table('order_goods')." SET 
                     custom_shoulder_width='{$shoulder_width}', custom_bust_size='{$bust_size}',
                     custom_waist_size='{$waist_size}',custom_hip_size='{$hip_size}',
                     custom_hollow_to_floor='{$hollow_to_floor}',custom_hollow_to_knee='{$hollow_to_knee}',custom_height='{$height}' WHERE order_id='{$new_order_id}'";
-        $db->query($customsql);        
+                $db->query($customsql);      
+            }        
+        }   
     }
     
     /* 修改拍卖活动状态 */

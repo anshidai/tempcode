@@ -899,3 +899,23 @@ border-right: 1px solid #E5E5E5;border-top: 1px solid #E5E5E5;cursor: pointer;fl
 .nums_sale .ratio i{font-size:16px;}
 .nums_sale .ratio{height:24px;line-height:24px;font-size:24px;padding-top:8px;}
 .nums_sale .off{height:16px;line-height:16px;font-size:16px;padding-top:2px;}
+
+.goods-color-enable{}
+.goods-color-enable .color-enable{width:30px;height:30px;position:relative;padding-right:5px;vertical-align:middle; display:inline-block !important;}
+.goods-color-enable .color-enable img{width:20px;height:20px;padding:5px 6px;}
+.goods-color-enable .color-enable i.curr{width:30px;height:30px;display:block;position:absolute;left:0;top:0;background:url(images/other_color_bg.png) no-repeat 3px -84px;}
+.goods-color-enable .change-color-btn{width:17px;height:17px;display:inline-block !important;cursor:pointer; background:url(images/other_color_bg.png) no-repeat;vertical-align:middle;}
+.select-color-block{position:absolute;left:75px;top:38px;z-index:99;display:none;width:415px;box-shadow:0 0 5px rgba(0,0,0,0.4);background-color:#fff;
+    border:1px solid #9b9999;padding:8px 0 8px 8px;}
+.select-color-block .close{width:16px;height:16px;display:block;position:absolute;right:10px;top:10px;
+    background:url(images/other_color_bg.png) no-repeat 0 -40px;cursor:pointer;}
+.select-color-block .show-color{}
+.select-color-block .show-color dt{float:left;padding-right:5px;width:170px;text-align:center;}
+.select-color-block .show-color dt .color-tit{display:inline-block;text-align:center;padding-top:3px;}
+.select-color-block .show-color dt img{width:157px;height:157px;display:block;border:1px solid #333;padding:2px;cursor:default;}
+.select-color-block .show-color dd{position:relative;float:left;height:30px;margin:0 3px 6px 0;padding:0;}
+.select-color-block .show-color dd i.curr{width:30px;height:30px;display:block;position:absolute;left:0;top:0;cursor:pointer;
+    background:url(images/other_color_bg.png) no-repeat 3px -84px;}
+.select-color-block .show-color dd img{width:20px;height:20px;padding:5px 6px;margin-bottom:5px;cursor:pointer;
+    vertical-align:top;background:url(images/other_color_bg.png) no-repeat -32px -84px;}
+.select-color-block .show-color dd img:hover{background-position:-71px -84px;}
