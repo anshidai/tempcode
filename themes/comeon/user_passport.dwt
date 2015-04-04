@@ -7,6 +7,10 @@
 <meta name="Description" content="{$description}" />
 <link href="global.css" rel="stylesheet" type="text/css" />
 <link href="register.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.select-source{padding:8px 0;}
+.select-source select{width:256px;height:22px;line-height:22px;}
+</style>
 </head>
 <body>
 <div id="globalWrapper">
@@ -133,6 +137,17 @@
                         <span><font color='red'>*</font>Confirm Password:</span>
                         <p><input type="password" size="50" id="RegPwdRe" class="rtext2" name="conform_password"></p>
                     </li>
+                    <li class="select-source">
+                        <span><font color='red'>*</font>Which found from us:</span>
+                        <p><select name="source" id="sourceAddress">
+                            <option value="">Select source</option>
+                            <option value="Search Engine">Search Engine</option>
+                            <option value="www.pinterest.com">www.pinterest.com</option>
+                            <option value="www.Facebook.com">www.Facebook.com</option>
+                            <option value="Other">Other</option>
+                        </select></p>
+                        <span id="sp_source" style="color: Red; display: none; float: right; width: 335px; text-align: left;"></span>
+                    </li>
                     <li>
                         <input type="checkbox" checked="checked" name="agreement" id="cbx_agree" value="1">I accept 
                         <a href="#" target="_blank">Terms of Use</a> and
@@ -223,6 +238,7 @@ function UserCreate() {
     var pwd = jQuery("#RegPwd").val();
     var pwdRe = jQuery("#RegPwdRe").val();
     var agree = document.getElementById("cbx_agree");
+    var source = jQuery("#sourceAddress").val().Trim(); 
     
     if(isregistered) {
         jQuery('#sp_username').html('Username exists, please enter again');
@@ -292,6 +308,11 @@ function UserCreate() {
         jQuery('#sp_pwd').html("Sorry, passwords do not match. Please try again.");
         jQuery('#sp_pwdtoop').hide();
         return false;
+    }
+    else if(source == "") {
+        jQuery('#sp_source').html("Sorry, Please select a source.");
+        jQuery('#sp_source').show();
+        return false;    
     }
     else {
         jQuery('#sp_pwd').html('');

@@ -161,6 +161,7 @@ elseif ($action == 'act_register')
         $other['office_phone'] = isset($_POST['extend_field3']) ? $_POST['extend_field3'] : '';
         $other['home_phone'] = isset($_POST['extend_field4']) ? $_POST['extend_field4'] : '';
         $other['mobile_phone'] = isset($_POST['extend_field5']) ? $_POST['extend_field5'] : '';
+        $other['register_source'] = isset($_POST['source']) ? compile_str(trim($_POST['source'])) : '';
         $sel_question = empty($_POST['sel_question']) ? '' : compile_str($_POST['sel_question']);
         $passwd_answer = isset($_POST['passwd_answer']) ? compile_str(trim($_POST['passwd_answer'])) : '';
 
