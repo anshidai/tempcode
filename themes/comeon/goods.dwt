@@ -126,7 +126,7 @@ function $id(element) {
                             <span class="change-color-btn"></span>
                         </div>
                         <input type="hidden" name="attrColor" id="attrColor" value="" />
-                        <div class="select-color-block clearfix">
+                        <div class="select-color-block clearfix" style="display:none;">
                             <span class="close"></span>
                             <dl class="show-color clearfix">
                                 <dt><img id="default-clorimg" src="images/goods_color/black.jpg" /><strong class="color-tit">Black</strong></dt>
