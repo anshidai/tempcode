@@ -19,21 +19,6 @@
 <!-- {/foreach} -->
 </ul> 
 </div> 
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        $(function() {
-            $(".showbut").hover(function() {
-                $(this).find(".showbox").show();
-                $(this).addClass("hover")
-            },
-            function() {
-                $(this).find(".showbox").hide();
-                $(this).removeClass("hover")
-            })
-        });
-    
-    });
-</script>
 
 
 

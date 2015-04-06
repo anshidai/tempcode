@@ -7,8 +7,16 @@ var process_request = "{$lang.process_request}";
     <div class="header_r">
         <div class="top_nav">
             <ul class="usertool">
-                <!-- <li class="chatbt"><a rel="nofollow" target="_blank" href="#">Live Chat </a></li>-->
-                <li class="accountbt showbut"><a rel="nofollow" href="user.php?act=order_list">My Account<span class="mysan"></span></a>
+                <li class="chatbt"><a rel="nofollow" target="_blank" href="javascript:;" class="chat-link">Live Chat <span class="mysan"></span></a>
+                    <div class="my-account-con chat-box" style="display:none;">
+                        <p class="live1">If you have already made a purchase</p>
+                        <p class="p2">Log in to <a href="http://www.temperqueen.com/user.php?act=order_list">My Orders</a> track progress or request help through the order details page.</p>
+                        <p class="live2">If you are considering a purchase</p>
+                        <p>Email :<a rel="nofollow" href="mailto:service@temperqueen.com">service@temperqueen.com</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="accountbt showbut"><a rel="nofollow" href="http://www.temperqueen.com/user.php?act=order_list">My Account<span class="mysan"></span></a>
                     <div class="my-account-con showbox" style="display: none;">
                     <ul>
                         <li><a class="order" href="http://www.temperqueen.com/user.php?act=order_list" rel="nofollow"><span></span>Order</a></li>
@@ -56,3 +64,28 @@ var process_request = "{$lang.process_request}";
             </div>
         </div>
     </div>
+    
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    $(function() {
+        $(".chatbt").hover(function() {
+            $(this).find(".chat-box").show();
+            $(this).addClass("hover")
+        },
+        function() {
+            $(this).find(".chat-box").hide();
+            $(this).removeClass("hover")
+        });
+    
+        $(".showbut").hover(function() {
+            $(this).find(".showbox").show();
+            $(this).addClass("hover")
+        },
+        function() {
+            $(this).find(".showbox").hide();
+            $(this).removeClass("hover")
+        });
+    });
+
+});
+</script>

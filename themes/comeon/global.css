@@ -55,6 +55,7 @@ a,area{ blr:expression(this.onFocus=this.blur()) } /* for IE */
 .accountbt.hover>a{border-bottom:0}
 .accountbt .mysan{top:11px}
 .showm{width:400px;float:left;font-size:12px;color:#fd4a33;margin:8px 0 0 15px}
+
 .s_top span{font-size:15px;text-transform:uppercase;padding-right:5px;font-weight:bold}
 .s_bottom>span{text-transform:uppercase;padding-left:35px}
 .s_bottom a{color:#fd4a33;font-size:13px;font-weight:bold}
@@ -90,6 +91,18 @@ a,area{ blr:expression(this.onFocus=this.blur()) } /* for IE */
 .my-account-con li a.ifg:hover span{background-position:-25px -180px;}
 .my-account-con li a.facebook:hover span{background-position:-25px -210px;}
 .my-account-con li a.signout:hover span{background-position:-25px -240px;}
+
+.usertool .chatbt{padding-left:20px;}
+.usertool .chatbt a.chat-link{line-height:27px;padding-left:37px;padding-right:20px;border: 1px solid #fff;background-position: 5px 2px;}
+.usertool .chatbt.hover a.chat-link, .usertool .chatbt a.chat-link:hover{border:1px solid #ccc;}
+.usertool .chatbt .mysan{top:7px;}
+.chat-box{width:265px;padding:8px;left:auto;right:0px;top:21px;}
+.chat-box a{color:#1e4e8e;}
+.chat-box p{line-height: 18px;padding-left: 28px;}
+.chat-box .live1{background:url(images/live1.gif) no-repeat;}
+.chat-box .live2{background:url(images/live2.gif) no-repeat;}
+.chat-box .live1,.chat-box .live2{height:23px;line-height:23px;font-size:12px;font-style:italic;font-weight:700;}
+.chat-box .p2 {border-bottom: 1px solid #ccc;margin-bottom: 10px;padding-bottom: 8px;}
 
 .search{ width:500px; z-index:5; }
 .search_mode{ height:32px;  float:right; margin-left:10px; }
