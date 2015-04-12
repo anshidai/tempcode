@@ -116,11 +116,12 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('helps',           get_shop_help());       // 网店帮助
     //$smarty->assign('top_goods',       get_top10());           // 销售排行
 
-    $smarty->assign('best_goods',      get_recommend_goods('best'));    // 推荐商品
-    $smarty->assign('new_goods',       get_recommend_goods('new'));     // 最新商品
-    $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
-    $smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
-    $smarty->assign('brand_list',      get_brands());
+    //$smarty->assign('best_goods',      get_recommend_goods('best'));    // 推荐商品
+    //$smarty->assign('new_goods',       get_recommend_goods('new'));     // 最新商品
+    //$smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+    //$smarty->assign('promotion_goods', get_promote_goods()); // 特价商品
+    //$smarty->assign('brand_list',      get_brands());
+    $smarty->assign('recommend_list',      index_recommend_goods());
     //$smarty->assign('promotion_info',  get_promotion_info()); // 增加一个动态显示所有促销信息的标签栏
 
     //$smarty->assign('invoice_list',    index_get_invoice_query());  // 发货查询
@@ -408,11 +409,47 @@ function get_flash_xml()
             foreach ($t as $key => $val)
             {
                 $val[4] = isset($val[4]) ? $val[4] : 0;
-                $flashdb[] = array('src'=>$val[1],'url'=>$val[2],'text'=>$val[3],'sort'=>$val[4]);
+                $flashdb[] = array('src'=>$val[1],'url'=>$val[2],'text'=>$val[3],'sort'=>$val[4],'key'=>$key+1);
             }
         }
     }
     return $flashdb;
+}
+
+function index_recommend_goods($limit = 24, $offset = 3)
+{
+    $data = read_static_cache('index_recommend_goods');   
+    if(empty($data)) {
+        $sql = "SELECT goods_id,goods_name,market_price,shop_price,goods_thumb,click_count FROM ".$GLOBALS['ecs']->table('goods')." WHERE is_delete=0 AND is_index_page=1 ORDER BY add_time LIMIT $limit";
+        $goods_data = $GLOBALS['db']->getAll($sql);
+        if($goods_data) {
+            foreach($goods_data as $idx=>$row) {
+                $goods_data[$idx]['name'] = $row['goods_name'];
+                $goods_data[$idx]['thumb'] = get_image_path($row['goods_id'], $row['goods_thumb'], true);
+                $goods_data[$idx]['goods_img'] = get_image_path($row['goods_id'], $row['goods_img']);
+                $goods_data[$idx]['url'] = build_uri('goods', array('gid' => $row['goods_id']), $row['goods_name']);
+                $goods_data[$idx]['market_price'] = price_format($row['market_price']);
+                $goods_data[$idx]['shop_price']   = price_format($row['shop_price']);
+                $goods_data[$idx]['sale_num']  = intval((1-$row['shop_price']/$row['market_price'])*100);
+                $goods_data[$idx]['comment_num'] = get_goods_comment_num($row['goods_id']);
+                if($idx !== 0 && ($idx%$offset == '0')) {
+                    $goods_data[$idx]['offset']   = 'curr';    
+                }
+            }
+            write_static_cache('index_recommend_goods', $goods_data);
+            
+        }    
+    }else {
+        $goods_data = $data;
+    }
+    return $goods_data;
+}
+
+function get_goods_comment_num($goods_id)
+{
+    $sql = "SELECT count(*) FROM ".$GLOBALS['ecs']->table('comment')." WHERE id_value='$goods_id'";
+    $num = $GLOBALS['db']->getOne($sql);
+    return $num? $num: 0;
 }
 
 

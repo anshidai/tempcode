@@ -1,0 +1,89 @@
+/* slide css */
+.orbit-slide{width: 760px;height:320px;margin:0 auto;overflow: hidden;}
+.orbit-wrapper { position: relative; margin: 0 auto; }
+#featured { position: relative; width: 680px; height: 382px; overflow: hidden; background: #fff url(images/loading.gif) 50% no-repeat; }
+.orbit > img { display: none; position: absolute; top: 0; left: 0; border: 0 none; }
+.orbit > a { display: none; position: absolute; top: 0; left: 0; line-height: 0; border: 0 none; }
+.orbit > div { position: absolute; top: 0; left: 0; width: 100%; height: 100% }
+.orbit-item { background-color: #f5f5f5; }
+
+/* title */
+.orbit-caption { display: none; position: absolute; left: 0; bottom: 0; z-index: 10; width: 100%;height: 75px;color: #fff;text-align: center; background: rgba(0,0,0,.6); }
+.orbit-caption strong{display:black;width:610px;margin:0 auto;height: 75px;line-height:75px;overflow:hidden;font-size:18px;text-align: center; }
+
+/* nav */
+.orbit-bullets { position: absolute; z-index: 1000; list-style: none; bottom: 0px; left: 50%; margin: 15px 0 15px -50px; padding: 0; }
+.orbit-bullets li { float: left; margin: 0 5px; cursor: pointer; width: 10px; height: 10px; overflow: hidden; text-indent: -9999px; background-color: #000; }
+.orbit-bullets li.active { background-color: #49CFF1; }
+.orbit-bullets li.has-thumb { background: none; width: 100px; height: 75px; }
+.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px solid #000; }
+.slider-nav { display: block }
+.slider-nav span { width: 75px; height: 75px; text-indent: -9999px; position: absolute; z-index: 1000; bottom: 0; cursor: pointer; }
+.slider-nav span.right { background: url(images/arrow.png) right 0; right: 0; }
+.slider-nav span.left { background: url(images/arrow.png) 0 0; left: 0; }
+.slider-nav span.right:hover { background-position: right bottom; }
+.slider-nav span.left:hover { background-position: 0 bottom; }
+
+/* The timer */
+.timer { width: 40px; height: 40px; overflow: hidden; position: absolute; top: 10px; right: 10px; opacity: .6; cursor: pointer; z-index: 1001; }
+.rotator { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: -20px; background: url(images/rotator-black.png) no-repeat; z-index: 3; }
+.mask { display: block; width: 20px; height: 40px; position: absolute; top: 0; right: 0; z-index: 2; overflow: hidden; }
+.rotator.move { left: 0; }
+.mask.move { width: 40px; left: 0; background: url(images/timer-black.png) repeat 0 0; }
+.pause { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: 0; background: url(images/pause-black.png) no-repeat; z-index: 4; opacity: 0; }
+.pause.active { background: url(images/pause-black.png) no-repeat 0 -40px; }
+.timer:hover span.pause, span.pause.active { opacity: 1; }
+/* slide css end */
+
+.index-content{}
+.index-content .column-left{float:left;width:220px;}
+.category-url{}
+.category-url .cate-title{margin-bottom:5px;height:30px;line-height:30px;color:#fd4a33;
+	text-align:center;font-size:16px;border:1px solid #ccc;font-weight:normal;}
+.index-content .column-right{float:left;margin-left:10px;}
+.cate-block{padding:8px 5px;border-bottom:1px solid #ccc;}
+.cate-block.borderno{border-bottom:0 none;}
+.cate-block dt .tit{font-size:14px;margin-bottom:5px;}
+.cate-block dd{font-size:14px;}
+.cate-block dd li{line-height:26px;}
+
+.garrery-list {width:770px;margin:20px 0 30px;}
+.hot-title{padding-bottom:10px;margin:0 8px 10px;font-size:14px;height:28px;line-height:28px;border-bottom:1px solid #ccc;}
+.garrery-list  .l_g_s{display: inline;float: left; margin:0 10px 15px 0;padding-bottom: 10px; width: 246px; height:390px;}
+.garrery-list .last-dl{margin-right:0;}
+.garrery-list  .l_g_s .imgc_a{overflow: hidden;display: block;position: relative;left:0;top:0;
+	height: 320px;width: 240px;text-align: center;transition: all 0.5s ease-out 0s;border: 1px solid #fff;}
+.garrery-list  .l_g_s .imgc_a:hover{box-shadow:1px 1px 15px #666}
+.garrery-list  .l_g_s .imgc_a .nums_sale{display: block;height: 62px;width: 50px;position: absolute;right: 0;top: 0;z-index: 20;}
+.garrery-list  .l_g_s .imgc_a  img{max-width: 240px;ax-height: 355px;}
+
+.garrery-list  .l_g_s dt{height:auto;overflow:hidden; font-size:12px; color: #51423A;line-height:16px;padding-top:2px}
+.garrery-list  .l_g_s dt h3{height:auto;overflow:hidden; font-size:12px; color: #51423A;line-height:16px;padding-top:2px;}
+.garrery-list  .l_g_s dt a{color:#333}
+.garrery-list  .l_g_s dt a.dname{height:34px;display:block;overflow:hidden;}
+
+.garrery-list  .l_g_s dd.last{height:25px;clear:both}
+.garrery-list  .l_g_s .last .h20p span{ color:#fd4f39;font-size:18px}
+.garrery-list  .l_g_s .last .h20p span.old_pirce{margin-right:8px;text-decoration:line-through; font-size:12px; color:#999;}
+
+.l_star0,.l_star05,.l_star10,.l_star15,.l_star20,.l_star25,.l_star30,.l_star35,.l_star40,.l_star45,.l_star50 {background:url(images/star.png) no-repeat 0 0;float:left;height:12px;line-height:12px;margin-top:0px;overflow:hidden;width:70px}
+.l_star0 {background-position:left top}
+.l_star05 {background-position:left -17px}
+.l_star10 {background-position:left -17px}
+.l_star15 {background-position:left -17px}
+.l_star20 {background-position:left -33px}
+.l_star25 {background-position:left -33px}
+.l_star30 {background-position:left -49px}
+.l_star35 {background-position:left -49px}
+.l_star40 {background-position:left -65px}
+.l_star45 {background-position:left -65px}
+.l_star50 {background-position:left -81px}
+
+.nums_sale{background:url(images/nums_sale.png) no-repeat;}
+.nums_sale .ratio, .nums_sale .off{display:block;color:#fff;text-align:center;text-decoration:none;}
+.nums_sale .ratio i{font-size:16px;}
+.nums_sale .ratio{height:24px;line-height:24px;font-size:24px;padding-top:8px;}
+.nums_sale .off{height:16px;line-height:16px;font-size:16px;padding-top:2px;}
+
+ .selece-more a{display:block;height:30px;line-height:30px;font-size:14px;text-align:center;background-color:#eee;font-weight:700;}
+.selece-more a:hover{background-color:#ddd;}

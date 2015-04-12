@@ -8,6 +8,7 @@
 <meta name="Keywords" content="{$keywords}" />
 <meta name="Description" content="{$description}" />
 <link href="global.css" rel="stylesheet" type="text/css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
 <link rel="alternate" hreflang="en" href="http://www.temperqueen.com/" />
 </head>
 
@@ -24,190 +25,126 @@
 
 <!--g_content S  -->
 <div class="g_content">
-
-    <div class="con1">
-        <div class="navigator">
-            <div class="hot_type">Hot Categories</div>
-                <ul>
-                    <!--{foreach from=$categories[7]['cat_id'] item=child}-->
-                    <li><a href="{$child.url}">{$child.name}</a></li>
-                    <!--{/foreach}-->
-                </ul>
-        </div>
+    <div class="index-content">
+        <div class="column-left">
+            <div class="category-url">
+                <h2 class="cate-title">Category</h2>
+                <dl class="cate-block">
+                    <dt><h3 class="tit"><a href="Sort-Wedding-Dresses-c1-b0.html">Wedding Dress (2239)</a></h3></dt>
+                    <dd>
+                        <ul>
+                        <li><a href="Sort-A-Line-Wedding-Dresses-c3-b0.html">A Line Wedding Dresses</a></li>
+                        <li><a href="Sort-Beach-Wedding-Dresses-c9-b0.html">Beach Wedding Dresses</a></li>
+                        <li><a href="Sort-Lace-Wedding-Dresses-c8-b0.html">Lace Wedding Dresses</a></li>
+                        <li><a href="Sort-Chiffon-Wedding-Dresses-c12-b0.html">Chiffon Wedding Dresses</a></li>
+                        <li><a href="Sort-Maternity-Wedding-Dresses-c10-b0.html">Maternity Wedding Dresses</a></li>
+                        <li><a href="Sort-Trumpet-Mermaid-Wedding-Dresses-c11-b0.html">Trumpet/Mermaid Wedding Dresses</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="cate-block">
+                    <dt><h3 class="tit"><a href="Sort-Special-Occasion-Dresses-c4-b0.html">Special Occasion Dresses (2956)</a></h3></dt>
+                    <dd>
+                        <ul>
+                        <li><a href="Sort-Evening-Dresses-c17-b0.html">Evening Dresses</a></li>
+                        <li><a href="Sort-Prom-Dresses-c18-b0.html">Prom Dresses</a></li>
+                        <li><a href="Sort-Holiday-Dresses-c21-b0.html">Holiday Dresses</a></li>
+                        <li><a href="Sort-Cocktail-Dresses-c19-b0.html">Cocktail Dresses</a></li>
+                        <li><a href="Sort-Graduation-Dresses-c20-b0.html">Graduation Dresses</a></li>
+                        <li><a href="Sort-Homecoming-Dresses-c5-b0.html">Homecoming Dresses</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="cate-block">
+                    <dt><h3 class="tit"><a href="Sort-Wedding-Party-Dresses-c2-b0.html">Wedding Party Dresses (1246)</a></h3></dt>
+                    <dd>
+                        <ul>
+                        <li><a href="Sort-Bridesmaid-Dresses-c13-b0.html">Bridesmaid Dresses</a></li>
+                        <li><a href="Sort-Mother-Wedding-Dresses-c15-b0.html">Mother Wedding Dresses</a></li>
+                        <li><a href="Sort-Flower-Girl-Dresses-c14-b0.html">Flower Girl Dresses</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="cate-block borderno">
+                    <dt><h3 class="tit"><a href="Sort-Wedding-Accessories-c69-b0.html">Wedding Accessories</a></h3></dt>
+                    <dd>
+                        <ul>
+                        <li><a href="Sort-Wedding-Petticoats-c74-b0.html">Wedding Petticoats</a></li>
+                        <li><a href="Sort-Wedding-Gloves-c71-b0.html">Wedding Gloves</a></li>
+                        <li><a href="Sort-Wedding-Veils-c72-b0.html">Wedding Veils</a></li>
+                        <li><a href="Sort-Wedding-Wraps-c73-b0.html">Wedding Wraps</a></li>
+                        <li><a href="Sort-Wedding-Jewelry-c70-b0.html">Wedding Jewelry</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div> <!-- column-left end -->
         
-          <div class="slide_content">
-            <div class="slide">
-                <ul>
-                    <!-- {if $flashimg} -->
+        <div class="column-right">
+            <div class="slide_content">
+                <div class="orbit-slide">
+                     <!-- {if $flashimg} -->
+                    <div id="featured">
+                        <!--{foreach from=$flashimg item=item}-->
+                        <a class="orbit-item" href="{$item.url}" data-caption="#htmlCaption{$item.key}"><img src="{$item.src}" alt="{$item.text}"></a>
+                        <!--{/foreach}--> 
+                    </div>
                     <!--{foreach from=$flashimg item=item}-->
-                        <li><a href="{$item.url}"><img src="{$item.src}" width="760" height="320" /></a></li>
+                    <span class="orbit-caption" id="htmlCaption{$item.key}"><strong>{$item.text}</strong></span>
                     <!--{/foreach}--> 
                     <!--{/if}-->
-                </ul>
-                <div class="pre"></div>
-                <div class="next"></div>
-            </div>
-        </div>
-        
-        <script type="text/javascript">
-            var outerlayer = $(".slide");
-            var numberlayer = $(".mkeNum");
-            var imgwidth = 760;
-            var num = outerlayer.find("li").size();
-            var cnum = 0;
-            outerlayer.find("ul").width(num*imgwidth);
+                </div>
+                <script src="js/jquery.orbit.min.js"></script>
+                <script type="text/javascript">
+                    jQuery(window).load(function() {
+                        jQuery('#featured').orbit({
+                            bullets : true,
+                            startClockOnMouseOut : true,
+                            captionAnimation : 'slideOpen'
+                        });
+                    });
+                </script>
+            </div> <!-- slide_content end -->
+            <div class="clear"></div>
+            <div class="garrery-list clearfix">
+                <div class="hot-title"><h2>Hot Products</h2></div>
+                <!-- {if $recommend_list} -->
+                <!--{foreach from=$recommend_list item=goods}-->
+                <dl class="l_g_s clearfix <!--{if $goods.offset eq 'curr'}-->last-dl<!--{/if}-->">
+                    <dd>
+                        <a class="imgc_a" href="{$goods.url}">
+                        <span class="offsale nums_sale"><s class="ratio">{$goods.sale_num}<i>%</i></s><s class="off">OFF</s></span>
+                        <img class="imgChange" alt="{$goods.name|escape:html}" src="{$goods.thumb}"></a>
+                    </dd>
+                    <dt>
+                        <h3>
+                            <a class="dname" title="{$goods.name|escape:html}" href="{$goods.url}">{$goods.name}</a>
+                        </h3>
+                    </dt>
+                    <dd class="last">
+                        <div class="free"> </div>
+                        <span class="prlist h20p">
+                            <span class="old_pirce">USD ${$goods.market_price}  </span>
+                            <span class="fuhao">USD $</span>
+                            <span data-price="{$goods.shop_price} " class="huobi">{$goods.shop_price} </span>
+                        </span>
+                    </dd>
+                    <dd class="last">
+                        <div class="l_star50"></div>
+                        <span class="fc000"><a href="{$goods.url}#wrr" rel="nofollow">
+                        Reviews({$goods.comment_num})</a></span>
+                    </dd>
+                </dl>
+                <!--{/foreach}-->
+                <!--{/if}-->
+                <div class="clear"></div>
+                <div class="selece-more"><a href="Sort-Hot-Goods-c153-b0.html">More recommended &gt;&gt;</a></div>
+                
+            </div> <!-- garrery-list end -->
             
-            $(".next").click(function(){
-                cnum++;
-                if(cnum>(num-1)){
-                    cnum = 0    
-                }
-                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
-            });
-           
-           $(".pre").click(function(){
-                cnum--;
-                if(cnum<0){
-                    cnum = num - 1;    
-                }
-                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
-            }); 
-            
-           function autoPlay(){
-              cnum++;
-                if(cnum>(num-1)){
-                    cnum=0    
-                }
-                outerlayer.find("ul").animate({"left":-cnum*imgwidth},300);
-            }
-            var Timer = setInterval(autoPlay,4000);
-            $(".slide_content").hover(function(){clearInterval(Timer)},function(){Timer=setInterval(autoPlay,4000);}); 
-        </script>
-        
-        
-        <div class="clear"></div>
-      </div>
-      
-      
-  
-    <!-- {if $new_goods} -->
-    <div class="pd_list">
-        <div class="pd_list_title"> &nbsp;
-            <div class="pd_hotname"><h1 style="font-size:12px;font-weight:400;">Hot Sale Wedding Dresses</h1></div>
-        </div>
-        <ul class="pd_ul">
-            <!--{foreach from=$new_goods item=goods}-->
-            <li>
-                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
-                </div>
-                <div class="pd_info">
-                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
-                    <div class="price">
-                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
-                        <span class="last_price">USD ${$goods.shop_price}</span>
-                  </div>
-                </div>
-            </li>
-            <!--{/foreach}-->
-        </ul>
-    </div>
-    <!-- {/if} -->
+        </div> <!-- column-right end -->
+    </div> <!-- index-content end -->
     
-    <!-- {if $best_goods} -->
-    <div class="pd_list">
-        <div class="pd_list_title"> &nbsp;
-            <div class="pd_hotname">Plus Size Dresses For Special Occasions</div>
-        </div>
-        <ul class="pd_ul">
-            <!--{foreach from=$best_goods item=goods}-->
-            <li>
-                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
-                </div>
-                <div class="pd_info">
-                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
-                    <div class="price">
-                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
-                        <span class="last_price">USD ${$goods.shop_price}</span>
-                  </div>
-                </div>
-            </li>
-            <!--{/foreach}-->
-        </ul>
-    </div>
-    <!-- {/if} -->
-    
-    
-    <!-- {if $hot_goods} -->
-    <div class="pd_list">
-        <div class="pd_list_title"> &nbsp;
-            <div class="pd_hotname">Discount Wedding Dresses</div>
-        </div>
-        <ul class="pd_ul">
-            <!--{foreach from=$hot_goods item=goods}-->
-            <li>
-                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
-                </div>
-                <div class="pd_info">
-                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
-                    <div class="price">
-                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
-                        <span class="last_price">USD ${$goods.shop_price}</span>
-                  </div>
-                </div>
-            </li>
-            <!--{/foreach}-->
-        </ul>
-    </div>
-    <!-- {/if} -->
-    
-    
-    <!-- {if $promotion_goods} -->
-    <div class="pd_list">
-        <div class="pd_list_title"> &nbsp;
-            <div class="pd_hotname">Hot Sale Children Dresses</div>
-        </div>
-        <ul class="pd_ul">
-            <!--{foreach from=$promotion_goods item=goods}-->
-            <li>
-                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
-                </div>
-                <div class="pd_info">
-                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
-                    <div class="price">
-                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
-                        <span class="last_price">USD ${$goods.shop_price}</span>
-                  </div>
-                </div>
-            </li>
-            <!--{/foreach}-->
-        </ul>
-    </div>
-    <!-- {/if} -->
-    
-    
-    <!-- {if $random_goods} -->
-    <div class="pd_list">
-        <div class="pd_list_title"> &nbsp;
-            <div class="pd_hotname">Daily Discount Dresses</div>
-        </div>
-        <ul class="pd_ul">
-            <!--{foreach from=$random_goods item=goods}-->
-            <li>
-                <div class="pd_pic"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="172" height="250" /></a>
-                </div>
-                <div class="pd_info">
-                    <h3><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|truncate:50}</a></h3>
-                    <div class="price">
-                        <span class="old_pirce">USD ${$goods.market_price}</span><br />
-                        <span class="last_price">USD ${$goods.shop_price}</span>
-                  </div>
-                </div>
-            </li>
-            <!--{/foreach}-->
-        </ul>
-    </div>
-    <!-- {/if} --> 
-
     <div class="clear"></div>
     <div class="index_destxt">
         <div class="tit"><h3 class="postion">About Us</h3></div>
@@ -243,8 +180,21 @@
     </div>
     <div class="clear"></div>
 </div>
-
+<div class="go-top topdn" id="go-top"><a href="javascript:;" class="go"></a></div>
+<script type="text/javascript">
+    showScroll();
+    function showScroll(){
+        jQuery(window).scroll( function() { 
+            var scrollValue=jQuery(window).scrollTop();
+            scrollValue > 100 ? jQuery('.go-top').fadeIn():jQuery('.go-top').fadeOut();
+        } );    
+        jQuery('#go-top').click(function(){
+            jQuery("html,body").animate({scrollTop:0},200);    
+        });    
+    }
+</script>
 <!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem -->
+
 </body>
 </html>

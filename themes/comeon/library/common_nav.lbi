@@ -4,6 +4,7 @@
 <!--{foreach from=$categories item=cat name=foo}-->
     <!--{if $cat.id != '7'}-->
     <li class="showbut"><a href="http://www.temperqueen.com/{$cat.url}">{$cat.name}</a>
+        <!-- //
         <!-- {if $cat.cat_id}-->
         <div class="magc showbox" style="display: none;"><span></span></div>
         <div class="menus showbox" style="display: none;">
@@ -14,6 +15,7 @@
             </ul>
         </div>
         <!--{/if}-->
+       // -->
     </li>{if $smarty.foreach.foo.index <=5}/{/if}
     <!--{/if}-->   
 <!-- {/foreach} -->
