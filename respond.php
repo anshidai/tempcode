@@ -18,8 +18,34 @@ define('IN_ECS', true);
 require(dirname(__FILE__) . '/includes/init.php');
 require(ROOT_PATH . 'includes/lib_payment.php');
 require(ROOT_PATH . 'includes/lib_order.php');
+
+$smarty->assign('categories',      get_categories_tree()); // 分类树
+
 /* 支付方式代码 */
 $pay_code = !empty($_REQUEST['code']) ? trim($_REQUEST['code']) : '';
+
+//订单号
+$order_sn = !empty($_REQUEST['sn']) ? trim(intval($_REQUEST['sn'])) : '';
+if($order_sn) {
+    $order_tmp = order_info(0, $order_sn);    
+    if($order_tmp['pay_status'] == '0') {
+        $order_goods = order_goods($order_tmp['order_id']);
+        $order_goods = $order_goods[0];
+        
+        $host_url = $_SERVER['HTTP_HOST'];
+        if(strpos($host_url, 'http://') === false) {
+           $host_url = 'http://'.$host_url;  
+        }
+        $order_info['url'] = $host_url.'/'.build_uri('goods', array('gid'=>$order_goods['goods_id']), $order_goods['goods_name']);
+        $order_info['date'] = date('Y/m/d');
+        $order_info['order_sn'] = $order_tmp['order_sn'];
+        $order_info['goods_amount'] = $order_tmp['goods_amount'];
+        $smarty->assign('order_info', $order_info);
+    }
+   
+   
+}
+
 
 //获取首信支付方式
 if (empty($pay_code) && !empty($_REQUEST['v_pmode']) && !empty($_REQUEST['v_pstring']))
@@ -48,7 +74,7 @@ if ($_REQUEST['code'] == 'creditcard' && $_REQUEST['success'] == '1')
     $smarty->assign('message',    $msg);
     $smarty->assign('shop_url',   $ecs->url());
 
-    $smarty->display('respond.dwt');
+    $smarty->display('respond_success.dwt');
     exit();
 }elseif($_REQUEST['code'] == 'creditcard' && $_REQUEST['success'] == '0'){
     $msg = $_LANG['pay_fail'];
@@ -63,7 +89,7 @@ if ($_REQUEST['code'] == 'creditcard' && $_REQUEST['success'] == '1')
     $smarty->assign('message',    $msg);
     $smarty->assign('shop_url',   $ecs->url());
 
-    $smarty->display('respond.dwt');
+    $smarty->display('respond_failed.dwt');
     exit();
 }
 //获取钱宝支付方式(结束)

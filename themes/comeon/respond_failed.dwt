@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link href="respond.css" rel="stylesheet" type="text/css" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<style type="text/css">
+p a{color:#006acd; text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<!--g_header S  -->
+<div class="g_header">
+     <!-- #BeginLibraryItem "/library/common_header.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- common nav -->
+    <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
+    <!-- <div class="banners"><img src="images/banner2.jpg" width="1000" height="90" /> </div> -->
+</div>
+<!--g_header E  -->
+
+
+<div class="payment-block clearfix">
+    <div class="positions">Your Postion: <a href="{$shop_url}">Home</a> &gt; payment error</div>
+    <div class="error-tips">
+        <i class="fail-ico"></i>
+        <div class="fail-table">
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="td-l">transaction date</td>
+                    <td class="td-r">{$order_info.date}</td>
+                    <td class="td-l">order number</td>
+                    <td class="td-r">{$order_info.order_sn}</td>
+                </tr>
+                <tr>
+                    <td class="td-l">sum</td>
+                    <td class="td-r">USD ${$order_info.goods_amount}</td>
+                    <td class="td-l">trading result</td>
+                    <td class="td-r c-red">{$message}</td>
+                </tr>
+                <tr>
+                    <td class="td-l">product link</td>
+                    <td class="td-r td-colspan" colspan="3"><a href="{$order_info.url}">{$order_info.url}</a></td>
+                </tr>
+            </table>
+        </div>
+    </div> <!-- error-tips end -->
+    
+    <div class="tips-txt">
+        <p class="tit">Sorry, your payment was failed, the reason may be as followed:</p><br>
+        <p class="cred">Error return : orderInfo</p>
+        <p class="cred">Error return explaination: orderInfo</p><br>
+        <p class="tit">If you want to continue the transaction, we suggest you:</p>
+        <p class="cred">1.contact the issuing bank to prove that the transaction was done by yourself.</p>
+        <p class="cred">2.try another credit card.</p>
+        <p>For further questions, please contact : service@temperqueen.com</p><br>
+        <p class="tit">You can also :</p>
+        <p class="links">
+            <a href="{$shop_url}">{$lang.back_home}</a>
+            <a class="cred" href="user.php?act=order_list">Back to payment page</a>
+            <a href="flow.php">Back to Shopping Cart</a>
+            <a href="{$order_info.url}">Back to product details page</a>
+        </p>
+    </div>
+
+</div>
+
+<div class="blank5"></div>
+<!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/tongji.lbi" --><!-- #EndLibraryItem --> 
+</body>
+</html>

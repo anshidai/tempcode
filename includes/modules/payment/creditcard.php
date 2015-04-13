@@ -339,11 +339,11 @@ class creditcard
 						$log_id = get_order_id_by_sn($orderNo);
 						/* 改变订单状态 */
 						order_paid($log_id);
-						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=1";
+						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=1&sn=$orderNo";
 						echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';				
 					} else {		
 						//支付失败
-						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0";
+						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0&sn=$orderNo";
 						echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';
 					}
 				}
@@ -352,7 +352,7 @@ class creditcard
 					
 				//正常 POST返回
 				if(substr($orderInfo,0,5) == 'I0061'){	 //排除订单号重复(I0061)的交易
-					$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0";
+					$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0&sn=$orderNo";
 					echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';	
 				}else{
 					//正常处理流程
@@ -361,11 +361,11 @@ class creditcard
 						$log_id = get_order_id_by_sn($orderNo);
 						/* 改变订单状态 */
 						order_paid($log_id);
-						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=1";
+						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=1&sn=$orderNo";
 						echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';			
 					} else {
 						//支付失败
-						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0";
+						$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0&sn=$orderNo";
 						echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';			
 					}			
 				}				
@@ -373,7 +373,7 @@ class creditcard
 			
 		}else{
 			//加密验证失败
-			$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0";
+			$returnUrl = return_url(basename(__FILE__, '.php'))."&success=0&sn=$orderNo";
 			echo '<script type="text/javascript">parent.location.replace("'.$returnUrl.'");</script>';
 		}
 
