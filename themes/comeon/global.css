@@ -30,9 +30,10 @@ a,area{ blr:expression(this.onFocus=this.blur()) } /* for IE */
 
 
 /*global*/
-.g_header{ width:1000px; margin:0 auto 25px auto;}
+.g_header{position:relative;width:1000px; margin:0 auto 25px auto;}
 .logo{ width:350px; height:85px; float:left; background:url(images/bg_al.png) no-repeat scroll 0 0; margin-top:10px;}
 .logo a{width:350px; height:85px; line-height:200px; display:block;overflow:hidden; }
+.free-shopping{position:absolute;left:357px;top:7px;width:213px;height:80px;display:inline-block;background:url(images/free-shopping.png) no-repeat;}
 
 /*topnav*/
 .header_r{ width:500px; height:98px; float:right;}

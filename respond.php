@@ -28,7 +28,7 @@ $pay_code = !empty($_REQUEST['code']) ? trim($_REQUEST['code']) : '';
 $order_sn = !empty($_REQUEST['sn']) ? trim(intval($_REQUEST['sn'])) : '';
 if($order_sn) {
     $order_tmp = order_info(0, $order_sn);    
-    if($order_tmp['pay_status'] == '0') {
+    if($order_tmp) {
         $order_goods = order_goods($order_tmp['order_id']);
         $order_goods = $order_goods[0];
         

@@ -168,7 +168,7 @@ elseif ($_REQUEST['act'] == 'save_template')
         $content = trim($_POST['content']);
     }
 
-    $type   = intval($_POST['is_html']);
+    $type   = intval($_POST['mail_type']);
     $tpl_id = intval($_POST['tpl']);
 
 

@@ -60,8 +60,15 @@
                 </form>
                 <!-- end login --> 
                 
+                {insert_scripts files='utils.js'}
+                <script type="text/javascript">
+                {foreach from=$lang.password_js item=item key=key}
+                  var {$key} = "{$item}";
+                {/foreach}
+                </script>
+                
                 <!-- Forget the password -->
-                <form action="user.php" name="getPassword" method="post" id="FormForget">
+                <form action="user.php" name="getPassword" method="post" id="FormForget" onsubmit="return submitPwdInfo();">
                 <ul style="display:none" class="l_find">
                     <li style="height: 32px">
                         <div style="color: red; height: 32px; width: 230px; line-height: 16px;" id="forgotErr"></div>
@@ -80,7 +87,7 @@
                     </li>
                     <li class="fg">
                         <input type="hidden" value="send_pwd_email" name="act">
-                        <input type="button" value="Find" class="l_fp" id="Forget" name="submit">
+                        <input type="submit" value="Find" class="l_fp" id="Forget" name="submit">
                         <b id="fr_b">Return of Registration</b>
                     </li>
                 </ul>
@@ -177,7 +184,7 @@
 <div class="clear"></div>
 
 <!-- #BeginLibraryItem "/library/common_footer.lbi" --><!-- #EndLibraryItem --> 
-
+<script type="text/javascript" src="/js/user.js"></script> 
 <script type="text/javascript">
 var isregistered = false;
 jQuery("#RegUsername").blur(function(){

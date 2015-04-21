@@ -605,7 +605,7 @@ elseif ($action == 'get_password')
         $smarty->assign('uid',    $uid);
         $smarty->assign('code',   $code);
         $smarty->assign('action', 'reset_password');
-        $smarty->display('user_passport.dwt');
+        $smarty->display('reset_password.dwt');
     }
     else
     {

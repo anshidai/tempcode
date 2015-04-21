@@ -4,6 +4,7 @@
 var process_request = "{$lang.process_request}";
 </script>
 <div class="logo"><a href="http://www.temperqueen.com">temperqueen</a></div>
+    <span class="free-shopping"></span>
     <div class="header_r">
         <div class="top_nav">
             <ul class="usertool">

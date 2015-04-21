@@ -19,7 +19,18 @@
     
     <!-- common nav -->
     <!-- #BeginLibraryItem "/library/common_nav.lbi" --><!-- #EndLibraryItem -->
-
+    <script type="text/javascript">
+        if(Object.prototype.toJSONString) {
+            var oldToJSONString = Object.toJSONString;
+            Object.prototype.toJSONString = function(){
+                if(arguments.length > 0) {
+                    return false;
+                }else {
+                    return oldToJSONString.apply(this, arguments);
+                }    
+            }
+        }
+    </script>
 </div>
 <!--g_header E  -->
 
@@ -55,25 +66,13 @@
                         </ul>
                     </dd>
                 </dl>
-                <dl class="cate-block">
+                <dl class="cate-block borderno">
                     <dt><h3 class="tit"><a href="Sort-Wedding-Party-Dresses-c2-b0.html">Wedding Party Dresses (1246)</a></h3></dt>
                     <dd>
                         <ul>
                         <li><a href="Sort-Bridesmaid-Dresses-c13-b0.html">Bridesmaid Dresses</a></li>
                         <li><a href="Sort-Mother-Wedding-Dresses-c15-b0.html">Mother Wedding Dresses</a></li>
                         <li><a href="Sort-Flower-Girl-Dresses-c14-b0.html">Flower Girl Dresses</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="cate-block borderno">
-                    <dt><h3 class="tit"><a href="Sort-Wedding-Accessories-c69-b0.html">Wedding Accessories</a></h3></dt>
-                    <dd>
-                        <ul>
-                        <li><a href="Sort-Wedding-Petticoats-c74-b0.html">Wedding Petticoats</a></li>
-                        <li><a href="Sort-Wedding-Gloves-c71-b0.html">Wedding Gloves</a></li>
-                        <li><a href="Sort-Wedding-Veils-c72-b0.html">Wedding Veils</a></li>
-                        <li><a href="Sort-Wedding-Wraps-c73-b0.html">Wedding Wraps</a></li>
-                        <li><a href="Sort-Wedding-Jewelry-c70-b0.html">Wedding Jewelry</a></li>
                         </ul>
                     </dd>
                 </dl>
